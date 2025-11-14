@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
-import { ThemeProvider } from 'next-themes';
+// import { ThemeProvider } from 'next-themes';
 
 import '@/app/globals.css';
 import Footer from '@/components/common/footer';
@@ -33,12 +33,10 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
         <html suppressHydrationWarning lang='en'>
             <body
                 className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground overscroll-none antialiased`}>
-                <ThemeProvider attribute='class'>
-                    <Navbar />
-                    <main>{children}</main>
-                    <Footer />
-                    <Toaster />
-                </ThemeProvider>
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
+                <Toaster />
             </body>
         </html>
     );
