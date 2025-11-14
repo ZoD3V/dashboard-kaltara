@@ -151,7 +151,7 @@ export function ChartAreaInteractive() {
                     <CardDescription>Showing total visitors for the last 3 months</CardDescription>
                 </div>
                 <Select value={timeRange} onValueChange={setTimeRange}>
-                    <SelectTrigger className='w-[160px] rounded-lg sm:ml-auto' aria-label='Select a value'>
+                    <SelectTrigger className='w-40 rounded-lg sm:ml-auto' aria-label='Select a value'>
                         <SelectValue placeholder='Last 3 months' />
                     </SelectTrigger>
                     <SelectContent className='rounded-xl'>
