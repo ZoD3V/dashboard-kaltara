@@ -10,8 +10,11 @@ import { formatNumber } from '@/registry/new-york-v4/lib/utils';
 import { ChartConfig } from '@/registry/new-york-v4/ui/chart';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/registry/new-york-v4/ui/dialog';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
+import { useCommodityStore } from '@/stores/useCommodityStore';
 import { useInfoTabStore } from '@/stores/useNeracaTabStore';
 
+import { getRegionValues } from '../helper/get-region-values';
+import { regionLayout } from '../helper/region-layout';
 import { Info } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
@@ -27,18 +30,7 @@ const REGION_KEYS = [
 
 type RegionName = (typeof REGION_KEYS)[number];
 
-const chartConfig = {
-    desktop: {
-        label: 'Desktop',
-        color: 'var(--chart-1)'
-    },
-    mobile: {
-        label: 'Mobile',
-        color: 'var(--chart-2)'
-    }
-} satisfies ChartConfig;
-
-export default function KaltaraMap() {
+const KaltaraMap: React.FC = () => {
     const wrapRef = useRef<HTMLDivElement | null>(null);
     const wiresRef = useRef<SVGSVGElement | null>(null);
     const [open, setOpen] = useState(false);
@@ -46,6 +38,15 @@ export default function KaltaraMap() {
     const [period, setPeriod] = useState('3bulan');
     const chartData = period === '3bulan' ? threeMonthsData : oneYearData;
     const activeTab = useInfoTabStore((s) => s.activeTab);
+    const selectedCommodity = useCommodityStore((state) => state.selectedCommodity);
+
+    const isNeraca = activeTab === 'neraca';
+
+    const neracaValues = getRegionValues(neracaRegion, selectedCommodity, 'neraca');
+
+    const ketersediaanValues = getRegionValues(ketersediaanRegion, selectedCommodity, 'ketersediaan');
+
+    const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
 
     // --- Connector lines (hanya render di ≥1280px) ---
     useEffect(() => {
@@ -172,7 +173,7 @@ export default function KaltaraMap() {
             <div
                 id='map-wrap'
                 ref={wrapRef}
-                className='relative flex flex-col items-center gap-12 lg:flex-row lg:gap-24 xl:gap-0'>
+                className='relative flex w-full flex-col items-center gap-12 lg:w-fit lg:flex-row lg:gap-24 xl:gap-0'>
                 <div className='w-[350px] sm:w-[550px] xl:w-[615px]'>
                     {/* SVG MAP (fixed)  */}
                     <svg
@@ -242,200 +243,72 @@ export default function KaltaraMap() {
                 </div>
 
                 {/* Connector overlay (xl-only) */}
-                <svg
-                    id='wires'
-                    ref={wiresRef}
-                    className='pointer-events-none absolute inset-0 hidden xl:block'
-                    viewBox='0 0 100 100'
-                    preserveAspectRatio='none'
-                />
+                {displayedValues?.length > 0 && (
+                    <svg
+                        id='wires'
+                        ref={wiresRef}
+                        className='pointer-events-none absolute inset-0 hidden xl:block'
+                        viewBox='0 0 100 100'
+                        preserveAspectRatio='none'
+                    />
+                )}
 
                 <div className='grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-1 lg:gap-4'>
-                    {/* Kiri atas (Nunukan) */}
-                    <div
-                        className='callout static w-full lg:w-[270px] xl:absolute'
-                        style={{ left: -200, top: 20 }}
-                        data-anchor='#anc-nunukan'>
-                        <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                            <Image
-                                src={activeTab == 'neraca' ? neracaRegion[0].icon : ketersediaanRegion[0].icon}
-                                alt='nunukan'
-                                width={100}
-                                height={100}
-                                className='h-10 w-9'
-                            />
-                            <div className='flex flex-col'>
-                                <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                    {activeTab == 'neraca' ? neracaRegion[0].name : ketersediaanRegion[0].name}
-                                </div>
-                                <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                    {activeTab === 'neraca'
-                                        ? formatNumber(neracaRegion[0].ton)
-                                        : formatNumber(ketersediaanRegion[0].ton)}
-                                    <span className='text-base font-bold'>ton</span>
-                                </div>
-                                <div className='mt-2 flex items-center gap-2'>
-                                    <p
-                                        className={`text-sm font-medium ${activeTab == 'ketersediaan' && ketersediaanRegion[0].valueColor}`}>
-                                        {activeTab == 'ketersediaan' && ketersediaanRegion[0].value}
-                                    </p>
-                                    <div
-                                        className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${activeTab == 'neraca' ? neracaRegion[0].statusColor : ketersediaanRegion[0].statusColor}`}>
-                                        {activeTab == 'neraca' ? neracaRegion[0].status : ketersediaanRegion[0].status}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Kiri atas (Malinau) */}
-                    <div
-                        className='callout static w-full lg:w-[270px] xl:absolute'
-                        style={{ left: -200, top: 200 }}
-                        data-anchor='#anc-malinau-1'>
-                        <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                            <Image
-                                src={activeTab == 'neraca' ? neracaRegion[1].icon : ketersediaanRegion[1].icon}
-                                alt='nunukan'
-                                width={100}
-                                height={100}
-                                className='h-10 w-9'
-                            />
-                            <div className='flex flex-col'>
-                                <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                    {activeTab == 'neraca' ? neracaRegion[1].name : ketersediaanRegion[1].name}
-                                </div>
-                                <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                    {activeTab === 'neraca'
-                                        ? formatNumber(neracaRegion[1].ton)
-                                        : formatNumber(ketersediaanRegion[1].ton)}
-                                    <span className='text-base font-bold'>ton</span>
-                                </div>
-                                <div className='mt-2 flex items-center gap-2'>
-                                    <p
-                                        className={`text-sm font-medium ${activeTab == 'ketersediaan' && ketersediaanRegion[1].valueColor}`}>
-                                        {activeTab == 'ketersediaan' && ketersediaanRegion[1].value}
-                                    </p>
-                                    <div
-                                        className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${activeTab == 'neraca' ? neracaRegion[1].statusColor : ketersediaanRegion[1].statusColor}`}>
-                                        {activeTab == 'neraca' ? neracaRegion[1].status : ketersediaanRegion[1].status}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Kanan atas (Tana Tindung) */}
-                    <div
-                        className='callout static w-full lg:w-[270px] xl:absolute'
-                        style={{ left: 615, top: 60 }}
-                        data-anchor='#anc-tana-tidung'>
-                        <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                            <Image
-                                src={activeTab == 'neraca' ? neracaRegion[2].icon : ketersediaanRegion[2].icon}
-                                alt='nunukan'
-                                width={100}
-                                height={100}
-                                className='h-10 w-9'
-                            />
-                            <div className='flex flex-col'>
-                                <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                    {activeTab == 'neraca' ? neracaRegion[2].name : ketersediaanRegion[2].name}
-                                </div>
-                                <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                    {activeTab === 'neraca'
-                                        ? formatNumber(neracaRegion[2].ton)
-                                        : formatNumber(ketersediaanRegion[2].ton)}
-                                    <span className='text-base font-bold'>ton</span>
-                                </div>
-                                <div className='mt-2 flex items-center gap-2'>
-                                    <p
-                                        className={`text-sm font-medium ${activeTab == 'ketersediaan' && ketersediaanRegion[2].valueColor}`}>
-                                        {activeTab == 'ketersediaan' && ketersediaanRegion[2].value}
-                                    </p>
-                                    <div
-                                        className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${activeTab == 'neraca' ? neracaRegion[2].statusColor : ketersediaanRegion[2].statusColor}`}>
-                                        {activeTab == 'neraca' ? neracaRegion[2].status : ketersediaanRegion[2].status}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Kanan tengah (Tarakan) */}
-                    <div
-                        className='callout static w-full lg:w-[270px] xl:absolute'
-                        style={{ left: 615, top: 210 }}
-                        data-anchor='#anc-tarakan-1'>
-                        <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                            <Image
-                                src={activeTab == 'neraca' ? neracaRegion[3].icon : ketersediaanRegion[3].icon}
-                                alt='nunukan'
-                                width={100}
-                                height={100}
-                                className='h-10 w-9'
-                            />
-                            <div className='flex flex-col'>
-                                <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                    {activeTab == 'neraca' ? neracaRegion[3].name : ketersediaanRegion[3].name}
-                                </div>
-                                <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                    {activeTab === 'neraca'
-                                        ? formatNumber(neracaRegion[3].ton)
-                                        : formatNumber(ketersediaanRegion[3].ton)}
+                    {displayedValues.map((region) => {
+                        const layout = regionLayout[region.id];
 
-                                    <span className='text-base font-bold'>ton</span>
-                                </div>
-                                <div className='mt-2 flex items-center gap-2'>
-                                    <p
-                                        className={`text-sm font-medium ${activeTab == 'ketersediaan' && ketersediaanRegion[3].valueColor}`}>
-                                        {activeTab == 'ketersediaan' && ketersediaanRegion[3].value}
-                                    </p>
-                                    <div
-                                        className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${activeTab == 'neraca' ? neracaRegion[3].statusColor : ketersediaanRegion[3].statusColor}`}>
-                                        {activeTab == 'neraca' ? neracaRegion[3].status : ketersediaanRegion[3].status}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* Kanan bawah (Bulungan) */}
-                    <div
-                        className='callout static w-full lg:w-[270px] xl:absolute'
-                        style={{ left: 615, top: 400 }}
-                        data-anchor='#anc-bulungan'>
-                        <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                            <Image
-                                src={activeTab == 'neraca' ? neracaRegion[4].icon : ketersediaanRegion[4].icon}
-                                alt='nunukan'
-                                width={100}
-                                height={100}
-                                className='h-10 w-9'
-                            />
-                            <div className='flex flex-col'>
-                                <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                    {activeTab == 'neraca' ? neracaRegion[4].name : ketersediaanRegion[4].name}
-                                </div>
-                                <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                    {activeTab === 'neraca'
-                                        ? formatNumber(neracaRegion[4].ton)
-                                        : formatNumber(ketersediaanRegion[4].ton)}
+                        return (
+                            <div
+                                key={region.id}
+                                className='callout static w-full lg:w-[270px] xl:absolute'
+                                style={{
+                                    left: layout.left,
+                                    top: layout.top
+                                }}
+                                data-anchor={layout.anchor}>
+                                <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
+                                    <Image
+                                        src={region.icon}
+                                        alt={region.name}
+                                        width={100}
+                                        height={100}
+                                        className='h-10 w-9'
+                                    />
 
-                                    <span className='text-base font-bold'>ton</span>
-                                </div>
-                                <div className='mt-2 flex items-center gap-2'>
-                                    <p
-                                        className={`text-sm font-medium ${activeTab == 'ketersediaan' && ketersediaanRegion[4].valueColor}`}>
-                                        {activeTab == 'ketersediaan' && ketersediaanRegion[4].value}
-                                    </p>
-                                    <div
-                                        className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${activeTab == 'neraca' ? neracaRegion[4].statusColor : ketersediaanRegion[4].statusColor}`}>
-                                        {activeTab == 'neraca' ? neracaRegion[4].status : ketersediaanRegion[4].status}
+                                    <div className='flex flex-col'>
+                                        {/* Nama daerah */}
+                                        <div className='text-xs font-medium text-slate-900 sm:text-sm'>
+                                            {region.name}
+                                        </div>
+
+                                        {/* Ton */}
+                                        <div className='mt-1 text-xl font-bold lg:text-2xl'>
+                                            {formatNumber(region.ton)}
+                                            <span className='text-base font-bold'>ton</span>
+                                        </div>
+
+                                        {/* Value + status */}
+                                        <div className='mt-2 flex items-center gap-2'>
+                                            {/* Hanya tampil jika tab ketersediaan & value ada */}
+                                            {!isNeraca && region.value && (
+                                                <p className={`text-sm font-medium ${region.valueColor ?? ''}`}>
+                                                    {region.value}
+                                                </p>
+                                            )}
+
+                                            <div
+                                                className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${region.statusColor}`}>
+                                                {region.status}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        );
+                    })}
                 </div>
             </div>
-            <div className='mt-8 w-full p-4 md:p-6'>
+            <div className='mt-8 w-full'>
                 {activeTab == 'neraca' ? (
                     <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
                         <div className='flex items-center gap-2'>
@@ -532,7 +405,7 @@ export default function KaltaraMap() {
                 </div>
             </div>
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className='lg:max-w-4xl!'>
+                <DialogContent className='sm:max-w-2xl! md:max-w-3xl! lg:max-w-4xl!'>
                     <DialogHeader>
                         <DialogTitle>
                             <div className='flex flex-col items-start justify-between gap-2 lg:flex-row'>
@@ -590,4 +463,6 @@ export default function KaltaraMap() {
             </Dialog>
         </section>
     );
-}
+};
+
+export default KaltaraMap;

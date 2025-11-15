@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                                 style={{ height: 'auto' }}
                             />
                             <div className='flex flex-col'>
-                                <div className='text-base leading-tight font-extrabold'>
+                                <div className='text-base leading-tight font-extrabold text-slate-900'>
                                     DASHBOARD HARGA DAN PASOKAN PANGAN
                                 </div>
                                 <p className='text-sm text-slate-600'>Provinsi Kalimantan Utara</p>
@@ -69,13 +69,13 @@ const Footer: React.FC = () => {
                         <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
                             {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
                                 <div key={category}>
-                                    <h3 className='mb-4 text-lg font-bold'>
+                                    <h3 className='mb-4 text-lg font-bold text-slate-900'>
                                         {category
                                             .split('_')
                                             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                                             .join(' ')}
                                     </h3>
-                                    <p className='mb-2 text-sm font-semibold'>
+                                    <p className='mb-2 text-sm font-semibold text-slate-900'>
                                         Sekretariat Tim Pengendalian Inflasi Provinsi Kalimantan Utara
                                     </p>
                                     <p className='mb-2 text-sm font-normal text-slate-600'>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
                             ))}
 
                             <div>
-                                <h3 className='mb-4 text-lg font-bold'>Sumber Data</h3>
+                                <h3 className='mb-4 text-lg font-bold text-slate-900'>Sumber Data</h3>
                                 <ul className='flex flex-col gap-4'>
                                     <li className='flex flex-col items-start gap-2'>
                                         <Image

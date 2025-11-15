@@ -1,30 +1,30 @@
-// components/food-info-layout.tsx
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import Image from 'next/image';
 
 import { foodItems } from '@/data/food-items';
+import { formatDate, isValidDate } from '@/registry/new-york-v4/lib/utils';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Calendar } from '@/registry/new-york-v4/ui/calendar';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
+import { useCommodityStore } from '@/stores/useCommodityStore';
 import { useInfoTabStore } from '@/stores/useNeracaTabStore';
 
 import { CalendarIcon } from 'lucide-react';
 
 type TabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
 
-export default function FoodInfoLayout() {
+const NeracaFilter: React.FC = () => {
     const [open, setOpen] = React.useState(false);
     const [date, setDate] = React.useState<Date | undefined>(new Date('2025-06-01'));
     const [month, setMonth] = React.useState<Date | undefined>(date);
     const [value, setValue] = React.useState(formatDate(date));
-    const [selectedFood, setSelectedFood] = useState('beras');
-    const activeTab = useInfoTabStore((s) => s.activeTab);
-    const setActiveTab = useInfoTabStore((s) => s.setActiveTab);
+    const { selectedCommodity, setselectedCommodity } = useCommodityStore();
+    const { activeTab, setActiveTab } = useInfoTabStore();
 
     return (
         <div className='mx-auto w-full pt-28'>
@@ -116,17 +116,17 @@ export default function FoodInfoLayout() {
                     {foodItems.map((item) => (
                         <button
                             key={item.id}
-                            onClick={() => setSelectedFood(item.id)}
+                            onClick={() => setselectedCommodity(item.id)}
                             className={`flex flex-col items-center gap-2`}>
                             <div
                                 className={`flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border text-2xl transition-all ease-in md:h-16 md:w-16 md:text-3xl ${
-                                    selectedFood === item.id ? 'bg-white ring-2 ring-blue-500' : 'bg-slate-100'
+                                    selectedCommodity === item.id ? 'bg-white ring-2 ring-blue-500' : 'bg-slate-100'
                                 }`}>
                                 <Image src={item.icon} alt='icon' width={40} height={40} />
                             </div>
                             <span
                                 className={`text-center text-xs leading-tight font-semibold ${
-                                    selectedFood === item.id ? 'text-blue-500' : 'text-gray-700'
+                                    selectedCommodity === item.id ? 'text-blue-500' : 'text-gray-700'
                                 }`}>
                                 {item.name}
                             </span>
@@ -136,24 +136,6 @@ export default function FoodInfoLayout() {
             </div>
         </div>
     );
-}
+};
 
-function formatDate(date: Date | undefined) {
-    if (!date) {
-        return '';
-    }
-
-    return date.toLocaleDateString('id-ID', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-    });
-}
-
-function isValidDate(date: Date | undefined) {
-    if (!date) {
-        return false;
-    }
-
-    return !isNaN(date.getTime());
-}
+export default NeracaFilter;

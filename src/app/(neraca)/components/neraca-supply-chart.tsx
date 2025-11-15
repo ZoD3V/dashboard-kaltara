@@ -47,7 +47,7 @@ const NeracaSupplyChart = () => {
     }, [timeRange]);
 
     return (
-        <div className='mx-auto w-full space-y-6 bg-gray-50 px-4 pt-12'>
+        <div className='mx-auto w-full space-y-6 bg-gray-50 px-4 pt-6'>
             <div className='flex items-center gap-3'>
                 <Image src='/icons/ic-beras.png' alt='icon' width={40} height={40} />
 
