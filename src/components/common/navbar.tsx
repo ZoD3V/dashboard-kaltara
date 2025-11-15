@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { menuItems } from '@/data/menu-items';
 import { Button } from '@/registry/new-york-v4/ui/button';
@@ -14,7 +15,7 @@ import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const pathname = usePathname();
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
@@ -25,8 +26,8 @@ const Navbar: React.FC = () => {
                 <nav className='bg-primary-950 flex items-center justify-between gap-4 p-4'>
                     <div className='flex items-center justify-between transition-all ease-out lg:gap-10 xl:gap-32'>
                         {/* Kiri: Logo + Judul */}
-                        <div className='flex min-w-0 items-center gap-2 justify-self-start sm:gap-3'>
-                            <Link href='/' className='flex shrink-0 items-center gap-2'>
+                        <Link href='/' className='flex min-w-0 items-center gap-2 justify-self-start sm:gap-3'>
+                            <div className='flex shrink-0 items-center gap-2'>
                                 <Image
                                     src='/images/kalimantan-utara-logo.png'
                                     alt='Logo'
@@ -35,30 +36,39 @@ const Navbar: React.FC = () => {
                                     className='h-10 w-8 sm:h-12 sm:w-9'
                                     style={{ height: 'auto' }}
                                 />
-                            </Link>
+                            </div>
 
                             <div className='flex min-w-0 flex-col'>
-                                <div className='truncate text-sm font-bold sm:text-base'>
+                                <div className='truncate text-xs font-bold text-slate-900 sm:text-sm md:text-base'>
                                     DASHBOARD HARGA DAN PASOKAN PANGAN
                                 </div>
                                 <span className='truncate text-xs font-medium text-gray-600 sm:text-sm'>
                                     Provinsi Kalimantan Utara
                                 </span>
                             </div>
-                        </div>
+                        </Link>
 
                         {/* Tengah: Menu (selalu center visual) */}
                         <ul className='hidden space-x-6 justify-self-center rounded-full border px-7 py-2.5 lg:flex'>
-                            {menuItems.map((item) => (
-                                <li
-                                    key={item.text}
-                                    className='hover:text-primary flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors ease-in'>
-                                    {item.icon}
-                                    <Link href={item.url} className='font-medium transition-colors'>
-                                        {item.text}
-                                    </Link>
-                                </li>
-                            ))}
+                            {menuItems.map((item) => {
+                                const isActive = pathname === item.url;
+
+                                return (
+                                    <li
+                                        key={item.text}
+                                        className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                                            isActive
+                                                ? 'text-primary' // aktif
+                                                : 'hover:text-primary text-slate-600'
+                                        }`}>
+                                        {item.icon}
+
+                                        <Link href={item.url} className='font-medium transition-colors'>
+                                            {item.text}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
                         </ul>
                     </div>
                     {/* Kanan: Login */}
@@ -93,18 +103,27 @@ const Navbar: React.FC = () => {
                 leave='transition ease-in duration-75 transform'
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'>
-                <div id='mobile-menu' className='rounded-b-xl shadow-sm xl:hidden'>
+                <div id='mobile-menu' className='lg:hidden'>
                     <ul className='flex flex-col space-y-5 px-4 pt-4 pb-6'>
-                        {menuItems.map((item) => (
-                            <li
-                                key={item.text}
-                                className='hover:text-primary flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors ease-in'>
-                                {item.icon}
-                                <Link href={item.url} className='font-medium transition-colors'>
-                                    {item.text}
-                                </Link>
-                            </li>
-                        ))}
+                        {menuItems.map((item) => {
+                            const isActive = pathname === item.url;
+
+                            return (
+                                <li
+                                    key={item.text}
+                                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                                        isActive
+                                            ? 'text-primary' // aktif
+                                            : 'hover:text-primary text-slate-600'
+                                    }`}>
+                                    {item.icon}
+
+                                    <Link href={item.url} className='font-medium transition-colors'>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            );
+                        })}
                         <li>
                             {/* Kanan: Login */}
                             <Link href='/' className='w-full'>

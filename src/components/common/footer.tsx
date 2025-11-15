@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className='flex flex-col items-center bg-white'>
+        <footer className='flex flex-col items-center bg-white pt-6 md:pt-12'>
             <div className='max-w-[1440px] px-4 py-16 md:px-6'>
                 <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12 lg:gap-12'>
                     {/* Brand Column */}
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
 
                     {/* Links Columns */}
                     <div className='lg:col-span-7'>
-                        <div className='grid grid-cols-2 gap-4'>
+                        <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
                             {Object.entries(footerLinks).map(([category, links], categoryIndex) => (
                                 <div key={category}>
                                     <h3 className='mb-4 text-lg font-bold'>
@@ -109,9 +109,27 @@ const Footer: React.FC = () => {
                                 <h3 className='mb-4 text-lg font-bold'>Sumber Data</h3>
                                 <ul className='flex flex-col gap-4'>
                                     <li className='flex flex-col items-start gap-2'>
-                                        <Image src='/icons/ic-dpkp.png' alt='logo' width={75} height={75} />
-                                        <Image src='/icons/ic-bpn.png' alt='logo' width={150} height={150} />
-                                        <Image src='/icons/ic-bi.png' alt='logo' width={250} height={250} />
+                                        <Image
+                                            src='/icons/ic-dpkp.png'
+                                            alt='logo'
+                                            width={100}
+                                            height={100}
+                                            className='h-18 w-18 md:h-24 md:w-24'
+                                        />
+                                        <Image
+                                            src='/icons/ic-bpn.png'
+                                            alt='logo'
+                                            width={100}
+                                            height={100}
+                                            className='h-12 w-28 md:h-14 md:w-32'
+                                        />
+                                        <Image
+                                            src='/icons/ic-bi.png'
+                                            alt='logo'
+                                            width={100}
+                                            height={100}
+                                            className='h-14 w-42 md:h-16 md:w-48'
+                                        />
                                     </li>
                                 </ul>
                             </div>

@@ -1,9 +1,12 @@
 'use client';
 import React, { useMemo, useState } from 'react';
 
+import Image from 'next/image';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
 import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
 import { Label } from '@/registry/new-york-v4/ui/label';
+import { Switch } from '@/registry/new-york-v4/ui/switch';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
@@ -44,23 +47,21 @@ const NeracaSupplyChart = () => {
     }, [timeRange]);
 
     return (
-        <div className='mx-auto w-full space-y-6 p-6 px-4'>
-            <Card>
-                <CardHeader>
-                    <div className='flex items-start gap-3'>
-                        <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-2xl'>
-                            🌾
-                        </div>
-                        <div className='flex-1'>
-                            <CardTitle className='text-xl font-semibold'>
-                                Grafik Beras / ton - Provinsi Kalimantan Utara
-                            </CardTitle>
-                            <CardDescription className='mt-1 text-sm text-gray-500'>
-                                Berdasarkan Neraca, Ketersediaan dan Kebutuhan
-                            </CardDescription>
-                        </div>
-                    </div>
-                </CardHeader>
+        <div className='mx-auto w-full space-y-6 bg-gray-50 px-4 pt-12'>
+            <div className='flex items-center gap-3'>
+                <Image src='/icons/ic-beras.png' alt='icon' width={40} height={40} />
+
+                <div className='flex-1'>
+                    <CardTitle className='text-xl font-semibold'>
+                        Grafik Beras / ton - Provinsi Kalimantan Utara
+                    </CardTitle>
+                    <CardDescription className='mt-1 text-sm text-gray-500'>
+                        Berdasarkan Neraca, Ketersediaan dan Kebutuhan
+                    </CardDescription>
+                </div>
+            </div>
+            <Card className='pt-0 pb-4'>
+                <CardHeader></CardHeader>
 
                 <CardContent>
                     {/* Controls */}
@@ -69,18 +70,13 @@ const NeracaSupplyChart = () => {
                             {/* Stacked Toggle */}
                             <div className='flex items-center gap-3 text-slate-900'>
                                 <div className='flex items-center gap-2'>
-                                    <div
-                                        className={`h-6 w-10 cursor-pointer rounded-full transition-colors ${
-                                            isStacked ? 'bg-primary' : 'bg-blue-300'
-                                        }`}
-                                        onClick={() => setIsStacked(!isStacked)}>
-                                        <div
-                                            className={`h-5 w-5 transform rounded-full bg-white shadow-md transition-transform ${
-                                                isStacked ? 'translate-x-5' : 'translate-x-0.5'
-                                            } mt-0.5`}
-                                        />
-                                    </div>
+                                    <Switch
+                                        id='chart-stack'
+                                        checked={isStacked}
+                                        onClick={() => setIsStacked(!isStacked)}
+                                    />
                                     <Label
+                                        htmlFor='chart-stack'
                                         className='cursor-pointer text-slate-900'
                                         onClick={() => setIsStacked(!isStacked)}>
                                         Tipe Stacked
@@ -90,14 +86,13 @@ const NeracaSupplyChart = () => {
 
                             <div className='flex flex-wrap items-center gap-4'>
                                 {/* Neraca Checkbox */}
-                                <div className='flex items-center gap-2'>
+                                <div className='flex items-center gap-2 rounded-lg border p-2'>
                                     <Checkbox
                                         id='neraca'
                                         checked={showNeraca}
                                         onCheckedChange={(checked) => {
                                             setShowNeraca(!!checked);
                                         }}
-                                        className='border-blue-400 data-[state=checked]:bg-blue-500'
                                     />
                                     <Label
                                         htmlFor='neraca'
@@ -108,14 +103,13 @@ const NeracaSupplyChart = () => {
                                 </div>
 
                                 {/* Ketersediaan Checkbox */}
-                                <div className='flex items-center gap-2'>
+                                <div className='flex items-center gap-2 rounded-lg border p-2'>
                                     <Checkbox
                                         id='ketersediaan'
                                         checked={showKetersediaan}
                                         onCheckedChange={(checked) => {
                                             setShowKetersediaan(!!checked);
                                         }}
-                                        className='border-teal-400 data-[state=checked]:bg-teal-500'
                                     />
                                     <Label
                                         htmlFor='ketersediaan'
@@ -126,14 +120,13 @@ const NeracaSupplyChart = () => {
                                 </div>
 
                                 {/* Kebutuhan Checkbox */}
-                                <div className='flex items-center gap-2'>
+                                <div className='flex items-center gap-2 rounded-lg border p-2'>
                                     <Checkbox
                                         id='kebutuhan'
                                         checked={showKebutuhan}
                                         onCheckedChange={(checked) => {
                                             setShowKebutuhan(!!checked);
                                         }}
-                                        className='border-red-400 data-[state=checked]:bg-red-500'
                                     />
                                     <Label
                                         htmlFor='kebutuhan'
@@ -146,21 +139,15 @@ const NeracaSupplyChart = () => {
                         </div>
 
                         {/* Time Range Tabs */}
-                        <Tabs value={timeRange} onValueChange={setTimeRange} className='w-auto'>
-                            <TabsList className='bg-gray-100'>
-                                <TabsTrigger
-                                    value='3months'
-                                    className='data-[state=active]:bg-primary data-[state=active]:text-white'>
+                        <Tabs value={timeRange} onValueChange={setTimeRange}>
+                            <TabsList className='grid w-full grid-cols-3'>
+                                <TabsTrigger value='3months' className='px-6'>
                                     3 Bulan
                                 </TabsTrigger>
-                                <TabsTrigger
-                                    value='6months'
-                                    className='data-[state=active]:bg-primary data-[state=active]:text-white'>
+                                <TabsTrigger value='6months' className='px-6'>
                                     6 Bulan
                                 </TabsTrigger>
-                                <TabsTrigger
-                                    value='1year'
-                                    className='data-[state=active]:bg-primary data-[state=active]:text-white'>
+                                <TabsTrigger value='1year' className='px-6'>
                                     1 Tahun
                                 </TabsTrigger>
                             </TabsList>

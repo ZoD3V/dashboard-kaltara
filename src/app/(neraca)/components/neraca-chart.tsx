@@ -1,14 +1,16 @@
 'use client';
 import React, { useState } from 'react';
 
+import Image from 'next/image';
+
 import { Badge } from '@/registry/new-york-v4/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
 import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
 import { Label } from '@/registry/new-york-v4/ui/label';
+import { Switch } from '@/registry/new-york-v4/ui/switch';
 
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-// Data dummy untuk 1 tahun (Oktober 2024 - Oktober 2025)
 const dummyData = [
     { month: 'Okt 2024', neraca: 80000, harga: 70000 },
     { month: 'Nov 2024', neraca: 72000, harga: 71000 },
@@ -31,11 +33,9 @@ const NeracaChart = () => {
     const [isStacked, setIsStacked] = useState(true);
 
     return (
-        <div className='mx-auto w-full space-y-6 p-6 px-4'>
-            <div className='flex items-start gap-3'>
-                <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-amber-100 text-2xl'>
-                    🌾
-                </div>
+        <div className='mx-auto w-full space-y-6 bg-gray-50 px-4 py-12'>
+            <div className='flex items-center gap-3'>
+                <Image src='/icons/ic-beras.png' alt='icon' width={40} height={40} />
                 <div className='flex-1'>
                     <CardTitle className='text-xl font-semibold'>
                         Grafik Beras / ton - Provinsi Kalimantan Utara
@@ -45,7 +45,7 @@ const NeracaChart = () => {
                     </CardDescription>
                 </div>
             </div>
-            <Card className='py-4'>
+            <Card className='pt-0 pb-4'>
                 <CardHeader></CardHeader>
 
                 <CardContent>
@@ -55,18 +55,14 @@ const NeracaChart = () => {
                             {/* Stacked Toggle */}
                             <div className='flex items-center gap-3 text-slate-900'>
                                 <div className='flex items-center gap-2'>
-                                    <div
-                                        className={`h-6 w-10 cursor-pointer rounded-full transition-colors ${
-                                            isStacked ? 'bg-primary' : 'bg-blue-300'
-                                        }`}
-                                        onClick={() => setIsStacked(!isStacked)}>
-                                        <div
-                                            className={`h-5 w-5 transform rounded-full bg-white shadow-md transition-transform ${
-                                                isStacked ? 'translate-x-5' : 'translate-x-0.5'
-                                            } mt-0.5`}
-                                        />
-                                    </div>
+                                    <Switch
+                                        id='chart-stack'
+                                        checked={isStacked}
+                                        onClick={() => setIsStacked(!isStacked)}
+                                    />
+
                                     <Label
+                                        htmlFor='chart-stack'
                                         className='cursor-pointer text-slate-900'
                                         onClick={() => setIsStacked(!isStacked)}>
                                         Tipe Stacked
@@ -76,16 +72,16 @@ const NeracaChart = () => {
 
                             <div className='flex flex-wrap items-center gap-4'>
                                 {/* Neraca Checkbox */}
-                                <div className='flex items-center gap-2'>
+                                <div className='flex items-center gap-2 rounded-lg border p-2'>
                                     <Checkbox
-                                        id='neraca'
+                                        id='neraca-2'
                                         checked={showNeraca}
                                         onCheckedChange={(checked) => {
                                             setShowNeraca(!!checked);
                                         }}
                                     />
                                     <Label
-                                        htmlFor='neraca'
+                                        htmlFor='neraca-2'
                                         className='flex cursor-pointer items-center gap-2 text-sm font-medium'>
                                         <span className='h-3 w-3 rounded-sm bg-blue-500'></span>
                                         Neraca (ton)
@@ -93,14 +89,13 @@ const NeracaChart = () => {
                                 </div>
 
                                 {/* Harga Checkbox */}
-                                <div className='flex items-center gap-2'>
+                                <div className='flex items-center gap-2 rounded-lg border p-2'>
                                     <Checkbox
                                         id='harga'
                                         checked={showHarga}
                                         onCheckedChange={(checked) => {
                                             setShowHarga(!!checked);
                                         }}
-                                        className='border-teal-400 data-[state=checked]:bg-teal-500'
                                     />
                                     <Label
                                         htmlFor='harga'

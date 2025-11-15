@@ -8,7 +8,7 @@ export const menuItems = [
     },
     {
         text: 'Dashboard Harga',
-        url: '/',
+        url: '/price-table',
         icon: <Banknote className='h-5 w-5' />
     }
 ];

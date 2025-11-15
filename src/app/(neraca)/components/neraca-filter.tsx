@@ -3,12 +3,15 @@
 
 import React, { useState } from 'react';
 
+import Image from 'next/image';
+
 import { foodItems } from '@/data/food-items';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Calendar } from '@/registry/new-york-v4/ui/calendar';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
+import { useInfoTabStore } from '@/stores/useNeracaTabStore';
 
 import { CalendarIcon } from 'lucide-react';
 
@@ -20,7 +23,8 @@ export default function FoodInfoLayout() {
     const [month, setMonth] = React.useState<Date | undefined>(date);
     const [value, setValue] = React.useState(formatDate(date));
     const [selectedFood, setSelectedFood] = useState('beras');
-    const [activeTab, setActiveTab] = useState<TabType>('neraca');
+    const activeTab = useInfoTabStore((s) => s.activeTab);
+    const setActiveTab = useInfoTabStore((s) => s.setActiveTab);
 
     return (
         <div className='mx-auto w-full pt-28'>
@@ -35,17 +39,17 @@ export default function FoodInfoLayout() {
                         className='rounded-lg border border-gray-300 bg-white'>
                         <ToggleGroupItem
                             value='neraca'
-                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100 data-[state=on]:text-purple-900/80 md:px-4 md:text-sm'>
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
                             Neraca
                         </ToggleGroupItem>
                         <ToggleGroupItem
                             value='ketersediaan'
-                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100 data-[state=on]:text-purple-900/80 md:px-4 md:text-sm'>
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
                             Ketersediaan
                         </ToggleGroupItem>
                         <ToggleGroupItem
                             value='kebutuhan'
-                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100 data-[state=on]:text-purple-900/80 md:px-4 md:text-sm'>
+                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
                             Kebutuhan
                         </ToggleGroupItem>
                     </ToggleGroup>
@@ -57,7 +61,7 @@ export default function FoodInfoLayout() {
                         <Input
                             id='date'
                             value={value}
-                            placeholder='June 01, 2025'
+                            placeholder='Jun 01, 2025'
                             className='bg-background'
                             onChange={(e) => {
                                 const date = new Date(e.target.value);
@@ -115,13 +119,13 @@ export default function FoodInfoLayout() {
                             onClick={() => setSelectedFood(item.id)}
                             className={`flex flex-col items-center gap-2`}>
                             <div
-                                className={`flex h-12 w-12 items-center justify-center rounded-full border text-2xl transition-all ease-in md:h-16 md:w-16 md:text-3xl ${
+                                className={`flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border text-2xl transition-all ease-in md:h-16 md:w-16 md:text-3xl ${
                                     selectedFood === item.id ? 'bg-white ring-2 ring-blue-500' : 'bg-slate-100'
                                 }`}>
-                                {item.icon}
+                                <Image src={item.icon} alt='icon' width={40} height={40} />
                             </div>
                             <span
-                                className={`text-center text-[10px] leading-tight font-semibold md:text-xs ${
+                                className={`text-center text-xs leading-tight font-semibold ${
                                     selectedFood === item.id ? 'text-blue-500' : 'text-gray-700'
                                 }`}>
                                 {item.name}
@@ -139,12 +143,13 @@ function formatDate(date: Date | undefined) {
         return '';
     }
 
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('id-ID', {
         day: '2-digit',
         month: 'long',
         year: 'numeric'
     });
 }
+
 function isValidDate(date: Date | undefined) {
     if (!date) {
         return false;
