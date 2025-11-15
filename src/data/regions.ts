@@ -19,6 +19,34 @@ export type RegionGroup = {
     values: RegionValue[];
 };
 
+export const listRegion = [
+    {
+        id: 'nunukan',
+        name: 'Kabupaten Nunukan',
+        type: 'kabupaten'
+    },
+    {
+        id: 'malinau',
+        name: 'Kabupaten Malinau',
+        type: 'kabupaten'
+    },
+    {
+        id: 'tana_tidung',
+        name: 'Kabupaten Tana Tidung',
+        type: 'kabupaten'
+    },
+    {
+        id: 'tarakan',
+        name: 'Kota Tarakan',
+        type: 'kota'
+    },
+    {
+        id: 'bulungan',
+        name: 'Kabupaten Bulungan',
+        type: 'kabupaten'
+    }
+];
+
 export const neracaRegion: RegionGroup[] = [
     // =======================
     // BERAS - NERACA
