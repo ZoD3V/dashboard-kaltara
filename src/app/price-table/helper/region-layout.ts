@@ -1,6 +1,6 @@
 export type RegionId = 'nunukan' | 'malinau' | 'tana-tidung' | 'tarakan' | 'bulungan';
 
-export type RegionLayout = {
+type RegionLayout = {
     left: number;
     top: number;
     anchor: string;

@@ -1,10 +1,10 @@
+import { NeracaTabType } from '@/types/neraca';
+
 import { create } from 'zustand';
 
-export type TabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
-
 type InfoTabState = {
-    activeTab: TabType;
-    setActiveTab: (tab: TabType) => void;
+    activeTab: NeracaTabType;
+    setActiveTab: (tab: NeracaTabType) => void;
 };
 
 export const useInfoTabStore = create<InfoTabState>((set) => ({

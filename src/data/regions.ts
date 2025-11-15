@@ -1,23 +1,4 @@
-import { RegionId } from '@/app/(neraca)/helper/region-layout';
-
-export type RegionValue = {
-    id: RegionId;
-    name: string;
-    icon: string;
-    ton: number;
-    status: string;
-    statusColor: string;
-    value?: string;
-    valueColor?: string;
-    anchor: string;
-};
-
-export type RegionGroup = {
-    commodityId: string;
-    infoTypeId: 'neraca' | 'ketersediaan';
-    monthId: string;
-    values: RegionValue[];
-};
+import { RegionGroup, RegionVisualConfig } from '@/types/neraca';
 
 export const listRegion = [
     {
@@ -46,6 +27,541 @@ export const listRegion = [
         type: 'kabupaten'
     }
 ];
+
+export const regionVisualConfig: RegionVisualConfig = {
+    // ============================
+    // BERAS
+    // ============================
+    beras: {
+        neraca: {
+            nunukan: { fill: 'fill-emerald-400', statusColor: 'bg-emerald-100 text-emerald-600' },
+            malinau: { fill: 'fill-emerald-400', statusColor: 'bg-emerald-100 text-emerald-600' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
+            tarakan: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600' },
+            bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-600' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-emerald-300',
+                statusColor: 'bg-emerald-100 text-emerald-600',
+                valueColor: 'text-emerald-600'
+            },
+            malinau: {
+                fill: 'fill-emerald-400',
+                statusColor: 'bg-emerald-100 text-emerald-600',
+                valueColor: 'text-emerald-600'
+            },
+            'tana-tidung': {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-600', valueColor: 'text-blue-600' },
+            bulungan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-600', valueColor: 'text-red-600' }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-emerald-400', statusColor: 'bg-emerald-100 text-emerald-600' },
+            malinau: { fill: 'fill-emerald-400', statusColor: 'bg-emerald-100 text-emerald-600' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
+            tarakan: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600' },
+            bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-600' }
+        }
+    },
+
+    // ============================
+    // CABAI MERAH
+    // ============================
+    'cabai-merah': {
+        neraca: {
+            nunukan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-600' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
+            tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' }
+        },
+        ketersediaan: {
+            nunukan: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600', valueColor: 'text-red-600' },
+            malinau: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-600', valueColor: 'text-red-600' },
+            'tana-tidung': {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-600', valueColor: 'text-blue-600' },
+            bulungan: {
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-600' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
+            tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' }
+        }
+    },
+
+    // ============================
+    // CABAI RAWIT
+    // ============================
+    'cabai-rawit': {
+        neraca: {
+            nunukan: { fill: 'fill-red-500', statusColor: 'bg-red-100 text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
+            tarakan: { fill: 'fill-amber-400', statusColor: 'bg-amber-100 text-amber-700' },
+            bulungan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' }
+        },
+        ketersediaan: {
+            nunukan: { fill: 'fill-red-500', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            'tana-tidung': {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            },
+            tarakan: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            bulungan: {
+                fill: 'fill-amber-500',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-red-500', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            'tana-tidung': {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            },
+            tarakan: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            bulungan: {
+                fill: 'fill-amber-500',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            }
+        }
+    },
+
+    // ============================
+    // BAWANG MERAH
+    // ============================
+    'bawang-merah': {
+        neraca: {
+            nunukan: { fill: 'fill-rose-400', statusColor: 'bg-rose-100 text-rose-700' },
+            malinau: { fill: 'fill-rose-300', statusColor: 'bg-rose-100 text-rose-700' },
+            'tana-tidung': { fill: 'fill-orange-300', statusColor: 'bg-orange-100 text-orange-600' },
+            tarakan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
+            bulungan: { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' }
+        },
+        ketersediaan: {
+            nunukan: { fill: 'fill-rose-300', statusColor: 'bg-rose-100 text-rose-700', valueColor: 'text-rose-700' },
+            malinau: { fill: 'fill-rose-400', statusColor: 'bg-rose-100 text-rose-700', valueColor: 'text-rose-700' },
+            'tana-tidung': {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-600', valueColor: 'text-blue-600' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-rose-300', statusColor: 'bg-rose-100 text-rose-700', valueColor: 'text-rose-700' },
+            malinau: { fill: 'fill-rose-400', statusColor: 'bg-rose-100 text-rose-700', valueColor: 'text-rose-700' },
+            'tana-tidung': {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-600', valueColor: 'text-blue-600' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
+            }
+        }
+    },
+
+    // ============================
+    // BAWANG PUTIH
+    // ============================
+    'bawang-putih': {
+        neraca: {
+            nunukan: { fill: 'fill-slate-200', statusColor: 'bg-slate-100 text-slate-700' },
+            malinau: { fill: 'fill-slate-300', statusColor: 'bg-slate-100 text-slate-700' },
+            'tana-tidung': { fill: 'fill-yellow-200', statusColor: 'bg-yellow-100 text-yellow-700' },
+            tarakan: { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' },
+            bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-slate-200',
+                statusColor: 'bg-slate-100 text-slate-700',
+                valueColor: 'text-slate-700'
+            },
+            malinau: {
+                fill: 'fill-slate-300',
+                statusColor: 'bg-slate-100 text-slate-700',
+                valueColor: 'text-slate-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-yellow-200',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: {
+                fill: 'fill-slate-200',
+                statusColor: 'bg-slate-100 text-slate-700',
+                valueColor: 'text-slate-700'
+            },
+            malinau: {
+                fill: 'fill-slate-300',
+                statusColor: 'bg-slate-100 text-slate-700',
+                valueColor: 'text-slate-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-yellow-200',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            }
+        }
+    },
+
+    // ============================
+    // DAGING SAPI
+    // ============================
+    'daging-sapi': {
+        neraca: {
+            nunukan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
+            tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' }
+        },
+        ketersediaan: {
+            nunukan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700', valueColor: 'text-red-700' },
+            'tana-tidung': {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-red-300', statusColor: 'bg-red-100 text-red-700' },
+            malinau: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-700' },
+            'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
+            tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' }
+        }
+    },
+
+    // ============================
+    // TELUR AYAM
+    // ============================
+    'telur-ayam': {
+        neraca: {
+            nunukan: { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' },
+            malinau: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' },
+            'tana-tidung': { fill: 'fill-amber-400', statusColor: 'bg-amber-100 text-amber-700' },
+            tarakan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' },
+            bulungan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            malinau: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            malinau: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        }
+    },
+
+    // ============================
+    // GULA PASIR
+    // ============================
+    'gula-pasir': {
+        neraca: {
+            nunukan: { fill: 'fill-amber-200', statusColor: 'bg-amber-100 text-amber-700' },
+            malinau: { fill: 'fill-amber-300', statusColor: 'bg-amber-100 text-amber-700' },
+            'tana-tidung': { fill: 'fill-amber-400', statusColor: 'bg-amber-100 text-amber-700' },
+            tarakan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' },
+            bulungan: { fill: 'fill-orange-300', statusColor: 'bg-orange-100 text-orange-700' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-amber-200',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            malinau: {
+                fill: 'fill-amber-300',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: {
+                fill: 'fill-amber-200',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            malinau: {
+                fill: 'fill-amber-300',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        }
+    },
+
+    // ============================
+    // MINYAK GORENG
+    // ============================
+    'minyak-goreng': {
+        neraca: {
+            nunukan: { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' },
+            malinau: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' },
+            'tana-tidung': { fill: 'fill-orange-300', statusColor: 'bg-orange-100 text-orange-700' },
+            tarakan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            malinau: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-orange-300',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' },
+            malinau: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' },
+            'tana-tidung': { fill: 'fill-orange-300', statusColor: 'bg-orange-100 text-orange-700' },
+            tarakan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
+            bulungan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' }
+        }
+    },
+
+    // ============================
+    // JAGUNG
+    // ============================
+    jagung: {
+        neraca: {
+            nunukan: { fill: 'fill-lime-300', statusColor: 'bg-lime-100 text-lime-700' },
+            malinau: { fill: 'fill-lime-400', statusColor: 'bg-lime-100 text-lime-700' },
+            'tana-tidung': { fill: 'fill-yellow-300', statusColor: 'bg-yellow-100 text-yellow-700' },
+            tarakan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' },
+            bulungan: { fill: 'fill-amber-400', statusColor: 'bg-amber-100 text-amber-700' }
+        },
+        ketersediaan: {
+            nunukan: { fill: 'fill-lime-300', statusColor: 'bg-lime-100 text-lime-700', valueColor: 'text-lime-700' },
+            malinau: { fill: 'fill-lime-400', statusColor: 'bg-lime-100 text-lime-700', valueColor: 'text-lime-700' },
+            'tana-tidung': {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: { fill: 'fill-lime-300', statusColor: 'bg-lime-100 text-lime-700', valueColor: 'text-lime-700' },
+            malinau: { fill: 'fill-lime-400', statusColor: 'bg-lime-100 text-lime-700', valueColor: 'text-lime-700' },
+            'tana-tidung': {
+                fill: 'fill-yellow-300',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            }
+        }
+    },
+
+    // ============================
+    // KEDELAI
+    // ============================
+    kedelai: {
+        neraca: {
+            nunukan: { fill: 'fill-amber-200', statusColor: 'bg-amber-100 text-amber-700' },
+            malinau: { fill: 'fill-amber-300', statusColor: 'bg-amber-100 text-amber-700' },
+            'tana-tidung': { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' },
+            tarakan: { fill: 'fill-yellow-500', statusColor: 'bg-yellow-100 text-yellow-700' },
+            bulungan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' }
+        },
+        ketersediaan: {
+            nunukan: {
+                fill: 'fill-amber-300',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            malinau: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        },
+        kebutuhan: {
+            nunukan: {
+                fill: 'fill-amber-300',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            malinau: {
+                fill: 'fill-amber-400',
+                statusColor: 'bg-amber-100 text-amber-700',
+                valueColor: 'text-amber-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-700',
+                valueColor: 'text-yellow-700'
+            },
+            tarakan: { fill: 'fill-blue-400', statusColor: 'bg-blue-100 text-blue-700', valueColor: 'text-blue-700' },
+            bulungan: {
+                fill: 'fill-orange-400',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
+            }
+        }
+    }
+};
 
 export const neracaRegion: RegionGroup[] = [
     // =======================
