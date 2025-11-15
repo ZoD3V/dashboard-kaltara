@@ -4,14 +4,15 @@ import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 
-import { ketersediaanRegion, neracaRegion } from '@/data/regions';
+import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-legend';
+import { ketersediaanRegion, neracaRegion, regionVisualConfig } from '@/data/regions';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
 import { formatNumber } from '@/registry/new-york-v4/lib/utils';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/registry/new-york-v4/ui/dialog';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 import { useCommodityStore } from '@/stores/useCommodityStore';
 import { useInfoTabStore } from '@/stores/useNeracaTabStore';
-import { NeracaTabType, RegionValue } from '@/types/neraca';
+import { RegionValue } from '@/types/neraca';
 
 import { getRegionValues } from '../helper/get-region-values';
 import { getRegionVisual } from '../helper/get-region-visual';
@@ -50,6 +51,12 @@ const KaltaraMap: React.FC = () => {
     const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
 
     const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
+
+    const cfg = regionVisualConfig[selectedCommodity] ?? regionVisualConfig['beras'];
+
+    const legendColors = activeTab === 'ketersediaan' ? cfg.legend.ketersediaan : cfg.legend.neraca;
+
+    const legendStatic = activeTab === 'ketersediaan' ? ketersediaanLegendStatic : neracaLegendStatic;
 
     // --- Connector lines (hanya render di ≥1280px) ---
     useEffect(() => {
@@ -310,78 +317,23 @@ const KaltaraMap: React.FC = () => {
                 </div>
             </div>
             <div className='mt-8 w-full'>
-                {activeTab == 'neraca' ? (
-                    <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-red-500'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Defisit</span>
-                                <span className='ml-1 text-gray-600'>0% - 0%</span>
-                            </div>
-                        </div>
+                <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
+                    {legendStatic.map((item: any) => (
+                        <div key={item.key} className='flex items-center gap-2'>
+                            {/* HANYA background yang dinamis */}
+                            <div className={`h-4 w-4 rounded-full ${legendColors[item.key]}`} />
 
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-orange-500'></div>
                             <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Rentan</span>
-                                <span className='ml-1 text-gray-600'>0% - 46%</span>
-                            </div>
-                        </div>
+                                <span className='font-semibold text-gray-900'>{item.label}</span>
 
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-yellow-400'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Waspada</span>
-                                <span className='ml-1 text-gray-600'>47% - 80%</span>
+                                {/* Hanya NERACA yang punya range, dan ini teks statis */}
+                                {activeTab === 'neraca' && item.range && (
+                                    <span className='ml-1 text-gray-600'>{item.range}</span>
+                                )}
                             </div>
                         </div>
-
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-green-500'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Aman</span>
-                                <span className='ml-1 text-gray-600'>81% - 100%</span>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-gray-400'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Data tidak tersedia</span>
-                            </div>
-                        </div>
-                    </div>
-                ) : (
-                    <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-orange-500'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Menurun</span>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-blue-500'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Stabil</span>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-green-400'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Meningkat</span>
-                            </div>
-                        </div>
-
-                        <div className='flex items-center gap-2'>
-                            <div className='h-4 w-4 rounded-full bg-gray-400'></div>
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>Data tidak tersedia</span>
-                            </div>
-                        </div>
-                    </div>
-                )}
+                    ))}
+                </div>
 
                 <div className='flex items-start gap-2 p-3 text-xs text-gray-700 md:p-4 md:text-sm'>
                     <Info className='mt-0.5 h-5 w-5 shrink-0 text-blue-600' />

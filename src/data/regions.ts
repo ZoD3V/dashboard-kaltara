@@ -65,6 +65,21 @@ export const regionVisualConfig: RegionVisualConfig = {
             'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
             tarakan: { fill: 'fill-red-400', statusColor: 'bg-red-100 text-red-600' },
             bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-600' }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-emerald-400',
+                rentan: 'bg-emerald-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-emerald-400',
+                stabil: 'bg-emerald-400',
+                meningkat: 'bg-orange-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -100,6 +115,21 @@ export const regionVisualConfig: RegionVisualConfig = {
             'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-600' },
             tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
             bulungan: { fill: 'fill-yellow-400', statusColor: 'bg-yellow-100 text-yellow-700' }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-red-400',
+                rentan: 'bg-red-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-red-400',
+                stabil: 'bg-red-400',
+                meningkat: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -151,6 +181,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 statusColor: 'bg-amber-100 text-amber-700',
                 valueColor: 'text-amber-700'
             }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-red-400',
+                rentan: 'bg-red-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-amber-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-red-400',
+                stabil: 'bg-red-400',
+                meningkat: 'bg-orange-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -193,6 +238,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 fill: 'fill-orange-400',
                 statusColor: 'bg-orange-100 text-orange-600',
                 valueColor: 'text-orange-600'
+            }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-rose-400',
+                rentan: 'bg-rose-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-rose-400',
+                stabil: 'bg-rose-400',
+                meningkat: 'bg-blue-400',
+                nodata: 'bg-slate-300'
             }
         }
     },
@@ -261,6 +321,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 statusColor: 'bg-yellow-100 text-yellow-700',
                 valueColor: 'text-yellow-700'
             }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-slate-400',
+                rentan: 'bg-slate-400',
+                waspada: 'bg-yellow-400',
+                aman: 'bg-yellow-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-slate-400',
+                stabil: 'bg-slate-400',
+                meningkat: 'bg-yellow-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -296,6 +371,21 @@ export const regionVisualConfig: RegionVisualConfig = {
             'tana-tidung': { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
             tarakan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' },
             bulungan: { fill: 'fill-amber-500', statusColor: 'bg-amber-100 text-amber-700' }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-red-400',
+                rentan: 'bg-red-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-red-400',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-yellow-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -354,6 +444,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 fill: 'fill-orange-400',
                 statusColor: 'bg-orange-100 text-orange-700',
                 valueColor: 'text-orange-700'
+            }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-yellow-400',
+                rentan: 'bg-yellow-400',
+                waspada: 'bg-amber-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-yellow-400',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-amber-400',
+                nodata: 'bg-slate-300'
             }
         }
     },
@@ -414,6 +519,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 statusColor: 'bg-orange-100 text-orange-700',
                 valueColor: 'text-orange-700'
             }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-amber-200',
+                rentan: 'bg-amber-300',
+                waspada: 'bg-amber-400',
+                aman: 'bg-blue-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-amber-200',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-amber-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -457,6 +577,21 @@ export const regionVisualConfig: RegionVisualConfig = {
             'tana-tidung': { fill: 'fill-orange-300', statusColor: 'bg-orange-100 text-orange-700' },
             tarakan: { fill: 'fill-orange-400', statusColor: 'bg-orange-100 text-orange-700' },
             bulungan: { fill: 'fill-orange-500', statusColor: 'bg-orange-100 text-orange-700' }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-yellow-300',
+                rentan: 'bg-yellow-400',
+                waspada: 'bg-orange-400',
+                aman: 'bg-orange-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-yellow-300',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-orange-400',
+                nodata: 'bg-slate-300'
+            }
         }
     },
 
@@ -499,6 +634,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 fill: 'fill-amber-400',
                 statusColor: 'bg-amber-100 text-amber-700',
                 valueColor: 'text-amber-700'
+            }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-lime-300',
+                rentan: 'bg-lime-400',
+                waspada: 'bg-yellow-400',
+                aman: 'bg-amber-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-lime-300',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-yellow-400',
+                nodata: 'bg-slate-300'
             }
         }
     },
@@ -558,6 +708,21 @@ export const regionVisualConfig: RegionVisualConfig = {
                 fill: 'fill-orange-400',
                 statusColor: 'bg-orange-100 text-orange-700',
                 valueColor: 'text-orange-700'
+            }
+        },
+        legend: {
+            neraca: {
+                defisit: 'bg-amber-300',
+                rentan: 'bg-amber-400',
+                waspada: 'bg-yellow-400',
+                aman: 'bg-orange-400',
+                nodata: 'bg-slate-300'
+            },
+            ketersediaan: {
+                menurun: 'bg-amber-300',
+                stabil: 'bg-blue-400',
+                meningkat: 'bg-yellow-400',
+                nodata: 'bg-slate-300'
             }
         }
     }
