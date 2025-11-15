@@ -27,10 +27,10 @@ const NeracaFilter: React.FC = () => {
     const { activeTab, setActiveTab } = useInfoTabStore();
 
     return (
-        <div className='mx-auto w-full pt-28'>
+        <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
             <div className='mb-6 flex flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between'>
                 <div className='flex flex-wrap items-center gap-3 md:gap-4'>
-                    <span className='text-sm font-medium text-slate-500'>Jenis Informasi</span>
+                    <span className='hidden text-sm font-medium text-slate-500 sm:block'>Jenis Informasi</span>
 
                     <ToggleGroup
                         type='single'
@@ -56,7 +56,7 @@ const NeracaFilter: React.FC = () => {
                 </div>
 
                 <div className='flex items-center gap-2'>
-                    <span className='text-sm font-medium text-slate-500'>Bulan</span>
+                    <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
                     <div className='relative flex gap-2'>
                         <Input
                             id='date'

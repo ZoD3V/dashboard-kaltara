@@ -54,9 +54,9 @@ const KaltaraMap: React.FC = () => {
 
     const cfg = regionVisualConfig[selectedCommodity] ?? regionVisualConfig['beras'];
 
-    const legendColors = activeTab === 'ketersediaan' ? cfg.legend.ketersediaan : cfg.legend.neraca;
+    const legendColors = activeTab === 'neraca' ? cfg.legend.neraca : cfg.legend.ketersediaan;
 
-    const legendStatic = activeTab === 'ketersediaan' ? ketersediaanLegendStatic : neracaLegendStatic;
+    const legendStatic = activeTab === 'neraca' ? neracaLegendStatic : ketersediaanLegendStatic;
 
     // --- Connector lines (hanya render di ≥1280px) ---
     useEffect(() => {
@@ -175,7 +175,7 @@ const KaltaraMap: React.FC = () => {
     }, []);
 
     return (
-        <section className='mx-auto flex w-full flex-col items-center justify-center px-4 pt-24'>
+        <section className='mx-auto flex w-full flex-col items-center justify-center px-4 pt-10 md:pt-18'>
             {/* Container map fixed width = 615px */}
             <div
                 id='map-wrap'
@@ -260,7 +260,7 @@ const KaltaraMap: React.FC = () => {
                     />
                 )}
 
-                <div className='grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-1 lg:gap-4'>
+                <div className='sm:rid-cols-2 grid w-full grid-cols-1 gap-3 md:grid-cols-3 lg:w-fit lg:grid-cols-1 lg:gap-4'>
                     {displayedValues.map((region: RegionValue) => {
                         const layout = regionLayout[region.id];
                         const visual = getRegionVisual(selectedCommodity, activeTab, region.id as RegionId);
@@ -320,13 +320,11 @@ const KaltaraMap: React.FC = () => {
                 <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
                     {legendStatic.map((item: any) => (
                         <div key={item.key} className='flex items-center gap-2'>
-                            {/* HANYA background yang dinamis */}
                             <div className={`h-4 w-4 rounded-full ${legendColors[item.key]}`} />
 
                             <div className='flex flex-col text-xs md:text-sm'>
                                 <span className='font-semibold text-gray-900'>{item.label}</span>
 
-                                {/* Hanya NERACA yang punya range, dan ini teks statis */}
                                 {activeTab === 'neraca' && item.range && (
                                     <span className='ml-1 text-gray-600'>{item.range}</span>
                                 )}

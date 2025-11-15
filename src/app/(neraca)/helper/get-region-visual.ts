@@ -17,7 +17,7 @@ export const getRegionVisual = (commodityId: string, tab: NeracaTabType, regionI
 
     return {
         fill: visualFromConfig?.fill ?? 'fill-slate-200',
-        statusColor: visualFromConfig?.statusColor ?? regionData?.statusColor ?? '',
-        valueColor: visualFromConfig?.valueColor ?? regionData?.valueColor ?? ''
+        statusColor: visualFromConfig?.statusColor,
+        valueColor: visualFromConfig?.valueColor
     };
 };

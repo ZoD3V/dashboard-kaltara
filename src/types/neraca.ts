@@ -8,10 +8,7 @@ export type RegionValue = {
     icon: string;
     ton: number;
     status: string;
-    statusColor: string;
     value?: string;
-    valueColor?: string;
-    anchor: string;
 };
 
 export type RegionGroup = {
