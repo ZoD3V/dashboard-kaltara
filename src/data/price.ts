@@ -7,19 +7,19 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     beras: {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
                 fill: 'fill-green-500',
@@ -27,26 +27,26 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
                 fill: 'fill-green-500',
@@ -54,26 +54,26 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
                 fill: 'fill-green-500',
@@ -81,9 +81,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             }
         }
     },
@@ -93,83 +93,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'cabai-merah': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -179,9 +179,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'cabai-rawit': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
                 fill: 'fill-green-500',
@@ -189,26 +189,26 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
                 fill: 'fill-green-500',
@@ -216,26 +216,26 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
                 fill: 'fill-green-500',
@@ -243,19 +243,19 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -265,83 +265,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'bawang-merah': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
-            },
-            malinau: {
                 fill: 'fill-green-500',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
+            malinau: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
-            },
-            malinau: {
                 fill: 'fill-green-500',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
+            malinau: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
-            },
-            malinau: {
                 fill: 'fill-green-500',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
+            malinau: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         }
     },
@@ -351,83 +351,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'bawang-putih': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             },
             malinau: {
-                fill: 'fill-green-500',
+                fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             },
             malinau: {
-                fill: 'fill-green-500',
+                fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-700',
+                valueColor: 'text-green-700'
             },
             malinau: {
-                fill: 'fill-green-500',
+                fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-600',
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -437,24 +437,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'daging-sapi': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -464,24 +464,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -491,24 +491,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -523,83 +523,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'telur-ayam': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            bulungan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -609,83 +609,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'gula-pasir': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            tarakan: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -695,83 +695,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'minyak-goreng': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            bulungan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             }
         }
     },
@@ -781,83 +781,83 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     jagung: {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            malinau: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            malinau: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
-            },
-            'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
-            },
-            bulungan: {
                 fill: 'fill-green-700',
                 statusColor: 'bg-green-100 text-green-700',
                 valueColor: 'text-green-700'
+            },
+            malinau: {
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            'tana-tidung': {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
+            },
+            tarakan: {
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
+            },
+            bulungan: {
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             }
         }
     },
@@ -867,24 +867,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     kedelai: {
         'level-harga': {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -894,24 +894,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -921,24 +921,24 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         mtm: {
             nunukan: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-700',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-red-700',
-                statusColor: 'bg-red-100 text-red-700',
-                valueColor: 'text-red-700'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-yellow-400',
+                statusColor: 'bg-yellow-100 text-yellow-600',
+                valueColor: 'text-yellow-600'
             },
             tarakan: {
-                fill: 'fill-red-500',
-                statusColor: 'bg-red-100 text-red-600',
-                valueColor: 'text-red-600'
+                fill: 'fill-green-500',
+                statusColor: 'bg-green-100 text-green-600',
+                valueColor: 'text-green-600'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -951,10 +951,8 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
 
 export const priceTypeRegion: PriceTypeRegionGroup[] = [
     // =======================
-    // NERACA - LEVEL HARGA
-    // =======================
-
     // BERAS - NERACA
+    // =======================
     {
         commodityId: 'beras',
         infoPriceTypeId: 'level-harga',
@@ -964,51 +962,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 14.000',
-                value: '- Rp 200',
-                percentage: '1.43%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 16.000',
-                value: '- Rp 80',
-                percentage: '0.50%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 15.000',
-                value: '- Rp 120',
-                percentage: '0.80%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 14.000',
-                value: '+ Rp 200',
-                percentage: '1.43%',
-                status: 'Tinggi'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 18.000',
-                value: '- Rp 150',
-                percentage: '0.83%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             }
         ]
     },
-
+    // =======================
     // CABAI-MERAH - NERACA
+    // =======================
     {
         commodityId: 'cabai-merah',
         infoPriceTypeId: 'level-harga',
@@ -1018,51 +1012,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 58.000',
-                value: '+ Rp 60',
-                percentage: '0.10%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 41.000',
-                value: '- Rp 200',
-                percentage: '0.49%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 42.000',
-                value: '- Rp 90',
-                percentage: '0.21%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 47.000',
-                value: '+ Rp 90',
-                percentage: '0.19%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 59.000',
-                value: '- Rp 200',
-                percentage: '0.34%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             }
         ]
     },
-
+    // =======================
     // CABAI-RAWIT - NERACA
+    // =======================
     {
         commodityId: 'cabai-rawit',
         infoPriceTypeId: 'level-harga',
@@ -1072,51 +1062,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 52.000',
-                value: '- Rp 90',
-                percentage: '0.17%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 57.000',
-                value: '+ Rp 180',
-                percentage: '0.32%',
-                status: 'Tinggi'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 57.000',
-                value: '+ Rp 100',
-                percentage: '0.18%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 48.000',
-                value: '- Rp 80',
-                percentage: '0.17%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 49.000',
-                value: '+ Rp 120',
-                percentage: '0.24%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             }
         ]
     },
-
+    // =======================
     // BAWANG-MERAH - NERACA
+    // =======================
     {
         commodityId: 'bawang-merah',
         infoPriceTypeId: 'level-harga',
@@ -1126,51 +1112,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 38.000',
-                value: '- Rp 200',
-                percentage: '0.53%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 35.000',
-                value: '+ Rp 60',
-                percentage: '0.17%',
-                status: 'Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 40.000',
-                value: '- Rp 70',
-                percentage: '0.18%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 34.000',
-                value: '- Rp 90',
-                percentage: '0.26%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 40.000',
-                value: '- Rp 130',
-                percentage: '0.33%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             }
         ]
     },
-
+    // =======================
     // BAWANG-PUTIH - NERACA
+    // =======================
     {
         commodityId: 'bawang-putih',
         infoPriceTypeId: 'level-harga',
@@ -1181,50 +1163,46 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
                 price: 'Rp 27.000',
-                value: '+ Rp 50',
-                percentage: '0.19%',
-                status: 'Tinggi'
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 28.000',
-                value: 'Rp 0',
-                percentage: '0%',
-                status: 'Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 36.000',
-                value: '+ Rp 150',
-                percentage: '0.42%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 33.000',
-                value: '- Rp 180',
-                percentage: '0.55%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 39.000',
-                value: '+ Rp 100',
-                percentage: '0.26%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             }
         ]
     },
-
+    // =======================
     // DAGING-SAPI - NERACA
+    // =======================
     {
         commodityId: 'daging-sapi',
         infoPriceTypeId: 'level-harga',
@@ -1234,51 +1212,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 117.000',
-                value: '+ Rp 50',
-                percentage: '0.04%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 115.000',
-                value: '+ Rp 100',
-                percentage: '0.09%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 128.000',
-                value: '+ Rp 180',
-                percentage: '0.14%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 149.000',
-                value: 'Rp 0',
-                percentage: '0%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 146.000',
-                value: '- Rp 90',
-                percentage: '0.06%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             }
         ]
     },
-
+    // =======================
     // TELUR-AYAM - NERACA
+    // =======================
     {
         commodityId: 'telur-ayam',
         infoPriceTypeId: 'level-harga',
@@ -1288,51 +1262,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 25.000',
-                value: '- Rp 180',
-                percentage: '0.72%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
                 price: 'Rp 27.000',
-                value: '- Rp 60',
-                percentage: '0.22%',
-                status: 'Sangat Rendah'
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 25.000',
-                value: '- Rp 80',
-                percentage: '0.32%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 25.000',
-                value: '+ Rp 50',
-                percentage: '0.20%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 28.000',
-                value: '+ Rp 70',
-                percentage: '0.25%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             }
         ]
     },
-
+    // =======================
     // GULA-PASIR - NERACA
+    // =======================
     {
         commodityId: 'gula-pasir',
         infoPriceTypeId: 'level-harga',
@@ -1342,51 +1312,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 15.000',
-                value: '- Rp 100',
-                percentage: '0.67%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 15.000',
-                value: 'Rp 0',
-                percentage: '0%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 14.000',
-                value: '+ Rp 200',
-                percentage: '1.43%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 15.000',
-                value: '+ Rp 200',
-                percentage: '1.33%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 13.000',
-                value: '+ Rp 150',
-                percentage: '1.15%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             }
         ]
     },
-
+    // =======================
     // MINYAK-GORENG - NERACA
+    // =======================
     {
         commodityId: 'minyak-goreng',
         infoPriceTypeId: 'level-harga',
@@ -1396,51 +1362,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 19.000',
-                value: '- Rp 100',
-                percentage: '0.53%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 18.000',
-                value: '- Rp 80',
-                percentage: '0.44%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 15.000',
-                value: '+ Rp 70',
-                percentage: '0.47%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 17.000',
-                value: '- Rp 70',
-                percentage: '0.41%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 19.000',
-                value: '+ Rp 100',
-                percentage: '0.53%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             }
         ]
     },
-
+    // =======================
     // JAGUNG - NERACA
+    // =======================
     {
         commodityId: 'jagung',
         infoPriceTypeId: 'level-harga',
@@ -1450,51 +1412,47 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 7.000',
-                value: '+ Rp 200',
-                percentage: '2.86%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 8.000',
-                value: '- Rp 180',
-                percentage: '2.25%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 7.000',
-                value: '- Rp 180',
-                percentage: '2.57%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 12.000',
-                value: '- Rp 50',
-                percentage: '0.42%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 9.000',
-                value: '- Rp 70',
-                percentage: '0.78%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             }
         ]
     },
-
+    // =======================
     // KEDELAI - NERACA
+    // =======================
     {
         commodityId: 'kedelai',
         infoPriceTypeId: 'level-harga',
@@ -1504,46 +1462,41 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
                 icon: '/icons/ic-kab-nunukan.png',
-                price: 'Rp 10.000',
-                value: '- Rp 90',
-                percentage: '0.90%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Sangat Rendah',
+                percentage: '-20%'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
                 icon: '/icons/ic-kab-malinau.png',
-                price: 'Rp 14.000',
-                value: '- Rp 50',
-                percentage: '0.36%',
-                status: 'Sangat Rendah'
+                price: 'Rp 27.000',
+                status: 'Rendah',
+                percentage: '-10%'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
                 icon: '/icons/ic-kab-tana-tidung.png',
-                price: 'Rp 11.000',
-                value: '+ Rp 180',
-                percentage: '1.64%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Sedang',
+                percentage: '0%'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
                 icon: '/icons/ic-kab-tarakan.png',
-                price: 'Rp 13.000',
-                value: '+ Rp 50',
-                percentage: '0.38%',
-                status: 'Rendah'
+                price: 'Rp 27.000',
+                status: 'Tinggi',
+                percentage: '+10%'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
                 icon: '/icons/ic-kab-bulungan.png',
-                price: 'Rp 15.000',
-                value: '+ Rp 70',
-                percentage: '0.47%',
-                status: 'Sangat Tinggi'
+                price: 'Rp 27.000',
+                status: 'Sangat Tinggi',
+                percentage: '+20%'
             }
         ]
     }
