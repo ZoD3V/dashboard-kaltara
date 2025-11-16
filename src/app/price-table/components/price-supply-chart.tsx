@@ -75,6 +75,8 @@ const PriceCard: React.FC<PriceCardProps> = ({ title, currentPrice, change, icon
                             stroke='#3b82f6'
                             strokeWidth={0.7}
                             fill={`url(#${gradientId})`}
+                            activeDot={{ r: 6 }}
+                            dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
                         />
                     </AreaChart>
                 </ResponsiveContainer>
