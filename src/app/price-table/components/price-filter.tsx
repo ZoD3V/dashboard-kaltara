@@ -42,7 +42,7 @@ const NeracaFilter: React.FC = () => {
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
             <div className='mb-6 flex flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between'>
-                <div className='flex flex-wrap items-center gap-3 md:gap-4'>
+                <div className='flex flex-col items-start gap-3 sm:flex-row sm:items-center md:gap-4'>
                     <span className='hidden text-sm font-medium text-slate-500 sm:block'>Jenis Informasi</span>
 
                     <ToggleGroup
@@ -62,7 +62,7 @@ const NeracaFilter: React.FC = () => {
                         </ToggleGroupItem>
                     </ToggleGroup>
                     <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
-                        <SelectTrigger className='w-full bg-white md:w-[200px]'>
+                        <SelectTrigger className='w-full bg-white sm:w-[200px]'>
                             <SelectValue placeholder='Pilih produk' />
                         </SelectTrigger>
                         <SelectContent>
@@ -76,9 +76,9 @@ const NeracaFilter: React.FC = () => {
                     </Select>
                 </div>
 
-                <div className='flex items-center gap-2'>
+                <div className='flex w-full items-center gap-2 sm:w-fit'>
                     <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
-                    <div className='relative flex gap-2'>
+                    <div className='relative flex w-full gap-2 sm:w-fit'>
                         <Input
                             id='date'
                             value={value}
