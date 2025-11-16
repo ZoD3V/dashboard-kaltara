@@ -1,4 +1,3 @@
-// Legend utama untuk NERACA (level-harga)
 export const levelHargaLegend = {
     'Sangat Rendah': {
         legendBg: 'bg-green-700',

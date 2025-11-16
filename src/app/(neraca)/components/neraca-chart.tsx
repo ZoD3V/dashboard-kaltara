@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 
+import { neracaChartData } from '@/data/neraca-chart';
 import { Badge } from '@/registry/new-york-v4/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
 import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
@@ -10,22 +11,6 @@ import { Label } from '@/registry/new-york-v4/ui/label';
 import { Switch } from '@/registry/new-york-v4/ui/switch';
 
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
-const dummyData = [
-    { month: 'Okt 2024', neraca: 80000, harga: 70000 },
-    { month: 'Nov 2024', neraca: 72000, harga: 71000 },
-    { month: 'Des 2024', neraca: 64000, harga: 75000 },
-    { month: 'Jan 2025', neraca: 67000, harga: 75000 },
-    { month: 'Feb 2025', neraca: 72000, harga: 54000 },
-    { month: 'Mar 2025', neraca: 74000, harga: 57000 },
-    { month: 'Apr 2025', neraca: 68000, harga: 75000 },
-    { month: 'Mei 2025', neraca: 79000, harga: 78000 },
-    { month: 'Jun 2025', neraca: 77000, harga: 80000 },
-    { month: 'Jul 2025', neraca: 79000, harga: 79000 },
-    { month: 'Agu 2025', neraca: 78000, harga: 77000 },
-    { month: 'Sep 2025', neraca: 79000, harga: 79000 },
-    { month: 'Okt 2025', neraca: 76000, harga: 81000 }
-];
 
 const NeracaChart = () => {
     const [showNeraca, setShowNeraca] = useState(true);
@@ -111,7 +96,7 @@ const NeracaChart = () => {
 
                     {/* Chart */}
                     <ResponsiveContainer width='100%' height={350}>
-                        <AreaChart data={dummyData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                        <AreaChart data={neracaChartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
                             <defs>
                                 <linearGradient id='colorNeraca' x1='0' y1='0' x2='0' y2='1'>
                                     <stop offset='5%' stopColor='#3b82f6' stopOpacity={0.3} />

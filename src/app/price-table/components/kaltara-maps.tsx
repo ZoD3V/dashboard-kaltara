@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 
-import { changePriceRegion, priceRegionVisualConfig, priceTypeRegion } from '@/data/price';
+import { changePriceRegion, priceTypeRegion } from '@/data/price';
 import { changePriceLegendStatic, priceLegendStatic } from '@/data/price-legend';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
 import { useInfoPriceStore } from '@/hooks/use-change-price-store';
@@ -52,8 +52,6 @@ const KaltaraMap: React.FC = () => {
     const displayedValues = isLevelPrice ? priceTypeValues : kaltara;
 
     const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
-
-    const cfg = priceRegionVisualConfig[selectedCommodity] ?? priceRegionVisualConfig['beras'];
 
     const legendStatic = activeTab === 'level-harga' ? priceLegendStatic : changePriceLegendStatic;
 

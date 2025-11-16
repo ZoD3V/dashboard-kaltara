@@ -13,10 +13,9 @@ import { Calendar } from '@/registry/new-york-v4/ui/calendar';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
+import { NeracaTabType } from '@/types/neraca';
 
 import { CalendarIcon } from 'lucide-react';
-
-type TabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
 
 const NeracaFilter: React.FC = () => {
     const [open, setOpen] = React.useState(false);
@@ -35,7 +34,7 @@ const NeracaFilter: React.FC = () => {
                     <ToggleGroup
                         type='single'
                         value={activeTab}
-                        onValueChange={(value) => value && setActiveTab(value as TabType)}
+                        onValueChange={(value) => value && setActiveTab(value as NeracaTabType)}
                         className='rounded-lg border border-gray-300 bg-white'>
                         <ToggleGroupItem
                             value='neraca'

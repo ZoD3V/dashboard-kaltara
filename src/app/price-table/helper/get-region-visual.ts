@@ -16,8 +16,6 @@ export const getRegionVisual = (commodityId: string, tab: PriceType, regionId: R
     const visualFromConfig = priceRegionVisualConfig[commodityId]?.[tab]?.[regionId];
 
     return {
-        fill: visualFromConfig?.fill ?? 'fill-slate-200',
-        statusColor: visualFromConfig?.statusColor,
-        valueColor: visualFromConfig?.valueColor
+        fill: visualFromConfig?.fill ?? 'fill-slate-200'
     };
 };

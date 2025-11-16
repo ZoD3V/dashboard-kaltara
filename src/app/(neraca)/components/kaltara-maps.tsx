@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-legend';
-import { ketersediaanRegion, neracaRegion, regionVisualConfig } from '@/data/regions';
+import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
@@ -14,6 +14,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 import { RegionValue } from '@/types/neraca';
 
+import { getRegionStyle } from '../helper/get-price-style';
 import { getRegionValues } from '../helper/get-region-values';
 import { getRegionVisual } from '../helper/get-region-visual';
 import { RegionId, regionLayout } from '../helper/region-layout';
@@ -51,10 +52,6 @@ const KaltaraMap: React.FC = () => {
     const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
 
     const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
-
-    const cfg = regionVisualConfig[selectedCommodity] ?? regionVisualConfig['beras'];
-
-    const legendColors = activeTab === 'neraca' ? cfg.legend.neraca : cfg.legend.ketersediaan;
 
     const legendStatic = activeTab === 'neraca' ? neracaLegendStatic : ketersediaanLegendStatic;
 
@@ -263,7 +260,7 @@ const KaltaraMap: React.FC = () => {
                 <div className='sm:rid-cols-2 grid w-full grid-cols-1 gap-3 md:grid-cols-3 lg:w-fit lg:grid-cols-1 lg:gap-4'>
                     {displayedValues.map((region: RegionValue) => {
                         const layout = regionLayout[region.id];
-                        const visual = getRegionVisual(selectedCommodity, activeTab, region.id as RegionId);
+                        const style = getRegionStyle(activeTab, region.status);
 
                         return (
                             <div
@@ -299,13 +296,13 @@ const KaltaraMap: React.FC = () => {
                                         <div className='mt-2 flex items-center gap-2'>
                                             {/* Hanya tampil jika tab ketersediaan & value ada */}
                                             {!isNeraca && region.value && (
-                                                <p className={`text-sm font-medium ${visual.valueColor}`}>
+                                                <p className={`text-sm font-medium ${style.valueColor}`}>
                                                     {region.value}
                                                 </p>
                                             )}
 
                                             <div
-                                                className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${visual.statusColor}`}>
+                                                className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
                                                 {region.status}
                                             </div>
                                         </div>
@@ -318,19 +315,23 @@ const KaltaraMap: React.FC = () => {
             </div>
             <div className='mt-8 w-full'>
                 <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
-                    {legendStatic.map((item: any) => (
-                        <div key={item.key} className='flex items-center gap-2'>
-                            <div className={`h-4 w-4 rounded-full ${legendColors[item.key]}`} />
+                    {legendStatic.map((item: any) => {
+                        const style = getRegionStyle(activeTab, item.label);
 
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>{item.label}</span>
+                        return (
+                            <div key={item.key} className='flex items-center gap-2'>
+                                <div className={`h-4 w-4 rounded-full ${style.legendBg}`} />
 
-                                {activeTab === 'neraca' && item.range && (
-                                    <span className='ml-1 text-gray-600'>{item.range}</span>
-                                )}
+                                <div className='flex flex-col text-xs md:text-sm'>
+                                    <span className='font-semibold text-gray-900'>{item.label}</span>
+
+                                    {activeTab === 'neraca' && item.range && (
+                                        <span className='ml-1 text-gray-600'>{item.range}</span>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 <div className='flex items-start gap-2 p-3 text-xs text-gray-700 md:p-4 md:text-sm'>
