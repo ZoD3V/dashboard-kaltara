@@ -58,7 +58,7 @@ const PriceCard: React.FC<PriceCardProps> = ({ title, currentPrice, change, icon
                         <defs>
                             <linearGradient id={gradientId} x1='0' y1='0' x2='0' y2='1'>
                                 <stop offset='5%' stopColor='#3b82f6' stopOpacity={0.3} />
-                                <stop offset='95%' stopColor='#3b82f6' stopOpacity={0} />
+                                <stop offset='95%' stopColor='#3b82f6' stopOpacity={0.05} />
                             </linearGradient>
                         </defs>
                         <CartesianGrid strokeDasharray='3 3' stroke='#e5e7eb' />
@@ -73,7 +73,8 @@ const PriceCard: React.FC<PriceCardProps> = ({ title, currentPrice, change, icon
                             type='monotone'
                             dataKey='price'
                             stroke='#3b82f6'
-                            strokeWidth={0.7}
+                            strokeWidth={2}
+                            fillOpacity={1}
                             fill={`url(#${gradientId})`}
                             activeDot={{ r: 6 }}
                             dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}

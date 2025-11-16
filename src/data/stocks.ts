@@ -16,7 +16,6 @@ export const threeMonthsData = [
     { date: '07/11/25', stock: 7500 }
 ];
 
-// Data dummy untuk 1 tahun
 export const oneYearData = [
     { date: '01/01/25', stock: 8500 },
     { date: '01/02/25', stock: 7800 },

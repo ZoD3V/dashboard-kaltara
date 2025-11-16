@@ -7,6 +7,14 @@ export function cn(...inputs: ClassValue[]) {
 
 export const formatNumber = (num: number) => num.toLocaleString('id-ID', { maximumFractionDigits: 0 });
 
+export const formatRupiah = (value: number): string => {
+    return value.toLocaleString('id-ID', {
+        style: 'currency',
+        currency: 'IDR',
+        maximumFractionDigits: 0
+    });
+};
+
 export function formatDate(date: Date | undefined) {
     if (!date) {
         return '';

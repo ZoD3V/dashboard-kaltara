@@ -5,14 +5,25 @@ import React from 'react';
 import Image from 'next/image';
 
 import { foodItems } from '@/data/food-items';
+import { useInfoPriceStore } from '@/hooks/use-change-price-store';
+import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useTypePriceStore } from '@/hooks/use-price-type-store';
 import { formatDate, isValidDate } from '@/registry/new-york-v4/lib/utils';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Calendar } from '@/registry/new-york-v4/ui/calendar';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/registry/new-york-v4/ui/select';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
-import { useCommodityStore } from '@/stores/useCommodityStore';
-import { useInfoTabStore } from '@/stores/useNeracaTabStore';
+import { PriceChangeType } from '@/types/price';
 
 import { CalendarIcon } from 'lucide-react';
 
@@ -23,8 +34,10 @@ const NeracaFilter: React.FC = () => {
     const [date, setDate] = React.useState<Date | undefined>(new Date('2025-06-01'));
     const [month, setMonth] = React.useState<Date | undefined>(date);
     const [value, setValue] = React.useState(formatDate(date));
+
     const { selectedCommodity, setselectedCommodity } = useCommodityStore();
-    const { activeTab, setActiveTab } = useInfoTabStore();
+    const { selectedPriceType, setSelectedPriceType } = useTypePriceStore();
+    const { activeTab, setActiveTab } = useInfoPriceStore();
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
@@ -35,24 +48,32 @@ const NeracaFilter: React.FC = () => {
                     <ToggleGroup
                         type='single'
                         value={activeTab}
-                        onValueChange={(value) => value && setActiveTab(value as TabType)}
+                        onValueChange={(value) => value && setActiveTab(value as PriceChangeType)}
                         className='rounded-lg border border-gray-300 bg-white'>
                         <ToggleGroupItem
-                            value='neraca'
+                            value='price'
                             className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            Neraca
+                            Harga
                         </ToggleGroupItem>
                         <ToggleGroupItem
-                            value='ketersediaan'
+                            value='price-change'
                             className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            Ketersediaan
-                        </ToggleGroupItem>
-                        <ToggleGroupItem
-                            value='kebutuhan'
-                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            Kebutuhan
+                            Perubahan Harga (%)
                         </ToggleGroupItem>
                     </ToggleGroup>
+                    <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
+                        <SelectTrigger className='w-full bg-white md:w-[200px]'>
+                            <SelectValue placeholder='Pilih produk' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Tipe</SelectLabel>
+                                <SelectItem value='level-harga'>Level Harga</SelectItem>
+                                <SelectItem value='kaltara'>Dibanding kaltara</SelectItem>
+                                <SelectItem value='mtm'>Bulan ke Bulan(MTM)</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
                 </div>
 
                 <div className='flex items-center gap-2'>

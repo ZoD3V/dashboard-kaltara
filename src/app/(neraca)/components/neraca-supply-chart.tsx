@@ -1,5 +1,5 @@
 'use client';
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -11,7 +11,6 @@ import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-// Data dummy untuk 1 tahun (Oktober 2024 - Oktober 2025)
 const fullData = [
     { month: 'Okt 2024', neraca: 24000, ketersediaan: 23000, kebutuhan: 24000 },
     { month: 'Nov 2024', neraca: 24500, ketersediaan: 22000, kebutuhan: 23500 },
@@ -190,8 +189,8 @@ const NeracaSupplyChart = () => {
                                     name='Neraca'
                                     stroke='#3b82f6'
                                     strokeWidth={2}
-                                    fill='url(#colorNeraca)'
                                     fillOpacity={1}
+                                    fill='url(#colorNeraca)'
                                     activeDot={{ r: 6 }}
                                     dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
                                     stackId={isStacked ? '1' : undefined}

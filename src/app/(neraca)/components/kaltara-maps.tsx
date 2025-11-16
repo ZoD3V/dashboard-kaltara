@@ -7,11 +7,11 @@ import Image from 'next/image';
 import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-legend';
 import { ketersediaanRegion, neracaRegion, regionVisualConfig } from '@/data/regions';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
+import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
 import { formatNumber } from '@/registry/new-york-v4/lib/utils';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/registry/new-york-v4/ui/dialog';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
-import { useCommodityStore } from '@/stores/useCommodityStore';
-import { useInfoTabStore } from '@/stores/useNeracaTabStore';
 import { RegionValue } from '@/types/neraca';
 
 import { getRegionValues } from '../helper/get-region-values';

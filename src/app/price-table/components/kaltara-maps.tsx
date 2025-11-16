@@ -4,23 +4,22 @@ import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 
-import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-legend';
-import { ketersediaanRegion, neracaRegion, regionVisualConfig } from '@/data/regions';
+import { changePriceRegion, priceRegionVisualConfig, priceTypeRegion } from '@/data/price';
+import { changePriceLegendStatic, priceLegendStatic } from '@/data/price-legend';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
-import { formatNumber } from '@/registry/new-york-v4/lib/utils';
+import { useInfoPriceStore } from '@/hooks/use-change-price-store';
+import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useTypePriceStore } from '@/hooks/use-price-type-store';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/registry/new-york-v4/ui/dialog';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
-import { useCommodityStore } from '@/stores/useCommodityStore';
-import { useInfoTabStore } from '@/stores/useNeracaTabStore';
-import { RegionValue } from '@/types/neraca';
+import { PriceTypeRegionValue } from '@/types/price';
 
+import { getRegionStyle } from '../helper/get-price-style';
 import { getRegionValues } from '../helper/get-region-values';
 import { getRegionVisual } from '../helper/get-region-visual';
 import { RegionId, regionLayout } from '../helper/region-layout';
 import { Info } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
-type FilterRange = '3m' | 'year';
 
 const REGION_KEYS = [
     'Kabupaten Malinau',
@@ -39,24 +38,24 @@ const KaltaraMap: React.FC = () => {
     const [selectedRegion, setSelectedRegion] = useState<RegionName | null>(null);
     const [period, setPeriod] = useState('3bulan');
     const chartData = period === '3bulan' ? threeMonthsData : oneYearData;
-    const activeTab = useInfoTabStore((s) => s.activeTab);
+    const activeTab = useTypePriceStore((s) => s.selectedPriceType);
+    const activeTabChangePrice = useInfoPriceStore((s) => s.activeTab);
     const selectedCommodity = useCommodityStore((state) => state.selectedCommodity);
 
-    const isNeraca = activeTab === 'neraca';
+    const isLevelPrice = activeTab === 'level-harga';
+    const isKaltara = activeTab === 'kaltara';
 
-    const neracaValues = getRegionValues(neracaRegion, selectedCommodity, 'neraca');
+    const priceTypeValues = getRegionValues(priceTypeRegion, selectedCommodity, 'level-harga');
 
-    const ketersediaanValues = getRegionValues(ketersediaanRegion, selectedCommodity, 'ketersediaan');
+    const kaltara = getRegionValues(changePriceRegion, selectedCommodity, 'kaltara');
 
-    const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
+    const displayedValues = isLevelPrice ? priceTypeValues : kaltara;
 
     const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
 
-    const cfg = regionVisualConfig[selectedCommodity] ?? regionVisualConfig['beras'];
+    const cfg = priceRegionVisualConfig[selectedCommodity] ?? priceRegionVisualConfig['beras'];
 
-    const legendColors = activeTab === 'neraca' ? cfg.legend.neraca : cfg.legend.ketersediaan;
-
-    const legendStatic = activeTab === 'neraca' ? neracaLegendStatic : ketersediaanLegendStatic;
+    const legendStatic = activeTab === 'level-harga' ? priceLegendStatic : changePriceLegendStatic;
 
     // --- Connector lines (hanya render di ≥1280px) ---
     useEffect(() => {
@@ -261,9 +260,9 @@ const KaltaraMap: React.FC = () => {
                 )}
 
                 <div className='sm:rid-cols-2 grid w-full grid-cols-1 gap-3 md:grid-cols-3 lg:w-fit lg:grid-cols-1 lg:gap-4'>
-                    {displayedValues.map((region: RegionValue) => {
+                    {displayedValues.map((region: PriceTypeRegionValue) => {
                         const layout = regionLayout[region.id];
-                        const visual = getRegionVisual(selectedCommodity, activeTab, region.id as RegionId);
+                        const style = getRegionStyle(activeTab, region.status);
 
                         return (
                             <div
@@ -284,30 +283,32 @@ const KaltaraMap: React.FC = () => {
                                     />
 
                                     <div className='flex flex-col'>
-                                        {/* Nama daerah */}
                                         <div className='text-xs font-medium text-slate-900 sm:text-sm'>
                                             {region.name}
                                         </div>
 
-                                        {/* Ton */}
-                                        <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                            {formatNumber(region.ton)}
-                                            <span className='text-base font-bold'>ton</span>
-                                        </div>
+                                        <div className='mt-1 text-xl font-bold lg:text-2xl'>{region.price}</div>
 
-                                        {/* Value + status */}
                                         <div className='mt-2 flex items-center gap-2'>
-                                            {/* Hanya tampil jika tab ketersediaan & value ada */}
-                                            {!isNeraca && region.value && (
-                                                <p className={`text-sm font-medium ${visual.valueColor}`}>
+                                            {!isLevelPrice && region.value && (
+                                                <p className={`text-sm font-medium ${style.valueColor}`}>
                                                     {region.value}
                                                 </p>
                                             )}
 
-                                            <div
-                                                className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${visual.statusColor}`}>
-                                                {region.status}
-                                            </div>
+                                            {activeTabChangePrice == 'price-change' && (
+                                                <div
+                                                    className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
+                                                    {region.percentage}
+                                                </div>
+                                            )}
+
+                                            {!isKaltara && isLevelPrice && (
+                                                <div
+                                                    className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
+                                                    {region.status}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -317,44 +318,41 @@ const KaltaraMap: React.FC = () => {
                 </div>
             </div>
             <div className='mt-8 w-full'>
-                <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
-                    {legendStatic.map((item: any) => (
-                        <div key={item.key} className='flex items-center gap-2'>
-                            <div className={`h-4 w-4 rounded-full ${legendColors[item.key]}`} />
+                {activeTab == 'level-harga' && (
+                    <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
+                        {legendStatic.map((item: any) => {
+                            const style = getRegionStyle(activeTab, item.label);
 
-                            <div className='flex flex-col text-xs md:text-sm'>
-                                <span className='font-semibold text-gray-900'>{item.label}</span>
+                            return (
+                                <div key={item.key} className='flex items-center gap-2'>
+                                    <div className={`h-4 w-4 rounded-full ${style.legendBg}`} />
 
-                                {activeTab === 'neraca' && item.range && (
-                                    <span className='ml-1 text-gray-600'>{item.range}</span>
-                                )}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                                    <div className='flex flex-col text-xs md:text-sm'>
+                                        <span className='font-semibold text-gray-900'>{item.label}</span>
 
-                <div className='flex items-start gap-2 p-3 text-xs text-gray-700 md:p-4 md:text-sm'>
-                    <Info className='mt-0.5 h-5 w-5 shrink-0 text-blue-600' />
-                    {activeTab == 'neraca' ? (
-                        <div>
-                            <p className='mb-1 font-medium text-gray-900'>Keterangan Kondisi Neraca (Stok akhir):</p>
-                            <p className='leading-relaxed text-slate-600'>
-                                Penentuan Kondisi Neraca (Stok akhir) dihitung dari persentase volume neraca (selisih
-                                ketersediaandengan kebutuhan) dibagi dengan kebutuhan selama satu bulan dengan
-                                klasifikasi threshold sebagaimana dibawah.
-                            </p>
-                        </div>
-                    ) : (
+                                        {activeTab === 'level-harga' && item.range && (
+                                            <span className='ml-1 text-gray-600'>{item.range}</span>
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                )}
+                {activeTab == 'mtm' && (
+                    <div className='flex items-start gap-2 p-3 text-xs text-gray-700 md:p-4 md:text-sm'>
+                        <Info className='mt-0.5 h-5 w-5 shrink-0 text-blue-600' />
                         <div>
                             <p className='mb-1 font-medium text-gray-900'>Keterangan:</p>
                             <p className='leading-relaxed text-slate-600'>
-                                Keterangan: Selisih ketersediaan meningkat/ stabil / menurun dibandingkan bulan
-                                sebelumnya.
+                                Month To Month adalah perubahan rata-rata harga pada bulan berjalan dibandingkan
+                                rata-rata harga pada 1 bulan sebelumnya
                             </p>
                         </div>
-                    )}
-                </div>
+                    </div>
+                )}
             </div>
+
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogContent className='sm:max-w-2xl! md:max-w-3xl! lg:max-w-4xl!'>
                     <DialogHeader>

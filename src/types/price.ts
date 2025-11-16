@@ -1,4 +1,10 @@
+import { RegionId } from '@/app/(neraca)/helper/region-layout';
+
 // ========== TYPES & INTERFACES ==========
+
+export type PriceChangeType = 'price' | 'price-change';
+
+export type PriceType = 'level-harga' | 'kaltara' | 'mtm';
 
 export interface PriceDataPoint {
     date: string;
@@ -58,3 +64,47 @@ export interface CustomTooltipProps {
     payload?: TooltipPayload[];
     label?: string;
 }
+
+export type PriceTypeRegionValue = {
+    id: RegionId;
+    name: string;
+    icon: string;
+    price: string;
+    percentage: string;
+    status: string;
+    value?: string;
+};
+
+export type PriceTypeRegionGroup = {
+    commodityId: string;
+    infoPriceTypeId: PriceType;
+    monthId: string;
+    values: PriceTypeRegionValue[];
+};
+
+export type PriceTypeRegionVisual = {
+    fill: string; // warna map (SVG)
+    statusColor: string; // badge bg+text
+    valueColor?: string; // teks persen (khusus ketersediaan)
+};
+
+export type PriceTypeRegionVisualConfig = {
+    [commodityId: string]: {
+        'level-harga': Record<RegionId, PriceTypeRegionVisual>;
+        kaltara: Record<RegionId, PriceTypeRegionVisual>;
+        mtm?: Record<RegionId, PriceTypeRegionVisual>;
+        legend?: any;
+    };
+};
+
+export type LegendItem = {
+    key: string; // 'defisit' | 'rentan' | ...
+    label: string; // teks yang tampil di legend
+    bgClass: string; // bg-red-400, bg-emerald-400, dst
+    valueRange?: string; // khusus neraca / ketersediaan bila perlu (misal '0% - 46%' atau '> 0%')
+};
+
+export type RegionLegend = {
+    neraca: LegendItem[];
+    ketersediaan: LegendItem[];
+};
