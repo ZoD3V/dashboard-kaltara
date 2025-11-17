@@ -22,11 +22,11 @@ const Navbar: React.FC = () => {
 
     return (
         <header className='fixed top-0 right-0 left-0 z-50 mx-auto w-full bg-white shadow transition-all ease-out'>
-            <Container className='max-w-full! px-0!'>
-                <nav className='bg-primary-950 flex items-center justify-between gap-4 p-4'>
-                    <div className='flex items-center'>
-                        {/* Kiri: Logo + Judul */}
-                        <Link href='/' className='flex min-w-0 items-center gap-2 justify-self-start sm:gap-3'>
+            <nav className='bg-primary-950 p-4'>
+                <div className='grid grid-cols-1 items-center gap-4 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]'>
+                    {/* Kiri: Logo + Judul + Mobile Menu Button */}
+                    <div className='flex w-full items-center justify-between gap-2 justify-self-start sm:gap-3'>
+                        <Link href='/' className='flex min-w-0 items-center gap-2 sm:gap-3'>
                             <div className='flex shrink-0 items-center gap-2'>
                                 <Image
                                     src='/images/kalimantan-utara-logo.png'
@@ -47,39 +47,12 @@ const Navbar: React.FC = () => {
                                 </span>
                             </div>
                         </Link>
-                    </div>
-                    {/* Tengah: Menu (selalu center visual) */}
-                    <ul className='hidden space-x-6 justify-self-center rounded-full border px-7 py-2.5 lg:flex'>
-                        {menuItems.map((item) => {
-                            const isActive = pathname === item.url;
 
-                            return (
-                                <li
-                                    key={item.text}
-                                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                                        isActive
-                                            ? 'text-primary' // aktif
-                                            : 'hover:text-primary text-slate-600'
-                                    }`}>
-                                    {item.icon}
-
-                                    <Link href={item.url} className='font-medium transition-colors'>
-                                        {item.text}
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    {/* Kanan: Login */}
-                    <Link href='/' className='hidden justify-end lg:flex'>
-                        <Button className='rounded-full px-5 py-5'>Login</Button>
-                    </Link>
-                    {/* Mobile Menu Button */}
-                    <div className='flex items-center lg:hidden'>
+                        {/* Mobile Menu Button - di kanan dari Logo+Judul */}
                         <button
                             onClick={toggleMenu}
                             type='button'
-                            className='text-primary flex cursor-pointer items-center justify-center focus:outline-none'
+                            className='text-primary flex cursor-pointer items-center justify-center focus:outline-none xl:hidden'
                             aria-controls='mobile-menu'
                             aria-expanded={isOpen}>
                             {isOpen ? (
@@ -90,8 +63,33 @@ const Navbar: React.FC = () => {
                             <span className='sr-only'>Toggle navigation</span>
                         </button>
                     </div>
-                </nav>
-            </Container>
+
+                    {/* Tengah: Menu (selalu center visual, hanya di lg) */}
+                    <ul className='hidden space-x-6 justify-self-center rounded-full border bg-white/90 px-7 py-2.5 xl:flex'>
+                        {menuItems.map((item) => {
+                            const isActive = pathname === item.url;
+
+                            return (
+                                <li
+                                    key={item.text}
+                                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                                        isActive ? 'text-primary' : 'hover:text-primary text-slate-600'
+                                    }`}>
+                                    {item.icon}
+                                    <Link href={item.url} className='font-medium transition-colors'>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+
+                    {/* Kanan: Login (desktop only) */}
+                    <Link href='/' className='hidden justify-self-end xl:flex'>
+                        <Button className='rounded-full px-5 py-5'>Login</Button>
+                    </Link>
+                </div>
+            </nav>
 
             {/* Mobile Menu with Transition */}
             <Transition
@@ -102,7 +100,7 @@ const Navbar: React.FC = () => {
                 leave='transition ease-in duration-75 transform'
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'>
-                <div id='mobile-menu' className='lg:hidden'>
+                <div id='mobile-menu' className='xl:hidden'>
                     <ul className='flex flex-col space-y-5 px-4 pt-4 pb-6'>
                         {menuItems.map((item) => {
                             const isActive = pathname === item.url;
