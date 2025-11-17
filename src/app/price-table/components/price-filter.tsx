@@ -61,22 +61,80 @@ const NeracaFilter: React.FC = () => {
                             Perubahan Harga (%)
                         </ToggleGroupItem>
                     </ToggleGroup>
-                    <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
-                        <SelectTrigger className='w-full bg-white sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih produk' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Tipe</SelectLabel>
-                                <SelectItem value='level-harga'>Level Harga</SelectItem>
-                                <SelectItem value='kaltara'>Dibanding kaltara</SelectItem>
-                                <SelectItem value='mtm'>Bulan ke Bulan(MTM)</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
+
+                    <div className='grid w-full grid-cols-2 items-center gap-2 sm:w-fit sm:grid-cols-1'>
+                        <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
+                            <SelectTrigger className='w-full bg-white sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih produk' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Tipe</SelectLabel>
+                                    <SelectItem value='level-harga'>Level Harga</SelectItem>
+                                    <SelectItem value='kaltara'>Dibanding kaltara</SelectItem>
+                                    <SelectItem value='mtm'>Bulan ke Bulan(MTM)</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+
+                        <div className='flex w-full items-center gap-2 sm:hidden sm:w-fit'>
+                            <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
+                            <div className='relative flex w-full gap-2 sm:w-fit'>
+                                <Input
+                                    id='date'
+                                    value={value}
+                                    placeholder='Jun 01, 2025'
+                                    className='bg-background'
+                                    onChange={(e) => {
+                                        const date = new Date(e.target.value);
+                                        setValue(e.target.value);
+                                        if (isValidDate(date)) {
+                                            setDate(date);
+                                            setMonth(date);
+                                        }
+                                    }}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'ArrowDown') {
+                                            e.preventDefault();
+                                            setOpen(true);
+                                        }
+                                    }}
+                                />
+                                <Popover open={open} onOpenChange={setOpen}>
+                                    <PopoverTrigger asChild>
+                                        <Button
+                                            id='date-picker'
+                                            variant='ghost'
+                                            className='absolute top-1/2 right-2 size-6 -translate-y-1/2'>
+                                            <CalendarIcon className='size-3.5' />
+                                            <span className='sr-only'>Select date</span>
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent
+                                        className='w-auto overflow-hidden p-0'
+                                        align='end'
+                                        alignOffset={-8}
+                                        sideOffset={10}>
+                                        <Calendar
+                                            mode='single'
+                                            selected={date}
+                                            captionLayout='dropdown'
+                                            month={month}
+                                            onMonthChange={setMonth}
+                                            onSelect={(date) => {
+                                                setDate(date);
+                                                setValue(formatDate(date));
+                                                setOpen(false);
+                                            }}
+                                        />
+                                    </PopoverContent>
+                                </Popover>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div className='flex w-full items-center gap-2 sm:w-fit'>
+                <div className='hidden w-full items-center gap-2 sm:flex sm:w-fit'>
                     <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
                     <div className='relative flex w-full gap-2 sm:w-fit'>
                         <Input

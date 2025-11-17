@@ -21,10 +21,10 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <header className='fixed top-0 right-0 left-0 z-50 mx-auto w-full bg-white shadow-sm'>
+        <header className='fixed top-0 right-0 left-0 z-50 mx-auto w-full bg-white shadow transition-all ease-out'>
             <Container className='max-w-full! px-0!'>
                 <nav className='bg-primary-950 flex items-center justify-between gap-4 p-4'>
-                    <div className='flex items-center justify-between transition-all ease-out lg:gap-10 xl:gap-32'>
+                    <div className='flex items-center'>
                         {/* Kiri: Logo + Judul */}
                         <Link href='/' className='flex min-w-0 items-center gap-2 justify-self-start sm:gap-3'>
                             <div className='flex shrink-0 items-center gap-2'>
@@ -47,30 +47,29 @@ const Navbar: React.FC = () => {
                                 </span>
                             </div>
                         </Link>
-
-                        {/* Tengah: Menu (selalu center visual) */}
-                        <ul className='hidden space-x-6 justify-self-center rounded-full border px-7 py-2.5 lg:flex'>
-                            {menuItems.map((item) => {
-                                const isActive = pathname === item.url;
-
-                                return (
-                                    <li
-                                        key={item.text}
-                                        className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                                            isActive
-                                                ? 'text-primary' // aktif
-                                                : 'hover:text-primary text-slate-600'
-                                        }`}>
-                                        {item.icon}
-
-                                        <Link href={item.url} className='font-medium transition-colors'>
-                                            {item.text}
-                                        </Link>
-                                    </li>
-                                );
-                            })}
-                        </ul>
                     </div>
+                    {/* Tengah: Menu (selalu center visual) */}
+                    <ul className='hidden space-x-6 justify-self-center rounded-full border px-7 py-2.5 lg:flex'>
+                        {menuItems.map((item) => {
+                            const isActive = pathname === item.url;
+
+                            return (
+                                <li
+                                    key={item.text}
+                                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                                        isActive
+                                            ? 'text-primary' // aktif
+                                            : 'hover:text-primary text-slate-600'
+                                    }`}>
+                                    {item.icon}
+
+                                    <Link href={item.url} className='font-medium transition-colors'>
+                                        {item.text}
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
                     {/* Kanan: Login */}
                     <Link href='/' className='hidden justify-end lg:flex'>
                         <Button className='rounded-full px-5 py-5'>Login</Button>
@@ -111,6 +110,7 @@ const Navbar: React.FC = () => {
                             return (
                                 <li
                                     key={item.text}
+                                    onClick={toggleMenu}
                                     className={`flex items-center gap-2 text-sm font-medium transition-colors ${
                                         isActive
                                             ? 'text-primary' // aktif
