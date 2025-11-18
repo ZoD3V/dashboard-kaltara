@@ -243,7 +243,7 @@ const TrenRegionCommodity: React.FC = () => {
 
     return (
         <div className='w-full bg-gray-50 px-4 pt-12'>
-            <div className='flex flex-col items-start justify-between gap-4 pb-8 lg:flex-row lg:items-center'>
+            <div className='flex flex-col items-start justify-between gap-4 pb-8 xl:flex-row xl:items-center'>
                 <div>
                     <h2 className='text-xl font-semibold md:text-2xl'>Tren Neraca, Ketersediaan, dan Kebutuhan</h2>
                     <p className='text-xs text-slate-500 md:text-sm'>
@@ -252,7 +252,7 @@ const TrenRegionCommodity: React.FC = () => {
                 </div>
 
                 {/* Filters */}
-                <div className='flex flex-wrap items-center gap-4'>
+                <div className='flex flex-wrap items-center gap-4 lg:flex-row'>
                     {/* Period Tabs */}
                     <ToggleGroup
                         type='single'
@@ -292,7 +292,7 @@ const TrenRegionCommodity: React.FC = () => {
 
                     {/* Commodity Select */}
                     <Select value={commodity} onValueChange={setCommodity}>
-                        <SelectTrigger className='w-[200px]'>
+                        <SelectTrigger className='w-full md:w-[250px]'>
                             <SelectValue placeholder='Pilih Komoditas' />
                         </SelectTrigger>
                         <SelectContent>
@@ -306,7 +306,7 @@ const TrenRegionCommodity: React.FC = () => {
 
                     {/* Province Select */}
                     <Select value={province} onValueChange={setProvince}>
-                        <SelectTrigger className='w-[250px]'>
+                        <SelectTrigger className='w-full md:w-[250px]'>
                             <SelectValue placeholder='Pilih Daerah' />
                         </SelectTrigger>
                         <SelectContent>

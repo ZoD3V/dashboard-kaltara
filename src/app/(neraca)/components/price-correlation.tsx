@@ -108,7 +108,7 @@ export default function PriceCorrelation() {
         <div className='w-full bg-slate-50 px-4 pt-12'>
             <div className='flex-col gap-6'>
                 {/* Header Section - Outside Card */}
-                <div className='flex flex-col items-start justify-between gap-4 pb-8 lg:flex-row'>
+                <div className='flex flex-col items-center justify-between gap-4 pb-8 lg:flex-row'>
                     <div>
                         <h2 className='text-xl font-semibold lg:text-2xl'>Korelasi Neraca dan Harga Pasar</h2>
                         <p className='text-sm text-slate-500'>Perubahan harga terhadap kondisi neraca komoditas.</p>
