@@ -1,8 +1,6 @@
 import KaltaraMap from './components/kaltara-maps';
-import NeracaChart from './components/neraca-chart';
 import NeracaFilter from './components/neraca-filter';
-import NeracaSupplyChart from './components/neraca-supply-chart';
-import NeracaTable from './components/neraca-table/neraca-table';
+import PriceCorrelation from './components/price-correlation';
 import TrenRegionCommodity from './components/tren-region-commodity';
 
 const DashboardNeracaPage: React.FC = () => {
@@ -11,9 +9,7 @@ const DashboardNeracaPage: React.FC = () => {
             <NeracaFilter />
             <KaltaraMap />
             <TrenRegionCommodity />
-            {/* <NeracaSupplyChart /> */}
-            {/* <NeracaTable /> */}
-            <NeracaChart />
+            <PriceCorrelation />
         </>
     );
 };
