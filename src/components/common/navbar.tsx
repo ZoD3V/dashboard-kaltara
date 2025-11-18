@@ -24,7 +24,6 @@ const Navbar: React.FC = () => {
         <header className='fixed top-0 right-0 left-0 z-50 mx-auto w-full bg-white shadow transition-all ease-out'>
             <nav className='bg-primary-950 p-4'>
                 <div className='grid grid-cols-1 items-center gap-4 xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]'>
-                    {/* Kiri: Logo + Judul + Mobile Menu Button */}
                     <div className='flex w-full items-center justify-between gap-2 justify-self-start sm:gap-3'>
                         <Link href='/' className='flex min-w-0 items-center gap-2 sm:gap-3'>
                             <div className='flex shrink-0 items-center gap-2'>
@@ -48,7 +47,6 @@ const Navbar: React.FC = () => {
                             </div>
                         </Link>
 
-                        {/* Mobile Menu Button - di kanan dari Logo+Judul */}
                         <button
                             onClick={toggleMenu}
                             type='button'
@@ -64,7 +62,6 @@ const Navbar: React.FC = () => {
                         </button>
                     </div>
 
-                    {/* Tengah: Menu (selalu center visual, hanya di lg) */}
                     <ul className='hidden space-x-6 justify-self-center rounded-full border bg-white/90 px-7 py-2.5 xl:flex'>
                         {menuItems.map((item) => {
                             const isActive = pathname === item.url;
@@ -84,14 +81,12 @@ const Navbar: React.FC = () => {
                         })}
                     </ul>
 
-                    {/* Kanan: Login (desktop only) */}
                     <Link href='/' className='hidden justify-self-end xl:flex'>
                         <Button className='rounded-full px-5 py-5'>Login</Button>
                     </Link>
                 </div>
             </nav>
 
-            {/* Mobile Menu with Transition */}
             <Transition
                 show={isOpen}
                 enter='transition ease-out duration-200 transform'
@@ -123,7 +118,6 @@ const Navbar: React.FC = () => {
                             );
                         })}
                         <li>
-                            {/* Kanan: Login */}
                             <Link href='/' className='w-full'>
                                 <Button className='w-full rounded-full px-5 py-5.5'>Login</Button>
                             </Link>

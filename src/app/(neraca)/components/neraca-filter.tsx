@@ -4,26 +4,30 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { foodItems } from '@/data/food-items';
+import { commodityItems } from '@/data/commodity-items';
+import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
-import { formatDate, isValidDate } from '@/registry/new-york-v4/lib/utils';
 import { Button } from '@/registry/new-york-v4/ui/button';
-import { Calendar } from '@/registry/new-york-v4/ui/calendar';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
-import { NeracaTabType } from '@/types/neraca';
+import { NeracaDateType, NeracaTabType } from '@/types/neraca';
 
-import { CalendarIcon } from 'lucide-react';
+import { downloadExcel } from '../helper/download-data-to-excell';
+import { getRegionValues } from '../helper/get-region-values';
+import { Download } from 'lucide-react';
 
 const NeracaFilter: React.FC = () => {
-    const [open, setOpen] = React.useState(false);
-    const [date, setDate] = React.useState<Date | undefined>(new Date('2025-06-01'));
-    const [month, setMonth] = React.useState<Date | undefined>(date);
-    const [value, setValue] = React.useState(formatDate(date));
     const { selectedCommodity, setselectedCommodity } = useCommodityStore();
     const { activeTab, setActiveTab } = useInfoTabStore();
+    const { activeDate, setActiveDate } = useInfoDateStore();
+
+    const isNeraca = activeTab === 'neraca';
+
+    const neracaValues = getRegionValues(activeDate, neracaRegion, selectedCommodity, 'neraca');
+    const ketersediaanValues = getRegionValues(activeDate, ketersediaanRegion, selectedCommodity, 'ketersediaan');
+
+    const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
@@ -35,7 +39,7 @@ const NeracaFilter: React.FC = () => {
                         type='single'
                         value={activeTab}
                         onValueChange={(value) => value && setActiveTab(value as NeracaTabType)}
-                        className='rounded-lg border border-gray-300 bg-white'>
+                        className='rounded-md border border-gray-300 bg-white'>
                         <ToggleGroupItem
                             value='neraca'
                             className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
@@ -54,65 +58,49 @@ const NeracaFilter: React.FC = () => {
                     </ToggleGroup>
                 </div>
 
-                <div className='flex items-center gap-2'>
-                    <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
-                    <div className='relative flex gap-2'>
-                        <Input
-                            id='date'
-                            value={value}
-                            placeholder='Jun 01, 2025'
-                            className='bg-background'
-                            onChange={(e) => {
-                                const date = new Date(e.target.value);
-                                setValue(e.target.value);
-                                if (isValidDate(date)) {
-                                    setDate(date);
-                                    setMonth(date);
-                                }
-                            }}
-                            onKeyDown={(e) => {
-                                if (e.key === 'ArrowDown') {
-                                    e.preventDefault();
-                                    setOpen(true);
-                                }
-                            }}
-                        />
-                        <Popover open={open} onOpenChange={setOpen}>
-                            <PopoverTrigger asChild>
-                                <Button
-                                    id='date-picker'
-                                    variant='ghost'
-                                    className='absolute top-1/2 right-2 size-6 -translate-y-1/2'>
-                                    <CalendarIcon className='size-3.5' />
-                                    <span className='sr-only'>Select date</span>
-                                </Button>
-                            </PopoverTrigger>
-                            <PopoverContent
-                                className='w-auto overflow-hidden p-0'
-                                align='end'
-                                alignOffset={-8}
-                                sideOffset={10}>
-                                <Calendar
-                                    mode='single'
-                                    selected={date}
-                                    captionLayout='dropdown'
-                                    month={month}
-                                    onMonthChange={setMonth}
-                                    onSelect={(date) => {
-                                        setDate(date);
-                                        setValue(formatDate(date));
-                                        setOpen(false);
-                                    }}
-                                />
-                            </PopoverContent>
-                        </Popover>
-                    </div>
+                <div className='flex flex-wrap items-center gap-3'>
+                    <ToggleGroup
+                        type='single'
+                        value={activeDate}
+                        onValueChange={(value) => value && setActiveDate(value as NeracaDateType)}
+                        className='rounded-md border border-gray-300 bg-white'>
+                        <ToggleGroupItem
+                            value='3m'
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            3 Bulan
+                        </ToggleGroupItem>
+                        <ToggleGroupItem
+                            value='6m'
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            6 Bulan
+                        </ToggleGroupItem>
+                        <ToggleGroupItem
+                            value='year'
+                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            1 Tahun
+                        </ToggleGroupItem>
+                    </ToggleGroup>
+                    <Button
+                        onClick={() =>
+                            downloadExcel(
+                                displayedValues,
+                                `${selectedCommodity}-${activeTab}`,
+                                selectedCommodity,
+                                activeTab,
+                                activeDate
+                            )
+                        }
+                        variant='outline'
+                        className='bg-primary hover:bg-primary/90 h-10 w-10 rounded-full text-white transition-all hover:text-white'
+                        size='icon'>
+                        <Download />
+                    </Button>
                 </div>
             </div>
 
             <div className='mt-6 pl-4 xl:pl-0'>
                 <div className='flex items-start justify-start gap-5 overflow-x-scroll p-1 xl:justify-center'>
-                    {foodItems.map((item) => (
+                    {commodityItems.map((item) => (
                         <button
                             key={item.id}
                             onClick={() => setselectedCommodity(item.id)}

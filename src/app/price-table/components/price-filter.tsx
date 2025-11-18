@@ -4,7 +4,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { foodItems } from '@/data/food-items';
+import { commodityItems } from '@/data/commodity-items';
 import { useInfoPriceStore } from '@/hooks/use-change-price-store';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useTypePriceStore } from '@/hooks/use-price-type-store';
@@ -192,7 +192,7 @@ const NeracaFilter: React.FC = () => {
 
             <div className='mt-6 pl-4 xl:pl-0'>
                 <div className='flex items-start justify-start gap-5 overflow-x-scroll p-1 xl:justify-center'>
-                    {foodItems.map((item) => (
+                    {commodityItems.map((item) => (
                         <button
                             key={item.id}
                             onClick={() => setselectedCommodity(item.id)}

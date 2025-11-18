@@ -8,20 +8,19 @@ import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-lege
 import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
 import { formatNumber } from '@/registry/new-york-v4/lib/utils';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/registry/new-york-v4/ui/dialog';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 import { RegionValue } from '@/types/neraca';
 
-import { getRegionStyle } from '../helper/get-price-style';
+import { getRegionStyle } from '../helper/get-region-style';
 import { getRegionValues } from '../helper/get-region-values';
 import { getRegionVisual } from '../helper/get-region-visual';
 import { RegionId, regionLayout } from '../helper/region-layout';
 import { Info } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-
-type FilterRange = '3m' | 'year';
 
 const REGION_KEYS = [
     'Kabupaten Malinau',
@@ -41,17 +40,19 @@ const KaltaraMap: React.FC = () => {
     const [period, setPeriod] = useState('3bulan');
     const chartData = period === '3bulan' ? threeMonthsData : oneYearData;
     const activeTab = useInfoTabStore((s) => s.activeTab);
+    const activeDate = useInfoDateStore((s) => s.activeDate);
     const selectedCommodity = useCommodityStore((state) => state.selectedCommodity);
 
     const isNeraca = activeTab === 'neraca';
 
-    const neracaValues = getRegionValues(neracaRegion, selectedCommodity, 'neraca');
+    const neracaValues = getRegionValues(activeDate, neracaRegion, selectedCommodity, 'neraca');
 
-    const ketersediaanValues = getRegionValues(ketersediaanRegion, selectedCommodity, 'ketersediaan');
+    const ketersediaanValues = getRegionValues(activeDate, ketersediaanRegion, selectedCommodity, 'ketersediaan');
 
     const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
 
-    const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
+    const getRegionFillClass = (regionId: RegionId) =>
+        getRegionVisual(activeDate, selectedCommodity, activeTab, regionId).fill;
 
     const legendStatic = activeTab === 'neraca' ? neracaLegendStatic : ketersediaanLegendStatic;
 
@@ -288,13 +289,10 @@ const KaltaraMap: React.FC = () => {
 
                                         {/* Ton */}
                                         <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                            {formatNumber(region.ton)}
-                                            <span className='text-base font-bold'>ton</span>
+                                            {formatNumber(region.ton)} <span className='text-base font-bold'>ton</span>
                                         </div>
 
-                                        {/* Value + status */}
                                         <div className='mt-2 flex items-center gap-2'>
-                                            {/* Hanya tampil jika tab ketersediaan & value ada */}
                                             {!isNeraca && region.value && (
                                                 <p className={`text-sm font-medium ${style.valueColor}`}>
                                                     {region.value}

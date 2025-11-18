@@ -1,13 +1,6 @@
-// data/food-items.ts
-export interface FoodItem {
-    id: string;
-    name: string;
-    icon: string;
-    category: string;
-    description?: string;
-}
+import { ICommodityItems } from '@/types/commodity';
 
-export const foodItems: FoodItem[] = [
+export const commodityItems: ICommodityItems[] = [
     {
         id: 'beras',
         name: 'Beras',

@@ -1,6 +1,50 @@
 import { RegionId } from '@/app/(neraca)/helper/region-layout';
 
 export type NeracaTabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
+export type NeracaDateType = '3m' | '6m' | 'year';
+
+export type ProvinceType = string;
+export type PeriodType = '3 Bulan' | '6 Bulan' | '1 Tahun';
+
+export interface TooltipProps {
+    active?: boolean;
+    payload?: Array<{
+        color: string;
+        name: string;
+        value: number;
+        payload: ChartDataPoint;
+    }>;
+}
+
+export interface ActiveLines {
+    neraca: boolean;
+    ketersediaan: boolean;
+    kebutuhan: boolean;
+}
+
+export interface CommodityBaseValue {
+    neraca: number;
+    ketersediaan: number;
+    kebutuhan: number;
+    trend: number;
+    volatility: number;
+}
+
+export interface ProvinceData {
+    base: number;
+    kebutuhanFactor: number;
+}
+
+export interface ChartDataPoint {
+    periode: string;
+    neraca: number;
+    ketersediaan: number;
+    kebutuhan: number;
+}
+
+export interface TableDataPoint extends ChartDataPoint {
+    status: string; // 'Surplus' | 'Defisit' | 'Seimbang'
+}
 
 export type RegionValue = {
     id: RegionId;
@@ -19,17 +63,19 @@ export type RegionGroup = {
 };
 
 export type RegionVisual = {
-    fill: string; // warna map (SVG)
-    statusColor: string; // badge bg+text
-    valueColor?: string; // teks persen (khusus ketersediaan)
+    fill: string;
+    statusColor: string;
+    valueColor?: string;
 };
 
 export type RegionVisualConfig = {
     [commodityId: string]: {
-        neraca: Record<RegionId, RegionVisual>;
-        ketersediaan: Record<RegionId, RegionVisual>;
-        kebutuhan?: Record<RegionId, RegionVisual>;
-        legend?: any;
+        [timeBase: string]: {
+            neraca: Record<RegionId, RegionVisual>;
+            ketersediaan: Record<RegionId, RegionVisual>;
+            kebutuhan?: Record<RegionId, RegionVisual>;
+            legend?: any;
+        };
     };
 };
 
