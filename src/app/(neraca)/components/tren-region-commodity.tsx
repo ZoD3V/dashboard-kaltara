@@ -3,13 +3,21 @@
 import React, { useMemo, useState } from 'react';
 
 import { commodityItems } from '@/data/commodity-items';
+import { months } from '@/data/months';
 import { formatRupiah } from '@/registry/new-york-v4/lib/utils';
 import { Button } from '@/registry/new-york-v4/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent, CardHeader } from '@/registry/new-york-v4/ui/card';
 import { Checkbox } from '@/registry/new-york-v4/ui/checkbox';
 import { Label } from '@/registry/new-york-v4/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/registry/new-york-v4/ui/select';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
 import {
     ActiveLines,
@@ -23,17 +31,7 @@ import {
 
 import { downloadDataTrenToExcel } from '../helper/download-data-to-excell';
 import { Download } from 'lucide-react';
-import {
-    Area,
-    AreaChart,
-    CartesianGrid,
-    Legend,
-    ResponsiveContainer,
-    Tooltip,
-    TooltipProps,
-    XAxis,
-    YAxis
-} from 'recharts';
+import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const generateData = (commodity: string, province: ProvinceType, period: PeriodType): ChartDataPoint[] => {
     const baseValues: Record<string, CommodityBaseValue> = {
@@ -243,7 +241,7 @@ const TrenRegionCommodity: React.FC = () => {
 
     return (
         <div className='w-full bg-gray-50 px-4 pt-12'>
-            <div className='flex flex-col items-start justify-between gap-4 pb-8 xl:flex-row xl:items-center'>
+            <div className='flex flex-col items-start justify-between gap-4 pb-8'>
                 <div>
                     <h2 className='text-xl font-semibold md:text-2xl'>Tren Neraca, Ketersediaan, dan Kebutuhan</h2>
                     <p className='text-xs text-slate-500 md:text-sm'>
@@ -252,9 +250,36 @@ const TrenRegionCommodity: React.FC = () => {
                 </div>
 
                 {/* Filters */}
-                <div className='flex flex-wrap items-center gap-4 lg:flex-row'>
+                <div className='flex flex-wrap items-center gap-3 lg:flex-row'>
                     {/* Period Tabs */}
-                    <ToggleGroup
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Tahun' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Tahun</SelectLabel>
+                                <SelectItem value='2024'>2024</SelectItem>
+                                <SelectItem value='2025'>2025</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Bulan' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Bulan</SelectLabel>
+                                {months.map((month) => (
+                                    <SelectItem key={month.value} value={month.label}>
+                                        {month.label}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    {/* <ToggleGroup
                         type='single'
                         value={period}
                         onValueChange={(value) => value && setPeriod(value as PeriodType)}
@@ -274,7 +299,7 @@ const TrenRegionCommodity: React.FC = () => {
                             className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
                             1 Tahun
                         </ToggleGroupItem>
-                    </ToggleGroup>
+                    </ToggleGroup> */}
                     {/* <div className='flex gap-2 rounded-lg bg-gray-100 p-1'>
                         {(['3 Bulan', '6 Bulan', '1 Tahun'] as PeriodType[]).map((p) => (
                             <button

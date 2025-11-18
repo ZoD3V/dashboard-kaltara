@@ -5,9 +5,12 @@ import Image from 'next/image';
 
 import { PriceCard } from '@/components/price-card';
 import { daerahData, komoditasData } from '@/data/price-chart';
+import { Button } from '@/registry/new-york-v4/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 import { DaerahItem, DropdownOption, FilterType, KomoditasItem, KomoditasKey } from '@/types/price';
+
+import { Download } from 'lucide-react';
 
 const PriceSupplyFilter: React.FC = () => {
     const [filterType, setFilterType] = useState<FilterType>('komoditas');
@@ -59,13 +62,20 @@ const PriceSupplyFilter: React.FC = () => {
     return (
         <div className='w-full bg-gray-50 px-4 py-12'>
             {/* Header */}
-            <div className='mb-6 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center'>
-                <h1 className='text-xl font-bold text-gray-900 lg:text-2xl'>Trend & Perubahan Harga 5 Hari Terakhir</h1>
-                <div className='flex w-full flex-col items-start gap-4 md:w-fit md:flex-row md:items-center'>
+            <div className='mb-6 flex flex-col items-start justify-between gap-4 xl:flex-row xl:items-center'>
+                <div>
+                    <h1 className='text-xl font-bold text-gray-900 lg:text-2xl'>
+                        Trend & Perubahan Harga 5 Hari Terakhir
+                    </h1>
+                    <p className='text-sm text-slate-500'>
+                        Perkembangan Tren dan Perubahan Harga dalam 5 Hari Terakhir
+                    </p>
+                </div>
+                <div className='flex w-full flex-col items-start gap-4 xl:w-fit xl:flex-row xl:items-center'>
                     <span className='text-sm font-medium text-gray-600'>Filter</span>
 
-                    <div className='flex w-full flex-col items-center justify-between gap-2 md:w-fit md:flex-row'>
-                        <Tabs value={filterType} onValueChange={handleFilterChange} className='w-full md:w-auto'>
+                    <div className='flex w-full flex-col items-start justify-between gap-2 xl:w-fit xl:flex-row xl:items-center'>
+                        <Tabs value={filterType} onValueChange={handleFilterChange} className='w-full xl:w-auto'>
                             <TabsList className='grid w-full grid-cols-2'>
                                 <TabsTrigger value='komoditas' className='px-6'>
                                     Komoditas
@@ -76,7 +86,7 @@ const PriceSupplyFilter: React.FC = () => {
                             </TabsList>
                         </Tabs>
                         <Select value={selectedItem} onValueChange={setSelectedItem}>
-                            <SelectTrigger className='w-full flex-1 bg-white md:w-[200px]'>
+                            <SelectTrigger className='w-full flex-1 bg-white xl:w-[200px]'>
                                 <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
@@ -87,20 +97,14 @@ const PriceSupplyFilter: React.FC = () => {
                                 ))}
                             </SelectContent>
                         </Select>
+                        <Button
+                            variant='outline'
+                            className='bg-primary hover:bg-primary/90 h-10 w-10 rounded-full text-white transition-all hover:text-white'
+                            size='icon'>
+                            <Download />
+                        </Button>
                     </div>
                 </div>
-            </div>
-
-            {/* Subtitle */}
-            <div className='mb-6 flex items-center gap-2'>
-                <Image src='/icons/ic-beras.png' alt='icons' width={100} height={100} className='h-10 w-9' />
-                <h2 className='text-lg font-medium text-gray-700'>
-                    Grafik
-                    {filterType === 'komoditas'
-                        ? dropdownOptions.find((o: DropdownOption) => o.value === selectedItem)?.label
-                        : selectedItem}
-                    / kilo - Provinsi Kalimantan Utara
-                </h2>
             </div>
 
             {/* Grid Cards */}

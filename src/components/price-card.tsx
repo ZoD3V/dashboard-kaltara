@@ -62,8 +62,8 @@ export const PriceCard: React.FC<PriceCardProps> = ({ title, currentPrice, chang
                             strokeWidth={2}
                             fillOpacity={1}
                             fill={`url(#${gradientId})`}
-                            activeDot={{ r: 6 }}
-                            dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
+                            activeDot={{ r: 4 }}
+                            dot={{ fill: '#3b82f6', strokeWidth: 2, r: 3 }}
                         />
                     </AreaChart>
                 </ResponsiveContainer>

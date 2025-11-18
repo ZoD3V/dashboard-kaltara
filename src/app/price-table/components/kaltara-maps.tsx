@@ -317,7 +317,7 @@ const KaltaraMap: React.FC = () => {
             </div>
             <div className='mt-8 w-full'>
                 {activeTab == 'level-harga' && (
-                    <div className='mb-4 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
+                    <div className='mb-8 flex w-full flex-wrap items-center justify-center gap-4 md:gap-6'>
                         {legendStatic.map((item: any) => {
                             const style = getRegionStyle(activeTab, item.label);
 

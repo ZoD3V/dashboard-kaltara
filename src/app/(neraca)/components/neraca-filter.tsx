@@ -5,11 +5,21 @@ import React from 'react';
 import Image from 'next/image';
 
 import { commodityItems } from '@/data/commodity-items';
+import { months } from '@/data/months';
 import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
 import { Button } from '@/registry/new-york-v4/ui/button';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/registry/new-york-v4/ui/select';
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
 import { NeracaDateType, NeracaTabType } from '@/types/neraca';
 
@@ -59,7 +69,34 @@ const NeracaFilter: React.FC = () => {
                 </div>
 
                 <div className='flex flex-wrap items-center gap-3'>
-                    <ToggleGroup
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Tahun' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Tahun</SelectLabel>
+                                <SelectItem value='2024'>2024</SelectItem>
+                                <SelectItem value='2025'>2025</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Bulan' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Bulan</SelectLabel>
+                                {months.map((month) => (
+                                    <SelectItem key={month.value} value={month.label}>
+                                        {month.label}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    {/* <ToggleGroup
                         type='single'
                         value={activeDate}
                         onValueChange={(value) => value && setActiveDate(value as NeracaDateType)}
@@ -79,7 +116,7 @@ const NeracaFilter: React.FC = () => {
                             className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
                             1 Tahun
                         </ToggleGroupItem>
-                    </ToggleGroup>
+                    </ToggleGroup> */}
                     <Button
                         onClick={() =>
                             downloadExcel(

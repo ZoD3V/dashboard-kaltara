@@ -5,6 +5,7 @@ import React from 'react';
 import Image from 'next/image';
 
 import { commodityItems } from '@/data/commodity-items';
+import { months } from '@/data/months';
 import { useInfoPriceStore } from '@/hooks/use-change-price-store';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useTypePriceStore } from '@/hooks/use-price-type-store';
@@ -41,7 +42,7 @@ const NeracaFilter: React.FC = () => {
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
-            <div className='mb-6 flex flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between'>
+            <div className='mb-6 flex flex-col gap-3 px-4 lg:flex-row lg:items-center lg:justify-between'>
                 <div className='flex flex-col items-start gap-3 sm:flex-row sm:items-center md:gap-4'>
                     <span className='hidden text-sm font-medium text-slate-500 sm:block'>Jenis Informasi</span>
 
@@ -62,131 +63,53 @@ const NeracaFilter: React.FC = () => {
                         </ToggleGroupItem>
                     </ToggleGroup>
 
-                    <div className='grid w-full grid-cols-2 items-center gap-2 sm:w-fit sm:grid-cols-1'>
-                        <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
-                            <SelectTrigger className='w-full bg-white sm:w-[200px]'>
-                                <SelectValue placeholder='Pilih produk' />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectGroup>
-                                    <SelectLabel>Tipe</SelectLabel>
-                                    <SelectItem value='level-harga'>Level Harga</SelectItem>
-                                    <SelectItem value='kaltara'>Dibanding kaltara</SelectItem>
-                                    <SelectItem value='mtm'>Bulan ke Bulan(MTM)</SelectItem>
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
-
-                        <div className='flex w-full items-center gap-2 sm:hidden sm:w-fit'>
-                            <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
-                            <div className='relative flex w-full gap-2 sm:w-fit'>
-                                <Input
-                                    id='date'
-                                    value={value}
-                                    placeholder='Jun 01, 2025'
-                                    className='bg-background'
-                                    onChange={(e) => {
-                                        const date = new Date(e.target.value);
-                                        setValue(e.target.value);
-                                        if (isValidDate(date)) {
-                                            setDate(date);
-                                            setMonth(date);
-                                        }
-                                    }}
-                                    onKeyDown={(e) => {
-                                        if (e.key === 'ArrowDown') {
-                                            e.preventDefault();
-                                            setOpen(true);
-                                        }
-                                    }}
-                                />
-                                <Popover open={open} onOpenChange={setOpen}>
-                                    <PopoverTrigger asChild>
-                                        <Button
-                                            id='date-picker'
-                                            variant='ghost'
-                                            className='absolute top-1/2 right-2 size-6 -translate-y-1/2'>
-                                            <CalendarIcon className='size-3.5' />
-                                            <span className='sr-only'>Select date</span>
-                                        </Button>
-                                    </PopoverTrigger>
-                                    <PopoverContent
-                                        className='w-auto overflow-hidden p-0'
-                                        align='end'
-                                        alignOffset={-8}
-                                        sideOffset={10}>
-                                        <Calendar
-                                            mode='single'
-                                            selected={date}
-                                            captionLayout='dropdown'
-                                            month={month}
-                                            onMonthChange={setMonth}
-                                            onSelect={(date) => {
-                                                setDate(date);
-                                                setValue(formatDate(date));
-                                                setOpen(false);
-                                            }}
-                                        />
-                                    </PopoverContent>
-                                </Popover>
-                            </div>
-                        </div>
+                    <div className='grid w-full grid-cols-1 items-center gap-2 sm:w-fit'>
+                        {activeTab == 'price' && (
+                            <Select value={selectedPriceType} onValueChange={setSelectedPriceType}>
+                                <SelectTrigger className='w-full bg-white sm:w-[200px]'>
+                                    <SelectValue placeholder='Pilih produk' />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectLabel>Tipe</SelectLabel>
+                                        <SelectItem value='level-harga'>Level Harga</SelectItem>
+                                        <SelectItem value='kaltara'>Dibanding kaltara</SelectItem>
+                                        <SelectItem value='mtm'>Bulan ke Bulan(MTM)</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
+                        )}
                     </div>
                 </div>
 
-                <div className='hidden w-full items-center gap-2 sm:flex sm:w-fit'>
-                    <span className='hidden text-sm font-medium text-slate-500 sm:block'>Bulan</span>
-                    <div className='relative flex w-full gap-2 sm:w-fit'>
-                        <Input
-                            id='date'
-                            value={value}
-                            placeholder='Jun 01, 2025'
-                            className='bg-background'
-                            onChange={(e) => {
-                                const date = new Date(e.target.value);
-                                setValue(e.target.value);
-                                if (isValidDate(date)) {
-                                    setDate(date);
-                                    setMonth(date);
-                                }
-                            }}
-                            onKeyDown={(e) => {
-                                if (e.key === 'ArrowDown') {
-                                    e.preventDefault();
-                                    setOpen(true);
-                                }
-                            }}
-                        />
-                        <Popover open={open} onOpenChange={setOpen}>
-                            <PopoverTrigger asChild>
-                                <Button
-                                    id='date-picker'
-                                    variant='ghost'
-                                    className='absolute top-1/2 right-2 size-6 -translate-y-1/2'>
-                                    <CalendarIcon className='size-3.5' />
-                                    <span className='sr-only'>Select date</span>
-                                </Button>
-                            </PopoverTrigger>
-                            <PopoverContent
-                                className='w-auto overflow-hidden p-0'
-                                align='end'
-                                alignOffset={-8}
-                                sideOffset={10}>
-                                <Calendar
-                                    mode='single'
-                                    selected={date}
-                                    captionLayout='dropdown'
-                                    month={month}
-                                    onMonthChange={setMonth}
-                                    onSelect={(date) => {
-                                        setDate(date);
-                                        setValue(formatDate(date));
-                                        setOpen(false);
-                                    }}
-                                />
-                            </PopoverContent>
-                        </Popover>
-                    </div>
+                <div className='flex w-full items-center gap-2 sm:w-fit'>
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Tahun' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Tahun</SelectLabel>
+                                <SelectItem value='2024'>2024</SelectItem>
+                                <SelectItem value='2025'>2025</SelectItem>
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
+                    <Select>
+                        <SelectTrigger className='w-full sm:w-[200px]'>
+                            <SelectValue placeholder='Pilih Bulan' />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Bulan</SelectLabel>
+                                {months.map((month) => (
+                                    <SelectItem key={month.value} value={month.label}>
+                                        {month.label}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                    </Select>
                 </div>
             </div>
 
