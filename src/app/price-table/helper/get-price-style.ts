@@ -2,7 +2,7 @@ import { levelHargaLegend } from '@/data/level-price-legend';
 import { movementLegend } from '@/data/movement-price-legend';
 import { PriceType } from '@/types/price';
 
-type LevelHargaStatus = 'Sangat Rendah' | 'Rendah' | 'Sedang' | 'Tinggi' | 'Sangat Tinggi' | 'NoData';
+type LevelHargaStatus = 'Lebih Rendah' | 'Sama' | 'Sedang' | 'Tinggi' | 'Lebih Tinggi' | 'NoData';
 
 type MovementStatus = 'Menurun' | 'Stabil' | 'Meningkat' | 'NoData';
 

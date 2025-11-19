@@ -1,11 +1,11 @@
 export const levelHargaLegend = {
-    'Sangat Rendah': {
+    'Lebih Rendah': {
         legendBg: 'bg-green-700',
         fill: 'fill-green-700',
         statusColor: 'bg-green-100 text-green-700',
         valueColor: 'text-green-700'
     },
-    Rendah: {
+    Sama: {
         legendBg: 'bg-green-500',
         fill: 'fill-green-500',
         statusColor: 'bg-green-100 text-green-600',
@@ -23,7 +23,7 @@ export const levelHargaLegend = {
         statusColor: 'bg-green-100 text-green-600',
         valueColor: 'text-green-600'
     },
-    'Sangat Tinggi': {
+    'Lebih Tinggi': {
         legendBg: 'bg-green-600',
         fill: 'fill-green-600',
         statusColor: 'bg-green-100 text-green-700',

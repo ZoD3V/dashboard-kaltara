@@ -1,6 +1,6 @@
 import { levelHargaLegend } from '@/data/level-price-legend';
 
-type LevelHargaStatus = 'Sangat Rendah' | 'Rendah' | 'Sedang' | 'Tinggi' | 'Sangat Tinggi' | 'NoData';
+type LevelHargaStatus = 'Lebih Rendah' | 'Sama' | 'Sedang' | 'Tinggi' | 'Lebih Tinggi' | 'NoData';
 
 type RegionVisualStyle = {
     fill: string;

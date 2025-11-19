@@ -328,9 +328,9 @@ const KaltaraMap: React.FC = () => {
                                     <div className='flex flex-col text-xs md:text-sm'>
                                         <span className='font-semibold text-gray-900'>{item.label}</span>
 
-                                        {activeTab === 'level-harga' && item.range && (
+                                        {/* {activeTab === 'level-harga' && item.range && (
                                             <span className='ml-1 text-gray-600'>{item.range}</span>
-                                        )}
+                                        )} */}
                                     </div>
                                 </div>
                             );
