@@ -24,10 +24,10 @@ export const levelHargaLegend = {
         valueColor: 'text-green-600'
     },
     'Lebih Tinggi': {
-        legendBg: 'bg-green-600',
-        fill: 'fill-green-600',
-        statusColor: 'bg-green-100 text-green-700',
-        valueColor: 'text-green-700'
+        legendBg: 'bg-orange-500',
+        fill: 'fill-orange-500',
+        statusColor: 'bg-orange-100 text-orange-700',
+        valueColor: 'text-orange-700'
     },
     NoData: {
         legendBg: 'bg-slate-400',
