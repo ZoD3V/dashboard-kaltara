@@ -69,33 +69,35 @@ const NeracaFilter: React.FC = () => {
                 </div>
 
                 <div className='flex flex-wrap items-center gap-3'>
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Tahun' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Tahun</SelectLabel>
-                                <SelectItem value='2024'>2024</SelectItem>
-                                <SelectItem value='2025'>2025</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Bulan' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Bulan</SelectLabel>
-                                {months.map((month) => (
-                                    <SelectItem key={month.value} value={month.label}>
-                                        {month.label}
-                                    </SelectItem>
-                                ))}
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
+                    <div className='flex w-full gap-3 sm:w-fit'>
+                        <Select>
+                            <SelectTrigger className='w-1/2 sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Tahun' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Tahun</SelectLabel>
+                                    <SelectItem value='2024'>2024</SelectItem>
+                                    <SelectItem value='2025'>2025</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                        <Select>
+                            <SelectTrigger className='w-1/2 sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Bulan' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Bulan</SelectLabel>
+                                    {months.map((month) => (
+                                        <SelectItem key={month.value} value={month.label}>
+                                            {month.label}
+                                        </SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
                     {/* <ToggleGroup
                         type='single'
                         value={activeDate}

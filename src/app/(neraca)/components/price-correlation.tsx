@@ -105,7 +105,7 @@ export default function PriceCorrelation() {
     };
 
     return (
-        <div className='w-full bg-slate-50 px-4 pt-12'>
+        <div className='w-full bg-gray-50 px-4 py-12'>
             <div className='flex-col gap-6'>
                 {/* Header Section - Outside Card */}
                 <div className='flex flex-col items-center justify-between gap-4 pb-8 lg:flex-row'>

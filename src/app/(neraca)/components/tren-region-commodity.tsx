@@ -18,7 +18,6 @@ import {
     SelectTrigger,
     SelectValue
 } from '@/registry/new-york-v4/ui/select';
-import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
 import {
     ActiveLines,
     ChartDataPoint,
@@ -250,74 +249,41 @@ const TrenRegionCommodity: React.FC = () => {
                 </div>
 
                 {/* Filters */}
-                <div className='flex flex-wrap items-center gap-3 lg:flex-row'>
+                <div className='flex w-full flex-wrap items-center gap-3 lg:flex-row'>
                     {/* Period Tabs */}
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Tahun' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Tahun</SelectLabel>
-                                <SelectItem value='2024'>2024</SelectItem>
-                                <SelectItem value='2025'>2025</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Bulan' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Bulan</SelectLabel>
-                                {months.map((month) => (
-                                    <SelectItem key={month.value} value={month.label}>
-                                        {month.label}
-                                    </SelectItem>
-                                ))}
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
-                    {/* <ToggleGroup
-                        type='single'
-                        value={period}
-                        onValueChange={(value) => value && setPeriod(value as PeriodType)}
-                        className='rounded-md border border-gray-300 bg-white'>
-                        <ToggleGroupItem
-                            value='3 Bulan'
-                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            3 Bulan
-                        </ToggleGroupItem>
-                        <ToggleGroupItem
-                            value='6 Bulan'
-                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            6 Bulan
-                        </ToggleGroupItem>
-                        <ToggleGroupItem
-                            value='1 Tahun'
-                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
-                            1 Tahun
-                        </ToggleGroupItem>
-                    </ToggleGroup> */}
-                    {/* <div className='flex gap-2 rounded-lg bg-gray-100 p-1'>
-                        {(['3 Bulan', '6 Bulan', '1 Tahun'] as PeriodType[]).map((p) => (
-                            <button
-                                key={p}
-                                onClick={() => setPeriod(p)}
-                                className={`rounded-md px-6 py-2 transition ${
-                                    period === p
-                                        ? 'bg-blue-500 text-white'
-                                        : 'bg-transparent text-gray-600 hover:bg-gray-200'
-                                }`}>
-                                {p}
-                            </button>
-                        ))}
-                    </div> */}
+                    <div className='grid w-full grid-cols-2 gap-3 lg:w-fit'>
+                        <Select>
+                            <SelectTrigger className='w-full lg:w-[200px]'>
+                                <SelectValue placeholder='Pilih Tahun' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Tahun</SelectLabel>
+                                    <SelectItem value='2024'>2024</SelectItem>
+                                    <SelectItem value='2025'>2025</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                        <Select>
+                            <SelectTrigger className='w-full lg:w-[200px]'>
+                                <SelectValue placeholder='Pilih Bulan' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Bulan</SelectLabel>
+                                    {months.map((month) => (
+                                        <SelectItem key={month.value} value={month.label}>
+                                            {month.label}
+                                        </SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
 
                     {/* Commodity Select */}
                     <Select value={commodity} onValueChange={setCommodity}>
-                        <SelectTrigger className='w-full md:w-[250px]'>
+                        <SelectTrigger className='w-full md:w-[200px]'>
                             <SelectValue placeholder='Pilih Komoditas' />
                         </SelectTrigger>
                         <SelectContent>
