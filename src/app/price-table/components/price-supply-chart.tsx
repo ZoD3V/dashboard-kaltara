@@ -1,9 +1,8 @@
 'use client';
 import React, { useMemo, useState } from 'react';
 
-import Image from 'next/image';
-
 import { PriceCard } from '@/components/price-card';
+import { commodityItems } from '@/data/commodity-items';
 import { daerahData, komoditasData } from '@/data/price-chart';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
@@ -18,26 +17,22 @@ const PriceSupplyFilter: React.FC = () => {
 
     const displayData = useMemo<(KomoditasItem | DaerahItem)[]>(() => {
         if (filterType === 'komoditas') {
-            return komoditasData[selectedItem as KomoditasKey] || [];
+            return komoditasData[selectedItem as string] || [];
         } else {
             return daerahData[selectedItem] || [];
         }
     }, [filterType, selectedItem]);
 
-    const dropdownOptions = useMemo<DropdownOption[]>(() => {
+    const dropdownOptions = useMemo(() => {
         if (filterType === 'komoditas') {
-            return [
-                { value: 'beras', label: 'Beras' },
-                { value: 'gula', label: 'Gula Pasir' },
-                { value: 'bawang', label: 'Bawang Merah' }
-            ];
+            return commodityItems;
         } else {
             return [
-                { value: 'Nunukan', label: 'Kabupaten Nunukan' },
-                { value: 'Tarakan', label: 'Kota Tarakan' },
-                { value: 'Bulungan', label: 'Kabupaten Bulungan' },
-                { value: 'Malinau', label: 'Kabupaten Malinau' },
-                { value: 'Tana Tidung', label: 'Kabupaten Tana Tidung' }
+                { id: 'Nunukan', name: 'Kabupaten Nunukan' },
+                { id: 'Tarakan', name: 'Kota Tarakan' },
+                { id: 'Bulungan', name: 'Kabupaten Bulungan' },
+                { id: 'Malinau', name: 'Kabupaten Malinau' },
+                { id: 'Tana Tidung', name: 'Kabupaten Tana Tidung' }
             ];
         }
     }, [filterType]);
@@ -90,9 +85,9 @@ const PriceSupplyFilter: React.FC = () => {
                                 <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
-                                {dropdownOptions.map((option: DropdownOption) => (
-                                    <SelectItem key={option.value} value={option.value}>
-                                        {option.label}
+                                {dropdownOptions.map((option) => (
+                                    <SelectItem key={option.id} value={option.id}>
+                                        {option.name}
                                     </SelectItem>
                                 ))}
                             </SelectContent>

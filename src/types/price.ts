@@ -31,6 +31,17 @@ export interface KomoditasData {
     beras: KomoditasItem[];
     gula: KomoditasItem[];
     bawang: KomoditasItem[];
+    'cabai-merah'?: KomoditasItem[];
+    'cabai-rawit'?: KomoditasItem[];
+    'bawang-merah'?: KomoditasItem[];
+    'bawang-putih'?: KomoditasItem[];
+    'daging-sapi'?: KomoditasItem[];
+    'daging-ayam'?: KomoditasItem[];
+    'telur-ayam'?: KomoditasItem[];
+    'gula-pasir'?: KomoditasItem[];
+    'minyak-goreng'?: KomoditasItem[];
+    jagung?: KomoditasItem[];
+    kedelai?: KomoditasItem[];
 }
 
 export interface DaerahData {
