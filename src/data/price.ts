@@ -22,14 +22,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             tarakan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-700',
+                valueColor: 'text-orange-700'
             }
         },
         kaltara: {
@@ -54,9 +54,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         },
         mtm: {
@@ -81,9 +81,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         }
     },
@@ -103,14 +103,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             'tana-tidung': {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -125,9 +125,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-yellow-500',
-                valueColor: 'text-green-500'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-500',
@@ -135,9 +135,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -162,9 +162,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -184,14 +184,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             malinau: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -216,9 +216,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -243,9 +243,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -265,14 +265,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'bawang-merah': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -297,9 +297,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -324,9 +324,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -351,9 +351,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'bawang-putih': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -378,9 +378,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -405,9 +405,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         mtm: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -452,14 +452,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             tarakan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         },
         kaltara: {
@@ -484,9 +484,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         },
         mtm: {
@@ -511,9 +511,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         }
     },
@@ -533,14 +533,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             'tana-tidung': {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -565,9 +565,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -592,9 +592,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             tarakan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             bulungan: {
                 fill: 'fill-green-700',
@@ -614,14 +614,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             malinau: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -646,9 +646,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -673,9 +673,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             'tana-tidung': {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             tarakan: {
                 fill: 'fill-green-700',
@@ -695,14 +695,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     'minyak-goreng': {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -727,9 +727,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -754,9 +754,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             malinau: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             'tana-tidung': {
                 fill: 'fill-green-700',
@@ -781,9 +781,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
     jagung: {
         'level-harga': {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -801,16 +801,16 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             bulungan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             }
         },
         kaltara: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -835,9 +835,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
         },
         mtm: {
             nunukan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             },
             malinau: {
                 fill: 'fill-green-700',
@@ -882,14 +882,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             tarakan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         },
         kaltara: {
@@ -909,14 +909,14 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-500'
             },
             tarakan: {
-                fill: 'fill-green-500',
-                statusColor: 'bg-green-100 text-green-600',
-                valueColor: 'text-green-600'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-600',
+                valueColor: 'text-orange-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         },
         mtm: {
@@ -941,9 +941,9 @@ export const priceRegionVisualConfig: PriceTypeRegionVisualConfig = {
                 valueColor: 'text-green-600'
             },
             bulungan: {
-                fill: 'fill-green-700',
-                statusColor: 'bg-green-100 text-green-700',
-                valueColor: 'text-green-700'
+                fill: 'fill-orange-500',
+                statusColor: 'bg-orange-100 text-orange-500',
+                valueColor: 'text-orange-500'
             }
         }
     }
