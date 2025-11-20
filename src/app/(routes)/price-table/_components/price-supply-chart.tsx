@@ -10,6 +10,7 @@ import { commodityItems } from '@/data/commodity-items';
 import { daerahData, komoditasData } from '@/data/price-chart';
 import { DaerahItem, FilterType, KomoditasItem } from '@/types/price';
 
+import { exportHargaPerKabupatenToExcel } from '../helper/export-data-to-excel';
 import { Download } from 'lucide-react';
 
 const PriceSupplyFilter: React.FC = () => {
@@ -55,6 +56,10 @@ const PriceSupplyFilter: React.FC = () => {
         return item.komoditas;
     };
 
+    const handleDownload = (data: (KomoditasItem | DaerahItem)[], filename: string) => {
+        exportHargaPerKabupatenToExcel(data, filename);
+    };
+
     return (
         <div className='w-full bg-gray-50 px-4 py-12'>
             {/* Header */}
@@ -90,6 +95,12 @@ const PriceSupplyFilter: React.FC = () => {
                             </SelectContent>
                         </Select>
                         <Button
+                            onClick={() => {
+                                handleDownload(
+                                    displayData,
+                                    filterType == 'daerah' ? 'harga-per-kabupaten-5-hari' : 'harga-per-komoditas-5-hari'
+                                );
+                            }}
                             variant='outline'
                             className='bg-primary hover:bg-primary/90 h-10 w-10 rounded-full text-white transition-all hover:text-white'
                             size='icon'>

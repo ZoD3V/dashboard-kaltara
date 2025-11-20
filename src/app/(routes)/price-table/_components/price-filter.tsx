@@ -4,7 +4,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import { downloadExcel } from '@/app/(routes)/(neraca)/helper/download-data-to-excell';
+import { downloadExcel } from '@/app/(routes)/(neraca)/helper/download-data-to-excel';
 import { Button } from '@/components/ui/button';
 import {
     Select,

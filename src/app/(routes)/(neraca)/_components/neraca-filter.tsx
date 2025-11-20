@@ -23,7 +23,7 @@ import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
 import { NeracaTabType } from '@/types/neraca';
 
-import { downloadExcel } from '../helper/download-data-to-excell';
+import { downloadExcel } from '../helper/download-data-to-excel';
 import { getRegionValues } from '../helper/get-region-values';
 import { Download } from 'lucide-react';
 

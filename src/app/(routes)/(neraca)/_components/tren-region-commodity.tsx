@@ -29,7 +29,7 @@ import {
 } from '@/types/neraca';
 import { provinces } from '@/types/region';
 
-import { downloadDataTrenToExcel } from '../helper/download-data-to-excell';
+import { downloadDataTrenToExcel } from '../helper/download-data-to-excel';
 import { columns } from './neraca-table/columns';
 import { DataTable } from './neraca-table/data-table';
 import { Download } from 'lucide-react';
