@@ -1,4 +1,4 @@
-import { RegionId } from '@/app/(routes)/(neraca)/helper/region-layout';
+import { RegionLayoutId } from './region';
 
 export type NeracaTabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
 export type NeracaDateType = '3m' | '6m' | 'year';
@@ -47,7 +47,7 @@ export interface TableDataPoint extends ChartDataPoint {
 }
 
 export type RegionValue = {
-    id: RegionId;
+    id: RegionLayoutId;
     name: string;
     icon: string;
     ton: number;
@@ -71,9 +71,9 @@ export type RegionVisual = {
 export type RegionVisualConfig = {
     [commodityId: string]: {
         [timeBase: string]: {
-            neraca: Record<RegionId, RegionVisual>;
-            ketersediaan: Record<RegionId, RegionVisual>;
-            kebutuhan?: Record<RegionId, RegionVisual>;
+            neraca: Record<RegionLayoutId, RegionVisual>;
+            ketersediaan: Record<RegionLayoutId, RegionVisual>;
+            kebutuhan?: Record<RegionLayoutId, RegionVisual>;
             legend?: any;
         };
     };

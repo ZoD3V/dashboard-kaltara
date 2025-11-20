@@ -1,6 +1,5 @@
 import { movementLegend } from '@/data/movement-price-legend';
-
-type MovementStatus = 'Menurun' | 'Stabil' | 'Meningkat' | 'NoData';
+import { MovementStatus } from '@/types/status';
 
 type RegionVisualStyle = {
     fill: string;

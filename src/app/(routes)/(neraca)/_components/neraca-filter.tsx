@@ -21,7 +21,7 @@ import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
-import { NeracaDateType, NeracaTabType } from '@/types/neraca';
+import { NeracaTabType } from '@/types/neraca';
 
 import { downloadExcel } from '../helper/download-data-to-excell';
 import { getRegionValues } from '../helper/get-region-values';

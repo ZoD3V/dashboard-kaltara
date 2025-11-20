@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from 'react';
 
 import { PriceCard } from '@/components/price-card';
+import { TitleSection } from '@/components/title-section';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -58,14 +59,10 @@ const PriceSupplyFilter: React.FC = () => {
         <div className='w-full bg-gray-50 px-4 py-12'>
             {/* Header */}
             <div className='mb-6 flex flex-col items-start justify-between gap-4 xl:flex-row xl:items-center'>
-                <div>
-                    <h1 className='text-xl font-bold text-gray-900 lg:text-2xl'>
-                        Trend & Perubahan Harga 5 Hari Terakhir
-                    </h1>
-                    <p className='text-sm text-slate-500'>
-                        Perkembangan Tren dan Perubahan Harga dalam 5 Hari Terakhir
-                    </p>
-                </div>
+                <TitleSection
+                    title='Trend & Perubahan Harga 5 Hari Terakhir'
+                    subtitle='Perkembangan Tren dan Perubahan Harga dalam 5 Hari Terakhir'
+                />
                 <div className='flex w-full flex-col items-start gap-4 xl:w-fit xl:flex-row xl:items-center'>
                     <span className='text-sm font-medium text-gray-600'>Filter</span>
 

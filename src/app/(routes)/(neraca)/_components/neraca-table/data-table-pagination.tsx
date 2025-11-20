@@ -10,12 +10,8 @@ interface DataTablePaginationProps<TData> {
 
 export function DataTablePagination<TData>({ table }: DataTablePaginationProps<TData>) {
     return (
-        <div className='flex items-center justify-between rounded-b-xl border border-t-0 bg-white p-4 md:p-5'>
-            <div className='text-muted-foreground hidden flex-1 text-sm lg:flex'>
-                {table.getFilteredSelectedRowModel().rows.length} of {table.getFilteredRowModel().rows.length} row(s)
-                selected.
-            </div>
-            <div className='flex w-full items-center gap-8 space-x-6 lg:w-fit lg:space-x-8'>
+        <div className='flex items-center justify-end rounded-b-xl border border-t-0 bg-white p-4 md:p-5'>
+            <div className='flex w-full items-center gap-8 space-x-6 self-end lg:w-fit lg:space-x-8'>
                 <div className='hidden items-center gap-2 space-x-2 lg:flex'>
                     <p className='text-sm font-medium'>Rows per page</p>
                     <Select

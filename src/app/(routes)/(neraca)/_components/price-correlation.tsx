@@ -2,18 +2,20 @@
 
 import { useMemo, useState } from 'react';
 
+import { TitleSection } from '@/components/title-section';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { formatRupiah } from '@/lib/utils';
+import { provinces } from '@/types/region';
 
 import { Download } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-// Dummy Data
 const generateData = (commodity: string, region: string) => {
-    const baseData: any = {
+    const baseValues: any = {
         beras: { neraca: 80000, harga: 70000, variance: 5000 },
         'gula pasir': { neraca: 65000, harga: 55000, variance: 3000 },
         'bawang merah': { neraca: 50000, harga: 45000, variance: 8000 },
@@ -46,7 +48,7 @@ const generateData = (commodity: string, region: string) => {
         'Okt 2025'
     ];
 
-    const base = baseData[commodity];
+    const base = baseValues[commodity];
     const multiplier = regionMultiplier[region];
 
     return months.map((month, index) => {
@@ -62,16 +64,8 @@ const generateData = (commodity: string, region: string) => {
 };
 
 const commodities = ['Beras', 'Gula Pasir', 'Bawang Merah', 'Bawang Putih', 'Cabai Merah'];
-const regions = [
-    'Provinsi Kalimantan Utara',
-    'Kabupaten Bulungan',
-    'Kabupaten Malinau',
-    'Kabupaten Nunukan',
-    'Kabupaten Tana Tidung',
-    'Kota Tarakan'
-];
 
-export default function PriceCorrelation() {
+const PriceCorrelation: React.FC = () => {
     const [selectedCommodity, setSelectedCommodity] = useState('Beras');
     const [selectedRegion, setSelectedRegion] = useState('Provinsi Kalimantan Utara');
     const [showNeraca, setShowNeraca] = useState(true);
@@ -100,19 +94,15 @@ export default function PriceCorrelation() {
         window.URL.revokeObjectURL(url);
     };
 
-    const formatCurrency = (value: number) => {
-        return new Intl.NumberFormat('id-ID').format(value);
-    };
-
     return (
         <div className='w-full bg-gray-50 px-4 py-12'>
             <div className='flex-col gap-6'>
                 {/* Header Section - Outside Card */}
                 <div className='flex flex-col items-center justify-between gap-4 pb-8 lg:flex-row'>
-                    <div>
-                        <h2 className='text-xl font-semibold lg:text-2xl'>Korelasi Neraca dan Harga Pasar</h2>
-                        <p className='text-sm text-slate-500'>Perubahan harga terhadap kondisi neraca komoditas.</p>
-                    </div>
+                    <TitleSection
+                        title='Korelasi Neraca dan Harga Pasar'
+                        subtitle='Perubahan harga terhadap kondisi neraca komoditas.'
+                    />
 
                     {/* Filters - Outside Card */}
                     <div className='flex w-full flex-col gap-3 md:w-fit md:flex-row md:items-center'>
@@ -136,7 +126,7 @@ export default function PriceCorrelation() {
                                 <SelectValue placeholder='Pilih wilayah' />
                             </SelectTrigger>
                             <SelectContent>
-                                {regions.map((region) => (
+                                {provinces.map((region) => (
                                     <SelectItem key={region} value={region}>
                                         {region}
                                     </SelectItem>
@@ -222,7 +212,7 @@ export default function PriceCorrelation() {
                                         tick={{ fontSize: 13, fill: '#64748B' }}
                                         tickLine={false}
                                         axisLine={{ stroke: '#E2E8F0' }}
-                                        tickFormatter={formatCurrency}
+                                        tickFormatter={formatRupiah}
                                     />
                                     <YAxis
                                         yAxisId='right'
@@ -230,7 +220,7 @@ export default function PriceCorrelation() {
                                         tick={{ fontSize: 13, fill: '#64748B' }}
                                         tickLine={false}
                                         axisLine={{ stroke: '#E2E8F0' }}
-                                        tickFormatter={formatCurrency}
+                                        tickFormatter={formatRupiah}
                                     />
                                     <Tooltip
                                         contentStyle={{
@@ -240,7 +230,7 @@ export default function PriceCorrelation() {
                                             padding: '12px',
                                             boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
                                         }}
-                                        formatter={(value: any) => `Rp ${formatCurrency(value)}`}
+                                        formatter={(value: any) => `Rp ${formatRupiah(value)}`}
                                     />
 
                                     {showNeraca && (
@@ -278,4 +268,6 @@ export default function PriceCorrelation() {
             </div>
         </div>
     );
-}
+};
+
+export default PriceCorrelation;

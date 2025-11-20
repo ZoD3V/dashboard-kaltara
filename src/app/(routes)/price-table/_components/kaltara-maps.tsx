@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
 
+import { InfoDescription } from '@/components/info-description';
 import { LegendItem } from '@/components/legend-item';
 import { Maps } from '@/components/maps';
 import { RegionCallout } from '@/components/region-callout';
@@ -16,12 +17,12 @@ import { useInfoPriceStore } from '@/hooks/use-change-price-store';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useTypePriceStore } from '@/hooks/use-price-type-store';
 import { PriceTypeRegionValue } from '@/types/price';
-import { REGION_KEYS } from '@/types/region';
+import { REGION_KEYS, RegionLayoutId } from '@/types/region';
 
 import { getRegionStyle } from '../helper/get-price-style';
 import { getRegionValues } from '../helper/get-region-values';
 import { getRegionVisual } from '../helper/get-region-visual';
-import { RegionId, regionLayout } from '../helper/region-layout';
+import { regionLayout } from '../helper/region-layout';
 import { Info } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
@@ -45,7 +46,8 @@ const KaltaraMap: React.FC = () => {
 
     const displayedValues = isLevelPrice ? priceTypeValues : kaltara;
 
-    const getRegionFillClass = (regionId: RegionId) => getRegionVisual(selectedCommodity, activeTab, regionId).fill;
+    const getRegionFillClass = (regionId: RegionLayoutId) =>
+        getRegionVisual(selectedCommodity, activeTab, regionId).fill;
 
     const legendStatic = activeTab === 'level-harga' ? priceLegendStatic : changePriceLegendStatic;
 
@@ -251,13 +253,11 @@ const KaltaraMap: React.FC = () => {
                 {activeTab == 'mtm' && (
                     <div className='flex items-start gap-2 p-3 text-xs text-gray-700 md:p-4 md:text-sm'>
                         <Info className='mt-0.5 h-5 w-5 shrink-0 text-blue-600' />
-                        <div>
-                            <p className='mb-1 font-medium text-gray-900'>Keterangan:</p>
-                            <p className='leading-relaxed text-slate-600'>
-                                Month To Month adalah perubahan rata-rata harga pada bulan berjalan dibandingkan
-                                rata-rata harga pada 1 bulan sebelumnya
-                            </p>
-                        </div>
+                        <InfoDescription
+                            title='Keterangan:'
+                            description='Month To Month adalah perubahan rata-rata harga pada bulan berjalan dibandingkan
+                                rata-rata harga pada 1 bulan sebelumnya'
+                        />
                     </div>
                 )}
             </div>

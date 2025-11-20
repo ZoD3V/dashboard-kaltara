@@ -1,4 +1,4 @@
-export type RegionId = 'nunukan' | 'malinau' | 'tana-tidung' | 'tarakan' | 'bulungan';
+import { RegionLayoutId } from '@/types/region';
 
 export type RegionLayout = {
     left: number;
@@ -6,7 +6,7 @@ export type RegionLayout = {
     anchor: string;
 };
 
-export const regionLayout: Record<RegionId, RegionLayout> = {
+export const regionLayout: Record<RegionLayoutId, RegionLayout> = {
     nunukan: { left: -200, top: 20, anchor: '#anc-nunukan' },
     malinau: { left: -200, top: 200, anchor: '#anc-malinau-1' },
     'tana-tidung': { left: 615, top: 60, anchor: '#anc-tana-tidung' },

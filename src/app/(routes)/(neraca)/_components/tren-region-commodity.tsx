@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from 'react';
 
+import { TitleSection } from '@/components/title-section';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -17,7 +18,6 @@ import {
 } from '@/components/ui/select';
 import { commodityItems } from '@/data/commodity-items';
 import { months } from '@/data/months';
-import { formatRupiah } from '@/lib/utils';
 import {
     ActiveLines,
     ChartDataPoint,
@@ -27,8 +27,11 @@ import {
     ProvinceType,
     TableDataPoint
 } from '@/types/neraca';
+import { provinces } from '@/types/region';
 
 import { downloadDataTrenToExcel } from '../helper/download-data-to-excell';
+import { columns } from './neraca-table/columns';
+import { DataTable } from './neraca-table/data-table';
 import { Download } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
@@ -113,7 +116,6 @@ const generateData = (commodity: string, province: ProvinceType, period: PeriodT
         }
     };
 
-    // Multiplier berbeda untuk setiap provinsi/kabupaten
     const provinceMultiplier: Record<ProvinceType, ProvinceData> = {
         'Provinsi Kalimantan Utara': { base: 1.0, kebutuhanFactor: 1.0 },
         'Kabupaten Bulungan': { base: 0.28, kebutuhanFactor: 0.3 },
@@ -146,10 +148,8 @@ const generateData = (commodity: string, province: ProvinceType, period: PeriodT
     const provData = provinceMultiplier[province];
 
     return monthNames.slice(startMonth, startMonth + months).map((month, idx) => {
-        // Tren berbeda untuk setiap metric
         const trendFactor = 1 + base.trend * idx;
 
-        // Variasi acak yang berbeda untuk setiap line
         const neracaVariance = Math.sin(idx * 0.5) * base.volatility;
         const ketersediaanVariance = Math.cos(idx * 0.7) * base.volatility * 0.8;
         const kebutuhanVariance = Math.sin(idx * 0.3) * base.volatility * 0.5;
@@ -158,7 +158,6 @@ const generateData = (commodity: string, province: ProvinceType, period: PeriodT
 
         const ketersediaan = Math.round(base.ketersediaan * provData.base * trendFactor * (1 + ketersediaanVariance));
 
-        // Kebutuhan cenderung stabil atau sedikit naik
         const kebutuhan = Math.round(
             base.kebutuhan * provData.kebutuhanFactor * (1 + idx * 0.008) * (1 + kebutuhanVariance)
         );
@@ -183,15 +182,6 @@ const TrenRegionCommodity: React.FC = () => {
         kebutuhan: true
     });
 
-    const provinces: ProvinceType[] = [
-        'Provinsi Kalimantan Utara',
-        'Kabupaten Bulungan',
-        'Kabupaten Malinau',
-        'Kabupaten Nunukan',
-        'Kabupaten Tana Tidung',
-        'Kota Tarakan'
-    ];
-
     const data: ChartDataPoint[] = useMemo(
         () => generateData(commodity, province, period),
         [commodity, province, period]
@@ -200,7 +190,6 @@ const TrenRegionCommodity: React.FC = () => {
     const tableData: TableDataPoint[] = useMemo(
         () =>
             data.map((item) => {
-                // Hitung persentase neraca terhadap kebutuhan
                 const percentageOfNeeds = (item.neraca / item.kebutuhan) * 100;
 
                 let status: 'Aman' | 'Waspada' | 'Rentan' | 'Defisit';
@@ -227,26 +216,13 @@ const TrenRegionCommodity: React.FC = () => {
         setActiveLines((prev) => ({ ...prev, [line]: !prev[line] }));
     };
 
-    const getStatusColor = (status: string) => {
-        const colors: any = {
-            Aman: 'bg-green-400 text-white',
-            Waspada: 'bg-yellow-300 text-gray-800',
-            Rentan: 'bg-orange-400 text-white',
-            Defisit: 'bg-red-500 text-white'
-        };
-
-        return colors[status];
-    };
-
     return (
         <div className='w-full bg-gray-50 px-4 pt-12'>
             <div className='flex flex-col items-start justify-between gap-4 pb-8'>
-                <div>
-                    <h2 className='text-xl font-semibold md:text-2xl'>Tren Neraca, Ketersediaan, dan Kebutuhan</h2>
-                    <p className='text-xs text-slate-500 md:text-sm'>
-                        Periode bulanan menurut komoditas dan Kabupaten/Kota
-                    </p>
-                </div>
+                <TitleSection
+                    title='Tren Neraca, Ketersediaan, dan Kebutuhan'
+                    subtitle='Periode bulanan menurut komoditas dan Kabupaten/Kota'
+                />
 
                 {/* Filters */}
                 <div className='flex w-full flex-wrap items-center gap-3 lg:flex-row'>
@@ -317,7 +293,7 @@ const TrenRegionCommodity: React.FC = () => {
                     </Button>
                 </div>
             </div>
-            <Card className='w-full px-0 pt-2'>
+            <Card className='w-full px-0 py-2 pb-4 sm:py-4 md:py-6'>
                 <CardHeader className='px-0'>
                     <div className='border-b border-gray-200 pt-2'>
                         <div className='flex gap-4'>
@@ -344,7 +320,7 @@ const TrenRegionCommodity: React.FC = () => {
                     </div>
                 </CardHeader>
 
-                <CardContent>
+                <CardContent className='px-2 sm:px-4 md:px-6'>
                     {activeTab === 'grafik' ? (
                         <div>
                             {/* Legend Checkboxes */}
@@ -462,57 +438,7 @@ const TrenRegionCommodity: React.FC = () => {
                             </ResponsiveContainer>
                         </div>
                     ) : (
-                        <div>
-                            <div className='overflow-hidden rounded-lg border'>
-                                <div className='overflow-x-auto'>
-                                    <table className='w-full'>
-                                        <thead>
-                                            <tr className='border-b bg-gray-50'>
-                                                <th className='px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase'>
-                                                    Periode
-                                                </th>
-                                                <th className='px-6 py-3 text-right text-xs font-semibold tracking-wider text-gray-700 uppercase'>
-                                                    Neraca
-                                                </th>
-                                                <th className='px-6 py-3 text-right text-xs font-semibold tracking-wider text-gray-700 uppercase'>
-                                                    Ketersediaan
-                                                </th>
-                                                <th className='px-6 py-3 text-right text-xs font-semibold tracking-wider text-gray-700 uppercase'>
-                                                    Kebutuhan
-                                                </th>
-                                                <th className='px-6 py-3 text-left text-xs font-semibold tracking-wider text-gray-700 uppercase'>
-                                                    Status
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className='divide-y divide-gray-200 bg-white'>
-                                            {tableData.map((row, idx) => (
-                                                <tr key={idx} className='transition hover:bg-gray-50'>
-                                                    <td className='px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900'>
-                                                        {row.periode}
-                                                    </td>
-                                                    <td className='px-6 py-4 text-right text-sm whitespace-nowrap text-gray-900'>
-                                                        {formatRupiah(row.neraca)}
-                                                    </td>
-                                                    <td className='px-6 py-4 text-right text-sm whitespace-nowrap text-gray-900'>
-                                                        {formatRupiah(row.ketersediaan)}
-                                                    </td>
-                                                    <td className='px-6 py-4 text-right text-sm whitespace-nowrap text-gray-900'>
-                                                        {formatRupiah(row.kebutuhan)}
-                                                    </td>
-                                                    <td className='px-6 py-4 text-sm whitespace-nowrap'>
-                                                        <span
-                                                            className={`rounded-full px-3 py-1 text-xs font-medium ${getStatusColor(row.status)}`}>
-                                                            {row.status}
-                                                        </span>
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
+                        <DataTable columns={columns} data={tableData} />
                     )}
                 </CardContent>
             </Card>

@@ -1,13 +1,14 @@
 'use client';
 
 import { Badge } from '@/components/ui/badge';
+import { formatRupiah } from '@/lib/utils';
 import { ColumnDef } from '@tanstack/react-table';
 
 export type Neraca = {
     periode: string;
-    neraca: string;
-    ketersediaan: string;
-    kebutuhan: string;
+    neraca: number;
+    ketersediaan: number;
+    kebutuhan: number;
     status: string;
 };
 
@@ -33,15 +34,32 @@ export const columns: ColumnDef<Neraca>[] = [
     },
     {
         accessorKey: 'neraca',
-        header: 'Neraca'
+        header: 'Neraca',
+        cell: ({ row }) => {
+            return (
+                <div className='text-sm whitespace-nowrap text-gray-900'>{formatRupiah(row.getValue('neraca'))}</div>
+            );
+        }
     },
     {
         accessorKey: 'ketersediaan',
-        header: 'Ketersediaan'
+        header: 'Ketersediaan',
+        cell: ({ row }) => {
+            return (
+                <div className='text-sm whitespace-nowrap text-gray-900'>
+                    {formatRupiah(row.getValue('ketersediaan'))}
+                </div>
+            );
+        }
     },
     {
         accessorKey: 'kebutuhan',
-        header: 'Kebutuhan'
+        header: 'Kebutuhan',
+        cell: ({ row }) => {
+            return (
+                <div className='text-sm whitespace-nowrap text-gray-900'>{formatRupiah(row.getValue('kebutuhan'))}</div>
+            );
+        }
     },
     {
         accessorKey: 'status',

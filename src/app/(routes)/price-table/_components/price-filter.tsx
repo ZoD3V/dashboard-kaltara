@@ -35,7 +35,6 @@ const NeracaFilter: React.FC = () => {
     const activeDate = useInfoDateStore((s) => s.activeDate);
 
     const isLevelPrice = activeTab === 'price';
-    const isKaltara = activeTab === 'price-change';
 
     const priceTypeValues = getRegionValues(priceTypeRegion, selectedCommodity, 'level-harga');
 

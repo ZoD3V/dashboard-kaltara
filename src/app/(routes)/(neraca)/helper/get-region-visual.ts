@@ -1,13 +1,12 @@
 import { regionVisualConfig } from '@/data/regions';
 import { NeracaDateType, NeracaTabType } from '@/types/neraca';
-
-import { RegionId } from './region-layout';
+import { RegionLayoutId } from '@/types/region';
 
 export const getRegionVisual = (
     timeBase: NeracaDateType,
     commodityId: string,
     tab: NeracaTabType,
-    regionId: RegionId
+    regionId: RegionLayoutId
 ) => {
     const visualFromConfig = regionVisualConfig[commodityId][timeBase]?.[tab]?.[regionId];
 

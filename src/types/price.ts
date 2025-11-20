@@ -1,4 +1,4 @@
-import { RegionId } from '@/app/(routes)/(neraca)/helper/region-layout';
+import { RegionLayoutId } from './region';
 
 // ========== TYPES & INTERFACES ==========
 
@@ -77,7 +77,7 @@ export interface CustomTooltipProps {
 }
 
 export type PriceTypeRegionValue = {
-    id: RegionId;
+    id: RegionLayoutId;
     name: string;
     icon: string;
     price: string;
@@ -101,9 +101,9 @@ export type PriceTypeRegionVisual = {
 
 export type PriceTypeRegionVisualConfig = {
     [commodityId: string]: {
-        'level-harga': Record<RegionId, PriceTypeRegionVisual>;
-        kaltara: Record<RegionId, PriceTypeRegionVisual>;
-        mtm?: Record<RegionId, PriceTypeRegionVisual>;
+        'level-harga': Record<RegionLayoutId, PriceTypeRegionVisual>;
+        kaltara: Record<RegionLayoutId, PriceTypeRegionVisual>;
+        mtm?: Record<RegionLayoutId, PriceTypeRegionVisual>;
         legend?: any;
     };
 };
