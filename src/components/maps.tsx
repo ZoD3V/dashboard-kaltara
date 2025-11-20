@@ -2,12 +2,12 @@
 
 import React from 'react';
 
-import { RegionId } from '@/app/(routes)/(neraca)/helper/region-layout';
+import { RegionLayoutId } from '@/types/region';
 
 import clsx from 'clsx';
 
 interface KaltaraMapProps {
-    getRegionFillClass: (id: RegionId) => string;
+    getRegionFillClass: (id: RegionLayoutId) => string;
 }
 
 export const Maps: React.FC<KaltaraMapProps> = ({ getRegionFillClass }) => {
