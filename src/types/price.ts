@@ -1,4 +1,4 @@
-import { RegionId } from '@/app/(neraca)/helper/region-layout';
+import { RegionId } from '@/app/(routes)/(neraca)/helper/region-layout';
 
 // ========== TYPES & INTERFACES ==========
 

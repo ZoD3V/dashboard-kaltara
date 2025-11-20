@@ -1,4 +1,4 @@
-import { RegionId } from '@/app/(neraca)/helper/region-layout';
+import { RegionId } from '@/app/(routes)/(neraca)/helper/region-layout';
 
 export type NeracaTabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
 export type NeracaDateType = '3m' | '6m' | 'year';

@@ -2,7 +2,7 @@ import { useId } from 'react';
 
 import Image from 'next/image';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/registry/new-york-v4/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CustomTooltipProps, PriceCardProps, PriceDataPoint } from '@/types/price';
 
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
