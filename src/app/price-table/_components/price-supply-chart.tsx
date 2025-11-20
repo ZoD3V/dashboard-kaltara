@@ -7,7 +7,7 @@ import { daerahData, komoditasData } from '@/data/price-chart';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
 import { Tabs, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
-import { DaerahItem, DropdownOption, FilterType, KomoditasItem, KomoditasKey } from '@/types/price';
+import { DaerahItem, FilterType, KomoditasItem } from '@/types/price';
 
 import { Download } from 'lucide-react';
 

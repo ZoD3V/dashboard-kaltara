@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Card, CardContent, CardHeader } from '@/registry/new-york-v4/ui/card';
