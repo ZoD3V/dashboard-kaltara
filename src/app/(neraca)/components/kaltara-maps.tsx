@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { Maps } from '@/components/maps';
+import { RegionCallout } from '@/components/region-callout';
 import { ketersediaanLegendStatic, neracaLegendStatic } from '@/data/neraca-legend';
 import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
@@ -227,49 +228,22 @@ const KaltaraMap: React.FC = () => {
                         const style = getRegionStyle(activeTab, region.status);
 
                         return (
-                            <div
+                            <RegionCallout
                                 key={region.id}
-                                className='callout static w-full lg:w-[270px] xl:absolute'
-                                style={{
-                                    left: layout.left,
-                                    top: layout.top
-                                }}
-                                data-anchor={layout.anchor}>
-                                <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                                    <Image
-                                        src={region.icon}
-                                        alt={region.name}
-                                        width={100}
-                                        height={100}
-                                        className='h-10 w-9'
-                                    />
-
-                                    <div className='flex flex-col'>
-                                        {/* Nama daerah */}
-                                        <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                            {region.name}
-                                        </div>
-
-                                        {/* Ton */}
-                                        <div className='mt-1 text-xl font-bold lg:text-2xl'>
-                                            {formatNumber(region.ton)} <span className='text-base font-bold'>ton</span>
-                                        </div>
-
-                                        <div className='mt-2 flex items-center gap-2'>
-                                            {!isNeraca && region.value && (
-                                                <p className={`text-sm font-medium ${style.valueColor}`}>
-                                                    {region.value}
-                                                </p>
-                                            )}
-
-                                            <div
-                                                className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
-                                                {region.status}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                region={region}
+                                layout={layout}
+                                primaryValue={formatNumber(region.ton)}
+                                primaryUnit='ton'
+                                showSecondary={!isNeraca && !!region.value}
+                                secondaryValue={region.value}
+                                secondaryClassName={style.valueColor}
+                                badges={[
+                                    {
+                                        label: region.status,
+                                        className: style.statusColor
+                                    }
+                                ]}
+                            />
                         );
                     })}
                 </div>

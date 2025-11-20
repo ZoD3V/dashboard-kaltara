@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import { Maps } from '@/components/maps';
+import { RegionCallout } from '@/components/region-callout';
 import { changePriceRegion, priceTypeRegion } from '@/data/price';
 import { changePriceLegendStatic, priceLegendStatic } from '@/data/price-legend';
 import { oneYearData, threeMonthsData } from '@/data/stocks';
@@ -226,54 +227,21 @@ const KaltaraMap: React.FC = () => {
                         const style = getRegionStyle(activeTab, region.status);
 
                         return (
-                            <div
+                            <RegionCallout
                                 key={region.id}
-                                className='callout static w-full lg:w-[270px] xl:absolute'
-                                style={{
-                                    left: layout.left,
-                                    top: layout.top
-                                }}
-                                data-anchor={layout.anchor}>
-                                <div className='flex items-start gap-2 rounded-xl border border-slate-300 bg-white px-4 py-3 lg:gap-4 lg:px-6'>
-                                    <Image
-                                        src={region.icon}
-                                        alt={region.name}
-                                        width={100}
-                                        height={100}
-                                        className='h-10 w-9'
-                                    />
-
-                                    <div className='flex flex-col'>
-                                        <div className='text-xs font-medium text-slate-900 sm:text-sm'>
-                                            {region.name}
-                                        </div>
-
-                                        <div className='mt-1 text-xl font-bold lg:text-2xl'>{region.price}</div>
-
-                                        <div className='mt-2 flex items-center gap-2'>
-                                            {!isLevelPrice && region.value && (
-                                                <p className={`text-sm font-medium ${style.valueColor}`}>
-                                                    {region.value}
-                                                </p>
-                                            )}
-
-                                            {activeTabChangePrice == 'price-change' && (
-                                                <div
-                                                    className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
-                                                    {region.percentage}
-                                                </div>
-                                            )}
-
-                                            {!isKaltara && isLevelPrice && (
-                                                <div
-                                                    className={`inline-flex w-fit items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold ${style.statusColor}`}>
-                                                    {region.status}
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                region={region}
+                                layout={layout}
+                                primaryValue={region.price}
+                                showSecondary={!isLevelPrice && !!region.value}
+                                secondaryValue={region.value}
+                                secondaryClassName={style.valueColor}
+                                badges={[
+                                    {
+                                        label: region.status,
+                                        className: style.statusColor
+                                    }
+                                ]}
+                            />
                         );
                     })}
                 </div>
