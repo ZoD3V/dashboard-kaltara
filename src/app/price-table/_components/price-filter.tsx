@@ -4,16 +4,15 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import { downloadExcel } from '@/app/(neraca)/helper/download-data-to-excell';
 import { commodityItems } from '@/data/commodity-items';
 import { months } from '@/data/months';
+import { changePriceRegion, priceTypeRegion } from '@/data/price';
 import { useInfoPriceStore } from '@/hooks/use-change-price-store';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
+import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useTypePriceStore } from '@/hooks/use-price-type-store';
-import { formatDate, isValidDate } from '@/registry/new-york-v4/lib/utils';
 import { Button } from '@/registry/new-york-v4/ui/button';
-import { Calendar } from '@/registry/new-york-v4/ui/calendar';
-import { Input } from '@/registry/new-york-v4/ui/input';
-import { Popover, PopoverContent, PopoverTrigger } from '@/registry/new-york-v4/ui/popover';
 import {
     Select,
     SelectContent,
@@ -26,19 +25,25 @@ import {
 import { ToggleGroup, ToggleGroupItem } from '@/registry/new-york-v4/ui/toggle-group';
 import { PriceChangeType } from '@/types/price';
 
-import { CalendarIcon } from 'lucide-react';
+import { getRegionValues } from '../helper/get-region-values';
+import { Download } from 'lucide-react';
 
 type TabType = 'neraca' | 'ketersediaan' | 'kebutuhan';
 
 const NeracaFilter: React.FC = () => {
-    const [open, setOpen] = React.useState(false);
-    const [date, setDate] = React.useState<Date | undefined>(new Date('2025-06-01'));
-    const [month, setMonth] = React.useState<Date | undefined>(date);
-    const [value, setValue] = React.useState(formatDate(date));
-
     const { selectedCommodity, setselectedCommodity } = useCommodityStore();
     const { selectedPriceType, setSelectedPriceType } = useTypePriceStore();
     const { activeTab, setActiveTab } = useInfoPriceStore();
+    const activeDate = useInfoDateStore((s) => s.activeDate);
+
+    const isLevelPrice = activeTab === 'price';
+    const isKaltara = activeTab === 'price-change';
+
+    const priceTypeValues = getRegionValues(priceTypeRegion, selectedCommodity, 'level-harga');
+
+    const kaltara = getRegionValues(changePriceRegion, selectedCommodity, 'kaltara');
+
+    const displayedValues = isLevelPrice ? priceTypeValues : kaltara;
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
@@ -82,34 +87,51 @@ const NeracaFilter: React.FC = () => {
                     </div>
                 </div>
 
-                <div className='flex w-full items-center gap-2 sm:w-fit'>
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Tahun' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Tahun</SelectLabel>
-                                <SelectItem value='2024'>2024</SelectItem>
-                                <SelectItem value='2025'>2025</SelectItem>
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
-                    <Select>
-                        <SelectTrigger className='w-full sm:w-[200px]'>
-                            <SelectValue placeholder='Pilih Bulan' />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectLabel>Bulan</SelectLabel>
-                                {months.map((month) => (
-                                    <SelectItem key={month.value} value={month.label}>
-                                        {month.label}
-                                    </SelectItem>
-                                ))}
-                            </SelectGroup>
-                        </SelectContent>
-                    </Select>
+                <div className='flex flex-wrap items-center gap-3'>
+                    <div className='flex w-full items-center gap-2 sm:w-fit'>
+                        <Select>
+                            <SelectTrigger className='w-full sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Tahun' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Tahun</SelectLabel>
+                                    <SelectItem value='2024'>2024</SelectItem>
+                                    <SelectItem value='2025'>2025</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                        <Select>
+                            <SelectTrigger className='w-full sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Bulan' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Bulan</SelectLabel>
+                                    {months.map((month) => (
+                                        <SelectItem key={month.value} value={month.label}>
+                                            {month.label}
+                                        </SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                    <Button
+                        onClick={() =>
+                            downloadExcel(
+                                displayedValues,
+                                `${selectedCommodity}-${activeTab}`,
+                                selectedCommodity,
+                                activeTab,
+                                activeDate
+                            )
+                        }
+                        variant='outline'
+                        className='bg-primary hover:bg-primary/90 h-10 w-10 rounded-full text-white transition-all hover:text-white'
+                        size='icon'>
+                        <Download />
+                    </Button>
                 </div>
             </div>
 
