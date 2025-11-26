@@ -195,7 +195,6 @@ const PriceCorrelation: React.FC = () => {
                     <CardContent>
                         <div className='h-[400px] w-full'>
                             {!isLoading ? (
-                                // SSR & initial client render sama persis → aman
                                 <div className='flex h-full items-center justify-center text-sm text-slate-400'>
                                     Memuat chart…
                                 </div>
