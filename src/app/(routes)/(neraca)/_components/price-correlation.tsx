@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { TitleSection } from '@/components/title-section';
 import { Button } from '@/components/ui/button';
@@ -51,14 +51,16 @@ const generateData = (commodity: string, region: string) => {
     const base = baseValues[commodity];
     const multiplier = regionMultiplier[region];
 
+    const variationPattern = [-1200, 800, -600, 1500, -900, 400];
+
     return months.map((month, index) => {
         const trend = Math.sin(index / 2) * base.variance;
-        const random = (Math.random() - 0.5) * 2000;
+        const variation = variationPattern[index % variationPattern.length];
 
         return {
             month,
-            neraca: Math.round((base.neraca + trend + random) * multiplier),
-            harga: Math.round((base.harga + trend * 0.8 + random * 0.9) * multiplier)
+            neraca: Math.round((base.neraca + trend + variation) * multiplier),
+            harga: Math.round((base.harga + trend * 0.8 + variation * 0.9) * multiplier)
         };
     });
 };
@@ -70,6 +72,11 @@ const PriceCorrelation: React.FC = () => {
     const [selectedRegion, setSelectedRegion] = useState('Provinsi Kalimantan Utara');
     const [showNeraca, setShowNeraca] = useState(true);
     const [showHarga, setShowHarga] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        setIsLoading(true);
+    }, []);
 
     const data = useMemo(
         () => generateData(selectedCommodity.toLowerCase(), selectedRegion),
@@ -187,81 +194,88 @@ const PriceCorrelation: React.FC = () => {
 
                     <CardContent>
                         <div className='h-[400px] w-full'>
-                            <ResponsiveContainer width='100%' height='100%'>
-                                <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                                    <defs>
-                                        <linearGradient id='colorNeraca' x1='0' y1='0' x2='0' y2='1'>
-                                            <stop offset='5%' stopColor='#3B82F6' stopOpacity={0.35} />
-                                            <stop offset='95%' stopColor='#3B82F6' stopOpacity={0.05} />
-                                        </linearGradient>
-                                        <linearGradient id='colorHarga' x1='0' y1='0' x2='0' y2='1'>
-                                            <stop offset='5%' stopColor='#14B8A6' stopOpacity={0.35} />
-                                            <stop offset='95%' stopColor='#14B8A6' stopOpacity={0.05} />
-                                        </linearGradient>
-                                    </defs>
+                            {!isLoading ? (
+                                // SSR & initial client render sama persis → aman
+                                <div className='flex h-full items-center justify-center text-sm text-slate-400'>
+                                    Memuat chart…
+                                </div>
+                            ) : (
+                                <ResponsiveContainer width='100%' height='100%'>
+                                    <AreaChart data={data} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                                        <defs>
+                                            <linearGradient id='colorNeraca' x1='0' y1='0' x2='0' y2='1'>
+                                                <stop offset='5%' stopColor='#3B82F6' stopOpacity={0.35} />
+                                                <stop offset='95%' stopColor='#3B82F6' stopOpacity={0.05} />
+                                            </linearGradient>
+                                            <linearGradient id='colorHarga' x1='0' y1='0' x2='0' y2='1'>
+                                                <stop offset='5%' stopColor='#14B8A6' stopOpacity={0.35} />
+                                                <stop offset='95%' stopColor='#14B8A6' stopOpacity={0.05} />
+                                            </linearGradient>
+                                        </defs>
 
-                                    <CartesianGrid strokeDasharray='3 3' stroke='#E2E8F0' vertical={false} />
-                                    <XAxis
-                                        dataKey='month'
-                                        tick={{ fontSize: 13, fill: '#64748B' }}
-                                        tickLine={false}
-                                        axisLine={{ stroke: '#E2E8F0' }}
-                                    />
-                                    <YAxis
-                                        yAxisId='left'
-                                        tick={{ fontSize: 13, fill: '#64748B' }}
-                                        tickLine={false}
-                                        axisLine={{ stroke: '#E2E8F0' }}
-                                        tickFormatter={formatRupiah}
-                                    />
-                                    <YAxis
-                                        yAxisId='right'
-                                        orientation='right'
-                                        tick={{ fontSize: 13, fill: '#64748B' }}
-                                        tickLine={false}
-                                        axisLine={{ stroke: '#E2E8F0' }}
-                                        tickFormatter={formatRupiah}
-                                    />
-                                    <Tooltip
-                                        contentStyle={{
-                                            backgroundColor: 'white',
-                                            border: '1px solid #E2E8F0',
-                                            borderRadius: '8px',
-                                            padding: '12px',
-                                            boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
-                                        }}
-                                        formatter={(value: any) => `Rp ${formatRupiah(value)}`}
-                                    />
-
-                                    {showNeraca && (
-                                        <Area
+                                        <CartesianGrid strokeDasharray='3 3' stroke='#E2E8F0' vertical={false} />
+                                        <XAxis
+                                            dataKey='month'
+                                            tick={{ fontSize: 13, fill: '#64748B' }}
+                                            tickLine={false}
+                                            axisLine={{ stroke: '#E2E8F0' }}
+                                        />
+                                        <YAxis
                                             yAxisId='left'
-                                            type='monotone'
-                                            dataKey='neraca'
-                                            stroke='#3B82F6'
-                                            strokeWidth={2.5}
-                                            fillOpacity={1}
-                                            fill='url(#colorNeraca)'
-                                            dot={{ fill: '#3B82F6', r: 3 }}
-                                            activeDot={{ r: 5 }}
+                                            tick={{ fontSize: 13, fill: '#64748B' }}
+                                            tickLine={false}
+                                            axisLine={{ stroke: '#E2E8F0' }}
+                                            tickFormatter={formatRupiah}
                                         />
-                                    )}
-
-                                    {showHarga && (
-                                        <Area
+                                        <YAxis
                                             yAxisId='right'
-                                            type='monotone'
-                                            dataKey='harga'
-                                            stroke='#14B8A6'
-                                            strokeWidth={2.5}
-                                            fillOpacity={1}
-                                            fill='url(#colorHarga)'
-                                            dot={{ fill: '#14B8A6', r: 3 }}
-                                            activeDot={{ r: 5 }}
+                                            orientation='right'
+                                            tick={{ fontSize: 13, fill: '#64748B' }}
+                                            tickLine={false}
+                                            axisLine={{ stroke: '#E2E8F0' }}
+                                            tickFormatter={formatRupiah}
                                         />
-                                    )}
-                                </AreaChart>
-                            </ResponsiveContainer>
+                                        <Tooltip
+                                            contentStyle={{
+                                                backgroundColor: 'white',
+                                                border: '1px solid #E2E8F0',
+                                                borderRadius: '8px',
+                                                padding: '12px',
+                                                boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                                            }}
+                                            formatter={(value: any) => `Rp ${formatRupiah(value)}`}
+                                        />
+
+                                        {showNeraca && (
+                                            <Area
+                                                yAxisId='left'
+                                                type='monotone'
+                                                dataKey='neraca'
+                                                stroke='#3B82F6'
+                                                strokeWidth={2.5}
+                                                fillOpacity={1}
+                                                fill='url(#colorNeraca)'
+                                                dot={{ fill: '#3B82F6', r: 3 }}
+                                                activeDot={{ r: 5 }}
+                                            />
+                                        )}
+
+                                        {showHarga && (
+                                            <Area
+                                                yAxisId='right'
+                                                type='monotone'
+                                                dataKey='harga'
+                                                stroke='#14B8A6'
+                                                strokeWidth={2.5}
+                                                fillOpacity={1}
+                                                fill='url(#colorHarga)'
+                                                dot={{ fill: '#14B8A6', r: 3 }}
+                                                activeDot={{ r: 5 }}
+                                            />
+                                        )}
+                                    </AreaChart>
+                                </ResponsiveContainer>
+                            )}
                         </div>
                     </CardContent>
                 </Card>
