@@ -309,7 +309,13 @@ const KaltaraMap: React.FC = () => {
                             </defs>
                             <CartesianGrid strokeDasharray='3 3' stroke='#e5e7eb' vertical={false} />
                             <XAxis dataKey='date' stroke='#9ca3af' tick={{ fontSize: 12 }} tickLine={false} />
-                            <YAxis stroke='#9ca3af' tick={{ fontSize: 12 }} tickLine={false} axisLine={false} />
+                            <YAxis
+                                stroke='#9ca3af'
+                                tick={{ fontSize: 12 }}
+                                tickLine={false}
+                                axisLine={false}
+                                tickFormatter={formatNumber}
+                            />
                             <Tooltip
                                 contentStyle={{
                                     backgroundColor: 'white',
@@ -317,6 +323,7 @@ const KaltaraMap: React.FC = () => {
                                     borderRadius: '8px',
                                     padding: '8px 12px'
                                 }}
+                                formatter={(value: any) => `${formatNumber(value)}`}
                             />
                             <Legend wrapperStyle={{ paddingTop: '20px' }} iconType='line' />
                             <Area

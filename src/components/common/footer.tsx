@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                     <div className='lg:col-span-5'>
                         <div className='mb-6 flex items-center gap-3'>
                             <Image
-                                src='/images/kalimantan-utara-logo.png'
+                                src='/images/kalimantan-utara-logo.webp'
                                 alt='Logo'
                                 width={35}
                                 height={35}
@@ -110,21 +110,21 @@ const Footer: React.FC = () => {
                                 <ul className='flex flex-col gap-4'>
                                     <li className='flex flex-col items-start gap-2'>
                                         <Image
-                                            src='/icons/ic-dpkp.png'
+                                            src='/icons/ic-dpkp.webp'
                                             alt='logo'
                                             width={100}
                                             height={100}
                                             className='h-18 w-18 md:h-24 md:w-24'
                                         />
                                         <Image
-                                            src='/icons/ic-bpn.png'
+                                            src='/icons/ic-bpn.webp'
                                             alt='logo'
                                             width={100}
                                             height={100}
                                             className='h-12 w-28 md:h-14 md:w-32'
                                         />
                                         <Image
-                                            src='/icons/ic-bi.png'
+                                            src='/icons/ic-bi.webp'
                                             alt='logo'
                                             width={100}
                                             height={100}

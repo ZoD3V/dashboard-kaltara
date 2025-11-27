@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
                         <Link href='/' className='flex min-w-0 items-center gap-2 sm:gap-3'>
                             <div className='flex shrink-0 items-center gap-2'>
                                 <Image
-                                    src='/images/kalimantan-utara-logo.png'
+                                    src='/images/kalimantan-utara-logo.webp'
                                     alt='Logo'
                                     width={100}
                                     height={100}

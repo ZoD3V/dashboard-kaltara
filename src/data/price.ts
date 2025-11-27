@@ -961,7 +961,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -969,7 +969,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -977,7 +977,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -985,7 +985,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -993,7 +993,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1011,7 +1011,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1019,7 +1019,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1027,7 +1027,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1035,7 +1035,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1043,7 +1043,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1061,7 +1061,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1069,7 +1069,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1077,7 +1077,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1085,7 +1085,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1093,7 +1093,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1111,7 +1111,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1119,7 +1119,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1127,7 +1127,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1135,7 +1135,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1143,7 +1143,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1161,7 +1161,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1169,7 +1169,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1177,7 +1177,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1185,7 +1185,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1193,7 +1193,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1211,7 +1211,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1219,7 +1219,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1227,7 +1227,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1235,7 +1235,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1243,7 +1243,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1261,7 +1261,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1269,7 +1269,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1277,7 +1277,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1285,7 +1285,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1293,7 +1293,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1311,7 +1311,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1319,7 +1319,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1327,7 +1327,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1335,7 +1335,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1343,7 +1343,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1361,7 +1361,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1369,7 +1369,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1377,7 +1377,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1385,7 +1385,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1393,7 +1393,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1411,7 +1411,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1419,7 +1419,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1427,7 +1427,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1435,7 +1435,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1443,7 +1443,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1461,7 +1461,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Rendah',
                 percentage: '-20%'
@@ -1469,7 +1469,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '-10%'
@@ -1477,7 +1477,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 price: 'Rp27.000',
                 status: 'Sama',
                 percentage: '0%'
@@ -1485,7 +1485,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+10%'
@@ -1493,7 +1493,7 @@ export const priceTypeRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 price: 'Rp27.000',
                 status: 'Lebih Tinggi',
                 percentage: '+20%'
@@ -1514,7 +1514,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp130',
                 price: 'Rp3.500',
                 percentage: '3.71%',
@@ -1523,7 +1523,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp150',
                 price: 'Rp3.700',
                 percentage: '4.05%',
@@ -1532,7 +1532,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp120',
                 price: 'Rp3.900',
                 percentage: '3.07%',
@@ -1541,7 +1541,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp3.800',
                 percentage: '0%',
@@ -1550,7 +1550,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp90',
                 price: 'Rp3.600',
                 percentage: '2.50%',
@@ -1570,7 +1570,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp250',
                 price: 'Rp5.000',
                 percentage: '5.00%',
@@ -1579,7 +1579,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp180',
                 price: 'Rp4.500',
                 percentage: '4.00%',
@@ -1588,7 +1588,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp140',
                 price: 'Rp4.800',
                 percentage: '2.91%',
@@ -1597,7 +1597,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp4.700',
                 percentage: '0%',
@@ -1606,7 +1606,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: 'Rp0',
                 price: 'Rp4.600',
                 percentage: '0%',
@@ -1626,7 +1626,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp200',
                 price: 'Rp4.000',
                 percentage: '5.00%',
@@ -1635,7 +1635,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp170',
                 price: 'Rp4.200',
                 percentage: '4.04%',
@@ -1644,7 +1644,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp150',
                 price: 'Rp4.300',
                 percentage: '3.48%',
@@ -1653,7 +1653,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp4.100',
                 percentage: '0%',
@@ -1662,7 +1662,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: 'Rp0',
                 price: 'Rp4.050',
                 percentage: '0%',
@@ -1682,7 +1682,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: 'Rp0',
                 price: 'Rp4.000',
                 percentage: '0%',
@@ -1691,7 +1691,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp120',
                 price: 'Rp4.200',
                 percentage: '2.85%',
@@ -1700,7 +1700,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp220',
                 price: 'Rp4.500',
                 percentage: '4.88%',
@@ -1709,7 +1709,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp4.300',
                 percentage: '0%',
@@ -1718,7 +1718,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: 'Rp0',
                 price: 'Rp4.250',
                 percentage: '0%',
@@ -1738,7 +1738,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp130',
                 price: 'Rp3.800',
                 percentage: '3.42%',
@@ -1747,7 +1747,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp90',
                 price: 'Rp3.900',
                 percentage: '2.30%',
@@ -1756,7 +1756,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp110',
                 price: 'Rp4.000',
                 percentage: '2.75%',
@@ -1765,7 +1765,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp3.950',
                 percentage: '0%',
@@ -1774,7 +1774,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp80',
                 price: 'Rp3.850',
                 percentage: '2.07%',
@@ -1794,7 +1794,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp200',
                 price: 'Rp5.000',
                 percentage: '4.00%',
@@ -1803,7 +1803,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp150',
                 price: 'Rp4.800',
                 percentage: '3.12%',
@@ -1812,7 +1812,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp180',
                 price: 'Rp5.200',
                 percentage: '3.46%',
@@ -1821,7 +1821,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp5.100',
                 percentage: '0%',
@@ -1830,7 +1830,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp120',
                 price: 'Rp5.150',
                 percentage: '2.33%',
@@ -1850,7 +1850,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp90',
                 price: 'Rp2.800',
                 percentage: '3.21%',
@@ -1859,7 +1859,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp70',
                 price: 'Rp2.900',
                 percentage: '2.41%',
@@ -1868,7 +1868,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp60',
                 price: 'Rp2.950',
                 percentage: '2.03%',
@@ -1877,7 +1877,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp2.850',
                 percentage: '0%',
@@ -1886,7 +1886,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp80',
                 price: 'Rp2.900',
                 percentage: '2.75%',
@@ -1906,7 +1906,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp60',
                 price: 'Rp1.800',
                 percentage: '3.33%',
@@ -1915,7 +1915,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp75',
                 price: 'Rp1.900',
                 percentage: '3.94%',
@@ -1924,7 +1924,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp130',
                 price: 'Rp2.200',
                 percentage: '5.90%',
@@ -1933,7 +1933,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp2.100',
                 percentage: '0%',
@@ -1942,7 +1942,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp55',
                 price: 'Rp1.950',
                 percentage: '2.82%',
@@ -1962,7 +1962,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp140',
                 price: 'Rp2.500',
                 percentage: '5.60%',
@@ -1971,7 +1971,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp110',
                 price: 'Rp2.600',
                 percentage: '4.23%',
@@ -1980,7 +1980,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp90',
                 price: 'Rp2.750',
                 percentage: '3.27%',
@@ -1989,7 +1989,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp2.650',
                 percentage: '0%',
@@ -1998,7 +1998,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp70',
                 price: 'Rp2.700',
                 percentage: '2.59%',
@@ -2018,7 +2018,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp120',
                 price: 'Rp1.800',
                 percentage: '6.67%',
@@ -2027,7 +2027,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp150',
                 price: 'Rp1.900',
                 percentage: '7.89%',
@@ -2036,7 +2036,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp80',
                 price: 'Rp2.000',
                 percentage: '4.00%',
@@ -2045,7 +2045,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp1.950',
                 percentage: '0%',
@@ -2054,7 +2054,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp70',
                 price: 'Rp1.850',
                 percentage: '3.78%',
@@ -2074,7 +2074,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '+ Rp70',
                 price: 'Rp1.800',
                 percentage: '3.89%',
@@ -2083,7 +2083,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '+ Rp65',
                 price: 'Rp1.900',
                 percentage: '3.42%',
@@ -2092,7 +2092,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '- Rp85',
                 price: 'Rp2.100',
                 percentage: '4.04%',
@@ -2101,7 +2101,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: 'Rp0',
                 price: 'Rp2.050',
                 percentage: '0%',
@@ -2110,7 +2110,7 @@ export const changePriceRegion: PriceTypeRegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '- Rp60',
                 price: 'Rp1.950',
                 percentage: '3.07%',

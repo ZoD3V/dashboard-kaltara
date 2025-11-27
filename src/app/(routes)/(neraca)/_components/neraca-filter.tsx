@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -21,7 +21,7 @@ import { ketersediaanRegion, neracaRegion } from '@/data/regions';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useInfoTabStore } from '@/hooks/use-neraca-tab-store';
-import { NeracaTabType } from '@/types/neraca';
+import { NeracaTabType, RegionValue } from '@/types/neraca';
 
 import { downloadExcel } from '../helper/download-data-to-excel';
 import { getRegionValues } from '../helper/get-region-values';
@@ -33,11 +33,14 @@ const NeracaFilter: React.FC = () => {
     const { activeDate, setActiveDate } = useInfoDateStore();
 
     const isNeraca = activeTab === 'neraca';
+    const [displayedValues, setDisplayedValues] = useState<RegionValue[] | RegionValue[]>([]);
 
-    const neracaValues = getRegionValues(activeDate, neracaRegion, selectedCommodity, 'neraca');
-    const ketersediaanValues = getRegionValues(activeDate, ketersediaanRegion, selectedCommodity, 'ketersediaan');
+    useEffect(() => {
+        const neracaValues = getRegionValues(activeDate, neracaRegion, selectedCommodity, 'neraca');
+        const ketersediaanValues = getRegionValues(activeDate, ketersediaanRegion, selectedCommodity, 'ketersediaan');
 
-    const displayedValues = isNeraca ? neracaValues : ketersediaanValues;
+        setDisplayedValues(isNeraca ? neracaValues : ketersediaanValues);
+    }, [isNeraca, activeDate, selectedCommodity]);
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>

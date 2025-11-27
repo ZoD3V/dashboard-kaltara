@@ -3002,35 +3002,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 670,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 650,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 630,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 610,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 600,
                 status: 'Waspada'
             }
@@ -3044,35 +3044,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3086,35 +3086,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -3135,35 +3135,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3177,35 +3177,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -3219,35 +3219,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3268,35 +3268,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -3310,35 +3310,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3352,35 +3352,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -3401,35 +3401,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 410,
                 status: 'Defisit'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 395,
                 status: 'Defisit'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 380,
                 status: 'Defisit'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Rentan'
             }
@@ -3443,35 +3443,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 200,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 120,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 350,
                 status: 'Defisit'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Rentan'
             }
@@ -3485,35 +3485,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 200,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 120,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 350,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Defisit'
             }
@@ -3531,35 +3531,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Waspada'
             }
@@ -3573,35 +3573,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Aman'
             }
@@ -3615,35 +3615,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Defisit'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Waspada'
             }
@@ -3661,35 +3661,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 190,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 175,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 165,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 180,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 170,
                 status: 'Defisit'
             }
@@ -3703,35 +3703,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 190,
                 status: 'Defisit'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 175,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 165,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 180,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 170,
                 status: 'Waspada'
             }
@@ -3745,35 +3745,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 190,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 175,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 165,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 180,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 170,
                 status: 'Defisit'
             }
@@ -3791,35 +3791,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 670,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 650,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 630,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 610,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 600,
                 status: 'Waspada'
             }
@@ -3833,35 +3833,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3875,35 +3875,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -3924,35 +3924,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -3966,35 +3966,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -4008,35 +4008,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -4057,35 +4057,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -4099,35 +4099,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 505,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 495,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 480,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 470,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 460,
                 status: 'Defisit'
             }
@@ -4141,35 +4141,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 320,
                 status: 'Rentan'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 310,
                 status: 'Waspada'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 290,
                 status: 'Rentan'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 280,
                 status: 'Aman'
             }
@@ -4190,35 +4190,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 410,
                 status: 'Defisit'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 395,
                 status: 'Defisit'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 380,
                 status: 'Defisit'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Rentan'
             }
@@ -4232,35 +4232,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 200,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 120,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 350,
                 status: 'Defisit'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Rentan'
             }
@@ -4274,35 +4274,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 200,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 120,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 350,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 370,
                 status: 'Waspada'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 360,
                 status: 'Defisit'
             }
@@ -4320,35 +4320,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Aman'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Waspada'
             }
@@ -4362,35 +4362,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Waspada'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Aman'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Rentan'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Defisit'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Aman'
             }
@@ -4404,35 +4404,35 @@ export const neracaRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 ton: 305,
                 status: 'Defisit'
             },
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 ton: 295,
                 status: 'Rentan'
             },
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 ton: 285,
                 status: 'Waspada'
             },
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 ton: 280,
                 status: 'Aman'
             },
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 ton: 270,
                 status: 'Waspada'
             }
@@ -4452,7 +4452,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,86%',
                 ton: 201,
                 status: 'Meningkat'
@@ -4460,7 +4460,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,47%',
                 ton: 202,
                 status: 'Stabil'
@@ -4468,7 +4468,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,68%',
                 ton: 203,
                 status: 'Stabil'
@@ -4476,7 +4476,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,25%',
                 ton: 204,
                 status: 'Menurun'
@@ -4484,7 +4484,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,92%',
                 ton: 205,
                 status: 'Meningkat'
@@ -4499,7 +4499,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,86%',
                 ton: 201,
                 status: 'Menurun'
@@ -4507,7 +4507,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,47%',
                 ton: 202,
                 status: 'Stabil'
@@ -4515,7 +4515,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,68%',
                 ton: 203,
                 status: 'Meningkat'
@@ -4523,7 +4523,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,25%',
                 ton: 204,
                 status: 'Meningkat'
@@ -4531,7 +4531,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,92%',
                 ton: 205,
                 status: 'Menurun'
@@ -4546,7 +4546,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,86%',
                 ton: 201,
                 status: 'Meningkat'
@@ -4554,7 +4554,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,47%',
                 ton: 202,
                 status: 'Meningkat'
@@ -4562,7 +4562,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,68%',
                 ton: 203,
                 status: 'Menurun'
@@ -4570,7 +4570,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,25%',
                 ton: 204,
                 status: 'Stabil'
@@ -4578,7 +4578,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,92%',
                 ton: 205,
                 status: 'Stabil'
@@ -4597,7 +4597,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,28%',
                 ton: 301,
                 status: 'Stabil'
@@ -4605,7 +4605,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '2,14%',
                 ton: 302,
                 status: 'Meningkat'
@@ -4613,7 +4613,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,79%',
                 ton: 303,
                 status: 'Menurun'
@@ -4621,7 +4621,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,20%',
                 ton: 304,
                 status: 'Stabil'
@@ -4629,7 +4629,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '1,90%',
                 ton: 305,
                 status: 'Meningkat'
@@ -4644,7 +4644,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-0,62%',
                 ton: 276,
                 status: 'Menurun'
@@ -4652,7 +4652,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '1,44%',
                 ton: 293,
                 status: 'Meningkat'
@@ -4660,7 +4660,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tidung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,55%',
                 ton: 310,
                 status: 'Stabil'
@@ -4668,7 +4668,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-1,22%',
                 ton: 257,
                 status: 'Menurun'
@@ -4676,7 +4676,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,68%',
                 ton: 341,
                 status: 'Meningkat'
@@ -4691,7 +4691,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '2,03%',
                 ton: 367,
                 status: 'Meningkat'
@@ -4699,7 +4699,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,28%',
                 ton: 259,
                 status: 'Menurun'
@@ -4707,7 +4707,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tidung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,88%',
                 ton: 301,
                 status: 'Stabil'
@@ -4715,7 +4715,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,47%',
                 ton: 329,
                 status: 'Meningkat'
@@ -4723,7 +4723,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,05%',
                 ton: 284,
                 status: 'Menurun'
@@ -4742,7 +4742,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,50%',
                 ton: 260,
                 status: 'Stabil'
@@ -4750,7 +4750,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '2,77%',
                 ton: 255,
                 status: 'Meningkat'
@@ -4758,7 +4758,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-1,81%',
                 ton: 248,
                 status: 'Menurun'
@@ -4766,7 +4766,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '0,56%',
                 ton: 252,
                 status: 'Stabil'
@@ -4774,7 +4774,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,83%',
                 ton: 245,
                 status: 'Meningkat'
@@ -4789,7 +4789,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,20%',
                 ton: 268,
                 status: 'Menurun'
@@ -4797,7 +4797,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,45%',
                 ton: 259,
                 status: 'Stabil'
@@ -4805,7 +4805,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '3,10%',
                 ton: 246,
                 status: 'Meningkat'
@@ -4813,7 +4813,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '0,05%',
                 ton: 273,
                 status: 'Menurun'
@@ -4821,7 +4821,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-2,25%',
                 ton: 251,
                 status: 'Stabil'
@@ -4836,7 +4836,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,90%',
                 ton: 279,
                 status: 'Meningkat'
@@ -4844,7 +4844,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '2,10%',
                 ton: 263,
                 status: 'Menurun'
@@ -4852,7 +4852,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,30%',
                 ton: 254,
                 status: 'Stabil'
@@ -4860,7 +4860,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,75%',
                 ton: 269,
                 status: 'Meningkat'
@@ -4868,7 +4868,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,20%',
                 ton: 257,
                 status: 'Menurun'
@@ -4887,7 +4887,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,63%',
                 ton: 310,
                 status: 'Stabil'
@@ -4895,7 +4895,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '2,59%',
                 ton: 315,
                 status: 'Meningkat'
@@ -4903,7 +4903,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,44%',
                 ton: 312,
                 status: 'Stabil'
@@ -4911,7 +4911,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,05%',
                 ton: 318,
                 status: 'Menurun'
@@ -4919,7 +4919,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '0,20%',
                 ton: 319,
                 status: 'Meningkat'
@@ -4934,7 +4934,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-0,75%',
                 ton: 298,
                 status: 'Menurun'
@@ -4942,7 +4942,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '1,88%',
                 ton: 327,
                 status: 'Meningkat'
@@ -4950,7 +4950,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,12%',
                 ton: 305,
                 status: 'Stabil'
@@ -4958,7 +4958,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,40%',
                 ton: 331,
                 status: 'Meningkat'
@@ -4966,7 +4966,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,10%',
                 ton: 291,
                 status: 'Menurun'
@@ -4981,7 +4981,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,52%',
                 ton: 340,
                 status: 'Meningkat'
@@ -4989,7 +4989,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,30%',
                 ton: 299,
                 status: 'Menurun'
@@ -4997,7 +4997,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,78%',
                 ton: 321,
                 status: 'Stabil'
@@ -5005,7 +5005,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,95%',
                 ton: 345,
                 status: 'Meningkat'
@@ -5013,7 +5013,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,45%',
                 ton: 310,
                 status: 'Menurun'
@@ -5032,7 +5032,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,53%',
                 ton: 260,
                 status: 'Stabil'
@@ -5040,7 +5040,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-1,77%',
                 ton: 255,
                 status: 'Menurun'
@@ -5048,7 +5048,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '1,08%',
                 ton: 248,
                 status: 'Meningkat'
@@ -5056,7 +5056,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,13%',
                 ton: 252,
                 status: 'Meningkat'
@@ -5064,7 +5064,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,86%',
                 ton: 245,
                 status: 'Menurun'
@@ -5079,7 +5079,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,42%',
                 ton: 272,
                 status: 'Stabil'
@@ -5087,7 +5087,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,25%',
                 ton: 263,
                 status: 'Menurun'
@@ -5095,7 +5095,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,98%',
                 ton: 259,
                 status: 'Meningkat'
@@ -5103,7 +5103,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,30%',
                 ton: 281,
                 status: 'Menurun'
@@ -5111,7 +5111,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-0,60%',
                 ton: 266,
                 status: 'Stabil'
@@ -5126,7 +5126,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,95%',
                 ton: 290,
                 status: 'Menurun'
@@ -5134,7 +5134,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '1,70%',
                 ton: 279,
                 status: 'Stabil'
@@ -5142,7 +5142,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,40%',
                 ton: 287,
                 status: 'Meningkat'
@@ -5150,7 +5150,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,88%',
                 ton: 295,
                 status: 'Menurun'
@@ -5158,7 +5158,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,15%',
                 ton: 273,
                 status: 'Meningkat'
@@ -5177,7 +5177,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-1,40%',
                 ton: 155,
                 status: 'Menurun'
@@ -5185,7 +5185,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,83%',
                 ton: 150,
                 status: 'Stabil'
@@ -5193,7 +5193,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '1,42%',
                 ton: 145,
                 status: 'Meningkat'
@@ -5201,7 +5201,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,66%',
                 ton: 160,
                 status: 'Meningkat'
@@ -5209,7 +5209,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '0,59%',
                 ton: 148,
                 status: 'Stabil'
@@ -5224,7 +5224,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,35%',
                 ton: 162,
                 status: 'Stabil'
@@ -5232,7 +5232,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,92%',
                 ton: 158,
                 status: 'Menurun'
@@ -5240,7 +5240,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '1,75%',
                 ton: 153,
                 status: 'Meningkat'
@@ -5248,7 +5248,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,05%',
                 ton: 167,
                 status: 'Stabil'
@@ -5256,7 +5256,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,20%',
                 ton: 160,
                 status: 'Menurun'
@@ -5271,7 +5271,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,10%',
                 ton: 175,
                 status: 'Meningkat'
@@ -5279,7 +5279,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,55%',
                 ton: 168,
                 status: 'Menurun'
@@ -5287,7 +5287,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,22%',
                 ton: 170,
                 status: 'Stabil'
@@ -5295,7 +5295,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,88%',
                 ton: 178,
                 status: 'Meningkat'
@@ -5303,7 +5303,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,30%',
                 ton: 165,
                 status: 'Menurun'
@@ -5322,7 +5322,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '2,33%',
                 ton: 210,
                 status: 'Meningkat'
@@ -5330,7 +5330,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,68%',
                 ton: 208,
                 status: 'Menurun'
@@ -5338,7 +5338,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,38%',
                 ton: 205,
                 status: 'Stabil'
@@ -5346,7 +5346,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,49%',
                 ton: 212,
                 status: 'Stabil'
@@ -5354,7 +5354,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '1,88%',
                 ton: 204,
                 status: 'Meningkat'
@@ -5369,7 +5369,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,86%',
                 ton: 201,
                 status: 'Menurun'
@@ -5377,7 +5377,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,47%',
                 ton: 202,
                 status: 'Stabil'
@@ -5385,7 +5385,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,68%',
                 ton: 203,
                 status: 'Meningkat'
@@ -5393,7 +5393,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,25%',
                 ton: 204,
                 status: 'Meningkat'
@@ -5401,7 +5401,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,92%',
                 ton: 205,
                 status: 'Menurun'
@@ -5416,7 +5416,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,86%',
                 ton: 201,
                 status: 'Meningkat'
@@ -5424,7 +5424,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,47%',
                 ton: 202,
                 status: 'Meningkat'
@@ -5432,7 +5432,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,68%',
                 ton: 203,
                 status: 'Menurun'
@@ -5440,7 +5440,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-2,25%',
                 ton: 204,
                 status: 'Stabil'
@@ -5448,7 +5448,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,92%',
                 ton: 205,
                 status: 'Stabil'
@@ -5467,7 +5467,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-1,92%',
                 ton: 720,
                 status: 'Menurun'
@@ -5475,7 +5475,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,76%',
                 ton: 710,
                 status: 'Stabil'
@@ -5483,7 +5483,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,58%',
                 ton: 700,
                 status: 'Stabil'
@@ -5491,7 +5491,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,93%',
                 ton: 730,
                 status: 'Meningkat'
@@ -5499,7 +5499,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '1,31%',
                 ton: 705,
                 status: 'Meningkat'
@@ -5514,7 +5514,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-0,62%',
                 ton: 276,
                 status: 'Menurun'
@@ -5522,7 +5522,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '1,44%',
                 ton: 293,
                 status: 'Meningkat'
@@ -5530,7 +5530,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tidung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,55%',
                 ton: 310,
                 status: 'Stabil'
@@ -5538,7 +5538,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '-1,22%',
                 ton: 257,
                 status: 'Menurun'
@@ -5546,7 +5546,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,68%',
                 ton: 341,
                 status: 'Meningkat'
@@ -5561,7 +5561,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '2,03%',
                 ton: 367,
                 status: 'Meningkat'
@@ -5569,7 +5569,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,28%',
                 ton: 259,
                 status: 'Menurun'
@@ -5577,7 +5577,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tidung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,88%',
                 ton: 301,
                 status: 'Stabil'
@@ -5585,7 +5585,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,47%',
                 ton: 329,
                 status: 'Meningkat'
@@ -5593,7 +5593,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,05%',
                 ton: 284,
                 status: 'Menurun'
@@ -5612,7 +5612,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '-1,55%',
                 ton: 650,
                 status: 'Menurun'
@@ -5620,7 +5620,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,15%',
                 ton: 640,
                 status: 'Stabil'
@@ -5628,7 +5628,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '2,33%',
                 ton: 630,
                 status: 'Meningkat'
@@ -5636,7 +5636,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,72%',
                 ton: 655,
                 status: 'Meningkat'
@@ -5644,7 +5644,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '0,46%',
                 ton: 635,
                 status: 'Stabil'
@@ -5659,7 +5659,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,20%',
                 ton: 268,
                 status: 'Menurun'
@@ -5667,7 +5667,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,45%',
                 ton: 259,
                 status: 'Stabil'
@@ -5675,7 +5675,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '3,10%',
                 ton: 246,
                 status: 'Meningkat'
@@ -5683,7 +5683,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '0,05%',
                 ton: 273,
                 status: 'Menurun'
@@ -5691,7 +5691,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-2,25%',
                 ton: 251,
                 status: 'Stabil'
@@ -5706,7 +5706,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,90%',
                 ton: 279,
                 status: 'Meningkat'
@@ -5714,7 +5714,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '2,10%',
                 ton: 263,
                 status: 'Menurun'
@@ -5722,7 +5722,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,30%',
                 ton: 254,
                 status: 'Stabil'
@@ -5730,7 +5730,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,75%',
                 ton: 269,
                 status: 'Meningkat'
@@ -5738,7 +5738,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,20%',
                 ton: 257,
                 status: 'Menurun'
@@ -5757,7 +5757,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,34%',
                 ton: 980,
                 status: 'Meningkat'
@@ -5765,7 +5765,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,93%',
                 ton: 970,
                 status: 'Stabil'
@@ -5773,7 +5773,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '1,46%',
                 ton: 960,
                 status: 'Stabil'
@@ -5781,7 +5781,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '1,40%',
                 ton: 990,
                 status: 'Meningkat'
@@ -5789,7 +5789,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-0,98%',
                 ton: 965,
                 status: 'Menurun'
@@ -5804,7 +5804,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,42%',
                 ton: 272,
                 status: 'Stabil'
@@ -5812,7 +5812,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '0,25%',
                 ton: 263,
                 status: 'Menurun'
@@ -5820,7 +5820,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,98%',
                 ton: 259,
                 status: 'Meningkat'
@@ -5828,7 +5828,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,30%',
                 ton: 281,
                 status: 'Menurun'
@@ -5836,7 +5836,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-0,60%',
                 ton: 266,
                 status: 'Stabil'
@@ -5851,7 +5851,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,95%',
                 ton: 290,
                 status: 'Menurun'
@@ -5859,7 +5859,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '1,70%',
                 ton: 279,
                 status: 'Stabil'
@@ -5867,7 +5867,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '-0,40%',
                 ton: 287,
                 status: 'Meningkat'
@@ -5875,7 +5875,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,88%',
                 ton: 295,
                 status: 'Menurun'
@@ -5883,7 +5883,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,15%',
                 ton: 273,
                 status: 'Meningkat'
@@ -5902,7 +5902,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '2,16%',
                 ton: 360,
                 status: 'Meningkat'
@@ -5910,7 +5910,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-1,66%',
                 ton: 355,
                 status: 'Menurun'
@@ -5918,7 +5918,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,66%',
                 ton: 350,
                 status: 'Stabil'
@@ -5926,7 +5926,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '0,32%',
                 ton: 365,
                 status: 'Stabil'
@@ -5934,7 +5934,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '2,87%',
                 ton: 352,
                 status: 'Meningkat'
@@ -5949,7 +5949,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '0,35%',
                 ton: 162,
                 status: 'Stabil'
@@ -5957,7 +5957,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,92%',
                 ton: 158,
                 status: 'Menurun'
@@ -5965,7 +5965,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '1,75%',
                 ton: 153,
                 status: 'Meningkat'
@@ -5973,7 +5973,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,05%',
                 ton: 167,
                 status: 'Stabil'
@@ -5981,7 +5981,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,20%',
                 ton: 160,
                 status: 'Menurun'
@@ -5996,7 +5996,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'nunukan',
                 name: 'Kabupaten Nunukan',
-                icon: '/icons/ic-kab-nunukan.png',
+                icon: '/icons/ic-kab-nunukan.webp',
                 value: '1,10%',
                 ton: 175,
                 status: 'Meningkat'
@@ -6004,7 +6004,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'malinau',
                 name: 'Kabupaten Malinau',
-                icon: '/icons/ic-kab-malinau.png',
+                icon: '/icons/ic-kab-malinau.webp',
                 value: '-0,55%',
                 ton: 168,
                 status: 'Menurun'
@@ -6012,7 +6012,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tana-tidung',
                 name: 'Kabupaten Tana Tindung',
-                icon: '/icons/ic-kab-tana-tidung.png',
+                icon: '/icons/ic-kab-tana-tidung.webp',
                 value: '0,22%',
                 ton: 170,
                 status: 'Stabil'
@@ -6020,7 +6020,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'tarakan',
                 name: 'Kota Tarakan',
-                icon: '/icons/ic-kab-tarakan.png',
+                icon: '/icons/ic-kab-tarakan.webp',
                 value: '2,88%',
                 ton: 178,
                 status: 'Meningkat'
@@ -6028,7 +6028,7 @@ export const ketersediaanRegion: RegionGroup[] = [
             {
                 id: 'bulungan',
                 name: 'Kabupaten Bulungan',
-                icon: '/icons/ic-kab-bulungan.png',
+                icon: '/icons/ic-kab-bulungan.webp',
                 value: '-1,30%',
                 ton: 165,
                 status: 'Menurun'

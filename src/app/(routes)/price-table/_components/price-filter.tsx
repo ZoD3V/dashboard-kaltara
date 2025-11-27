@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -23,7 +23,8 @@ import { useInfoPriceStore } from '@/hooks/use-change-price-store';
 import { useCommodityStore } from '@/hooks/use-commodity-store';
 import { useInfoDateStore } from '@/hooks/use-neraca-date.store';
 import { useTypePriceStore } from '@/hooks/use-price-type-store';
-import { PriceChangeType } from '@/types/price';
+import { RegionValue } from '@/types/neraca';
+import { PriceChangeType, PriceTypeRegionValue } from '@/types/price';
 
 import { getRegionValues } from '../helper/get-region-values';
 import { Download } from 'lucide-react';
@@ -35,12 +36,15 @@ const NeracaFilter: React.FC = () => {
     const activeDate = useInfoDateStore((s) => s.activeDate);
 
     const isLevelPrice = activeTab === 'price';
+    const [displayedValues, setDisplayedValues] = useState<PriceTypeRegionValue[] | PriceTypeRegionValue[]>([]);
 
-    const priceTypeValues = getRegionValues(priceTypeRegion, selectedCommodity, 'level-harga');
+    useEffect(() => {
+        const priceTypeValues = getRegionValues(priceTypeRegion, selectedCommodity, 'level-harga');
 
-    const kaltara = getRegionValues(changePriceRegion, selectedCommodity, 'kaltara');
+        const kaltaraValues = getRegionValues(changePriceRegion, selectedCommodity, 'kaltara');
 
-    const displayedValues = isLevelPrice ? priceTypeValues : kaltara;
+        setDisplayedValues(isLevelPrice ? priceTypeValues : kaltaraValues);
+    }, [isLevelPrice, selectedCommodity]);
 
     return (
         <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
