@@ -1,0 +1,166 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+
+import Image from 'next/image';
+
+import { Button } from '@/components/ui/button';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/components/ui/select';
+import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { commodityItems } from '@/data/commodity-items';
+import { months } from '@/data/months';
+import { ketersediaanRegion, neracaRegion } from '@/data/regions';
+import { NeracaDateType, NeracaTabType, RegionValue } from '@/types/neraca';
+
+import { downloadExcel } from '../helper/download-data-to-excel';
+import { getRegionValues } from '../helper/get-region-values';
+import { Download } from 'lucide-react';
+
+type NeracaFilterProps = {
+    activeTab: NeracaTabType;
+    setActiveTab: (tab: NeracaTabType) => void;
+
+    selectedCommodity: string;
+    setSelectedCommodity: (id: string) => void;
+
+    activeDate: NeracaDateType;
+    setActiveDate: (date: NeracaDateType) => void;
+};
+
+const NeracaFilter: React.FC<NeracaFilterProps> = ({
+    activeTab,
+    setActiveTab,
+    selectedCommodity,
+    setSelectedCommodity,
+    activeDate,
+    setActiveDate
+}) => {
+    const isNeraca = activeTab === 'neraca';
+    const [displayedValues, setDisplayedValues] = useState<RegionValue[]>([]);
+
+    useEffect(() => {
+        const neracaValues = getRegionValues(activeDate, neracaRegion, selectedCommodity, 'neraca');
+        const ketersediaanValues = getRegionValues(activeDate, ketersediaanRegion, selectedCommodity, 'ketersediaan');
+
+        setDisplayedValues(isNeraca ? neracaValues : ketersediaanValues);
+    }, [isNeraca, activeDate, selectedCommodity]);
+
+    return (
+        <div className='mx-auto w-full pt-24 sm:pt-26 xl:pt-28'>
+            <div className='mb-6 flex flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between'>
+                <div className='flex flex-wrap items-center gap-3 md:gap-4'>
+                    <span className='hidden text-sm font-medium text-slate-500 sm:block'>Jenis Informasi</span>
+
+                    <ToggleGroup
+                        type='single'
+                        value={activeTab}
+                        onValueChange={(value) => value && setActiveTab(value as NeracaTabType)}
+                        className='rounded-md border border-gray-300 bg-white'>
+                        <ToggleGroupItem
+                            value='neraca'
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            Neraca
+                        </ToggleGroupItem>
+                        <ToggleGroupItem
+                            value='ketersediaan'
+                            className='border-r px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            Ketersediaan
+                        </ToggleGroupItem>
+                        <ToggleGroupItem
+                            value='kebutuhan'
+                            className='px-3 text-sm font-medium text-slate-500 data-[state=on]:bg-blue-100/80 data-[state=on]:text-blue-900/80 md:px-4 md:text-sm'>
+                            Kebutuhan
+                        </ToggleGroupItem>
+                    </ToggleGroup>
+                </div>
+
+                <div className='flex flex-wrap items-center gap-3'>
+                    <div className='flex w-full gap-2 sm:w-fit'>
+                        <Select
+                        // contoh: kalau mau update activeDate berdasarkan tahun
+                        // onValueChange={(year) => { ... setActiveDate(...) }}
+                        >
+                            <SelectTrigger className='w-1/2 sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Tahun' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Tahun</SelectLabel>
+                                    <SelectItem value='2024'>2024</SelectItem>
+                                    <SelectItem value='2025'>2025</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                        <Select
+                        // onValueChange={(monthLabel) => { ... setActiveDate(...) }}
+                        >
+                            <SelectTrigger className='w-1/2 sm:w-[200px]'>
+                                <SelectValue placeholder='Pilih Bulan' />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    <SelectLabel>Bulan</SelectLabel>
+                                    {months.map((month) => (
+                                        <SelectItem key={month.value} value={month.label}>
+                                            {month.label}
+                                        </SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
+
+                    <Button
+                        onClick={() =>
+                            downloadExcel(
+                                displayedValues,
+                                `${selectedCommodity}-${activeTab}`,
+                                selectedCommodity,
+                                activeTab,
+                                activeDate
+                            )
+                        }
+                        variant='outline'
+                        className='bg-primary hover:bg-primary/90 h-10 w-10 rounded-full text-white transition-all hover:text-white'
+                        size='icon'>
+                        <Download />
+                    </Button>
+                </div>
+            </div>
+
+            <div className='mt-6 pl-4 xl:pl-0'>
+                <div className='flex items-start justify-start gap-5 overflow-x-scroll p-1 xl:justify-center'>
+                    {commodityItems.map((item) => (
+                        <button
+                            key={item.id}
+                            onClick={() => setSelectedCommodity(item.id)}
+                            className='flex flex-col items-center gap-2'>
+                            <div
+                                className={`flex h-14 w-14 cursor-pointer items-center justify-center rounded-full border text-2xl transition-all ease-in md:h-16 md:w-16 md:text-3xl ${
+                                    selectedCommodity === item.id ? 'bg-white ring-2 ring-blue-500' : 'bg-slate-100'
+                                }`}>
+                                <Image src={item.icon} alt='icon' width={40} height={40} />
+                            </div>
+                            <span
+                                className={`text-center text-xs leading-tight font-semibold ${
+                                    selectedCommodity === item.id ? 'text-blue-500' : 'text-gray-700'
+                                }`}>
+                                {item.name}
+                            </span>
+                        </button>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default NeracaFilter;

@@ -10,7 +10,6 @@ import { Button } from '@/components/ui/button';
 import { menuItems } from '@/data/menu-items';
 import { Transition } from '@headlessui/react';
 
-import Container from './container';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
@@ -81,7 +80,7 @@ const Navbar: React.FC = () => {
                         })}
                     </ul>
 
-                    <Link href='/' className='hidden justify-self-end xl:flex'>
+                    <Link href='/sign-in' className='hidden justify-self-end xl:flex'>
                         <Button className='rounded-full px-5 py-5'>Login</Button>
                     </Link>
                 </div>

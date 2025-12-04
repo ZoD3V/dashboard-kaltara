@@ -4,8 +4,6 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
 import '@/app/globals.css';
-import Footer from '@/components/common/footer';
-import Navbar from '@/components/common/navbar';
 import { Toaster } from '@/components/ui/sonner';
 
 const geistSans = localFont({
@@ -28,10 +26,9 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang='en'>
             <body
+                suppressHydrationWarning
                 className={`${geistSans.variable} ${geistMono.variable} bg-background text-foreground overscroll-none antialiased`}>
-                <Navbar />
                 <main>{children}</main>
-                <Footer />
                 <Toaster />
             </body>
         </html>
