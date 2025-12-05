@@ -15,7 +15,7 @@ import AppLogo from './app-logo';
 import { NavFooter } from './nav-footer';
 import { NavMain } from './nav-main';
 import { NavUser } from './nav-user';
-import { Book, Box, Folder, LayoutGrid, UsersIcon } from 'lucide-react';
+import { Book, Box, Folder, LayoutGrid, Tag, UsersIcon } from 'lucide-react';
 
 const mainNavItems: any[] = [
     {
@@ -25,13 +25,13 @@ const mainNavItems: any[] = [
     },
     {
         title: 'Neraca',
-        href: '/neraca',
+        href: '/dashboard/neraca',
         icon: Book
     },
     {
         title: 'Harga',
-        href: '/harga',
-        icon: Box
+        href: '/dashboard/harga',
+        icon: Tag
     },
     {
         title: 'Category',

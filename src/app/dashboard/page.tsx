@@ -1,5 +1,3 @@
-import { ChartAreaInteractive } from '@/components/chart-area-interactive';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Heading from '@/components/ui/heading';
 import { SectionCards } from '@/components/ui/section-cards';
 
