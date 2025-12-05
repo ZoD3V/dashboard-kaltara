@@ -34,14 +34,23 @@ const mainNavItems: any[] = [
         icon: Tag
     },
     {
-        title: 'Category',
-        href: '/dashboard/category',
-        icon: Box
+        title: 'Users',
+        href: '/dashboard/users',
+        icon: UsersIcon
     },
     {
         title: 'Master Data',
-        href: '/master-data',
-        icon: UsersIcon
+        icon: Box,
+        items: [
+            {
+                title: 'Wilayah',
+                href: '/dashboard/master-data/wilayah'
+            },
+            {
+                title: 'Commodity',
+                href: '/dashboard/master-data/commodity'
+            }
+        ]
     }
 ];
 

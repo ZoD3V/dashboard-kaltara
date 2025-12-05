@@ -2,16 +2,35 @@
 
 import { useMemo, useState } from 'react';
 
+import {
+    AlertDialog,
+    AlertDialogAction,
+    AlertDialogCancel,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogTitle
+} from '@/components/ui/alert-dialog';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger
+} from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
-import { Search } from 'lucide-react';
+import { MoreHorizontal, Pencil, Search, Trash2 } from 'lucide-react';
 
+// =======================
 // Types
-interface Column {
+// =======================
+
+export interface Column {
     key: string;
     label: string;
 }
@@ -29,9 +48,14 @@ interface DataTableProps {
     columns: Column[];
     data: any[];
     searchKey: string;
+    onEdit?: (row: any) => void;
+    onDelete?: (row: any) => void;
 }
 
+// =======================
 // Status Badge Component
+// =======================
+
 const StatusBadge = ({ status }: { status: string }) => {
     const variants: Record<string, 'default' | 'secondary' | 'outline'> = {
         Aktif: 'default',
@@ -42,13 +66,18 @@ const StatusBadge = ({ status }: { status: string }) => {
     return <Badge variant={variants[status] || 'default'}>{status}</Badge>;
 };
 
+// =======================
 // Table Header Component
+// =======================
+
 const TableHeaderComponent = ({ columns }: { columns: Column[] }) => {
     return (
         <TableHeader>
             <TableRow>
                 {columns.map((column) => (
-                    <TableHead key={column.key} className='font-semibold'>
+                    <TableHead
+                        key={column.key}
+                        className={column.key === 'action' ? 'w-20 text-right' : 'font-semibold'}>
                         {column.label}
                     </TableHead>
                 ))}
@@ -57,26 +86,113 @@ const TableHeaderComponent = ({ columns }: { columns: Column[] }) => {
     );
 };
 
+// =======================
 // Table Row Component
-const TableRowComponent = ({ item, columns }: { item: any; columns: Column[] }) => {
+// =======================
+
+const TableRowComponent = ({
+    item,
+    columns,
+    onEdit,
+    onDelete
+}: {
+    item: any;
+    columns: Column[];
+    onEdit?: (row: any) => void;
+    onDelete?: (row: any) => void;
+}) => {
+    const [isAlertOpen, setIsAlertOpen] = useState(false);
+
+    const handleConfirmDelete = () => {
+        if (onDelete) onDelete(item);
+        setIsAlertOpen(false);
+    };
+
     return (
         <TableRow>
-            {columns.map((column) => (
-                <TableCell key={column.key} className={column.key === columns[0].key ? 'font-medium' : ''}>
-                    {column.key === 'status' ? (
-                        <StatusBadge status={item[column.key]} />
-                    ) : column.key === 'rupiah' ? (
-                        `Rp ${parseFloat(item[column.key]).toLocaleString('id-ID')}`
-                    ) : (
-                        item[column.key]
-                    )}
-                </TableCell>
-            ))}
+            {columns.map((column, index) => {
+                // kolom status → Badge
+                if (column.key === 'status') {
+                    return (
+                        <TableCell key={column.key} className={index === 0 ? 'font-medium' : ''}>
+                            <StatusBadge status={item[column.key]} />
+                        </TableCell>
+                    );
+                }
+
+                // kolom rupiah → format currency
+                if (column.key === 'rupiah') {
+                    return (
+                        <TableCell key={column.key} className={index === 0 ? 'font-medium' : ''}>
+                            {item[column.key] != null
+                                ? `Rp ${parseFloat(item[column.key]).toLocaleString('id-ID')}`
+                                : '-'}
+                        </TableCell>
+                    );
+                }
+
+                // kolom action → titik tiga + Edit + Delete + AlertDialog
+                if (column.key === 'action') {
+                    return (
+                        <TableCell key={column.key} className='text-right'>
+                            <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button variant='ghost' size='icon' className='h-8 w-8'>
+                                            <MoreHorizontal className='h-4 w-4' />
+                                        </Button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent align='end'>
+                                        <DropdownMenuItem
+                                            className='cursor-pointer'
+                                            onClick={() => onEdit && onEdit(item)}>
+                                            <Pencil className='mr-2 h-4 w-4' />
+                                            Edit
+                                        </DropdownMenuItem>
+                                        <DropdownMenuItem
+                                            className='text-destructive focus:text-destructive cursor-pointer'
+                                            onClick={() => setIsAlertOpen(true)}>
+                                            <Trash2 className='mr-2 h-4 w-4' />
+                                            Delete
+                                        </DropdownMenuItem>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+
+                                <AlertDialogContent>
+                                    <AlertDialogHeader>
+                                        <AlertDialogTitle>Hapus data ini?</AlertDialogTitle>
+                                        <AlertDialogDescription>
+                                            Tindakan ini tidak dapat dibatalkan. Data yang dihapus tidak bisa
+                                            dikembalikan.
+                                        </AlertDialogDescription>
+                                    </AlertDialogHeader>
+                                    <AlertDialogFooter>
+                                        <AlertDialogCancel>Batal</AlertDialogCancel>
+                                        <AlertDialogAction className='bg-destructive' onClick={handleConfirmDelete}>
+                                            Ya, hapus
+                                        </AlertDialogAction>
+                                    </AlertDialogFooter>
+                                </AlertDialogContent>
+                            </AlertDialog>
+                        </TableCell>
+                    );
+                }
+
+                // default text
+                return (
+                    <TableCell key={column.key} className={column.key === columns[0].key ? 'font-medium' : ''}>
+                        {item[column.key] ?? '-'}
+                    </TableCell>
+                );
+            })}
         </TableRow>
     );
 };
 
+// =======================
 // Filter Component
+// =======================
+
 const FilterSection = ({
     filters,
     setFilters,
@@ -197,7 +313,10 @@ const FilterSection = ({
     );
 };
 
+// =======================
 // Pagination Component
+// =======================
+
 const TablePagination = ({
     currentPage,
     totalPages,
@@ -234,8 +353,11 @@ const TablePagination = ({
     );
 };
 
+// =======================
 // Main DataTable Component
-export function DataTable({ columns, data, searchKey }: DataTableProps) {
+// =======================
+
+export function DataTable({ columns, data, searchKey, onEdit, onDelete }: DataTableProps) {
     const [currentPage, setCurrentPage] = useState(1);
     const [filters, setFilters] = useState<FilterState>({
         tahun: 'all',
@@ -291,7 +413,8 @@ export function DataTable({ columns, data, searchKey }: DataTableProps) {
     }, [data, filters, searchKey]);
 
     // Pagination
-    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage) || 1;
+
     const paginatedData = useMemo(() => {
         const start = (currentPage - 1) * itemsPerPage;
         const end = start + itemsPerPage;
@@ -339,7 +462,13 @@ export function DataTable({ columns, data, searchKey }: DataTableProps) {
                     <TableBody>
                         {paginatedData.length > 0 ? (
                             paginatedData.map((item, index) => (
-                                <TableRowComponent key={item.id || index} item={item} columns={columns} />
+                                <TableRowComponent
+                                    key={item.id || index}
+                                    item={item}
+                                    columns={columns}
+                                    onEdit={onEdit}
+                                    onDelete={onDelete}
+                                />
                             ))
                         ) : (
                             <TableRow>
