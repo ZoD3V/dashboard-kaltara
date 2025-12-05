@@ -31,15 +31,15 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
                     <UserInfo user={user} showEmail={true} />
                 </div>
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuGroup>
+            {/* <DropdownMenuSeparator /> */}
+            {/* <DropdownMenuGroup>
                 <DropdownMenuItem asChild>
                     <Link className='block w-full' href={'/'} as='button' prefetch onClick={cleanup}>
                         <Settings className='mr-2' />
                         Settings
                     </Link>
                 </DropdownMenuItem>
-            </DropdownMenuGroup>
+            </DropdownMenuGroup> */}
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
                 <Link className='block w-full' href={'/'} as='button' data-test='logout-button'>

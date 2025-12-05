@@ -75,9 +75,7 @@ const TableHeaderComponent = ({ columns }: { columns: Column[] }) => {
         <TableHeader>
             <TableRow>
                 {columns.map((column) => (
-                    <TableHead
-                        key={column.key}
-                        className={column.key === 'action' ? 'w-20 text-right' : 'font-semibold'}>
+                    <TableHead key={column.key} className={column.key === 'action' ? 'w-20' : 'font-semibold'}>
                         {column.label}
                     </TableHead>
                 ))}
@@ -134,7 +132,7 @@ const TableRowComponent = ({
                 // kolom action → titik tiga + Edit + Delete + AlertDialog
                 if (column.key === 'action') {
                     return (
-                        <TableCell key={column.key} className='text-right'>
+                        <TableCell key={column.key}>
                             <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>

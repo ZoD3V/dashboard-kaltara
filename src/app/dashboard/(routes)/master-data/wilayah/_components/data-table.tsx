@@ -94,9 +94,7 @@ const TableHeaderComponent = ({ columns }: { columns: Column[] }) => {
         <TableHeader>
             <TableRow>
                 {columns.map((column) => (
-                    <TableHead
-                        key={column.key}
-                        className={column.key === 'action' ? 'w-20 text-right' : 'font-semibold'}>
+                    <TableHead key={column.key} className={column.key === 'action' ? 'w-20' : 'font-semibold'}>
                         {column.label}
                     </TableHead>
                 ))}
@@ -149,7 +147,7 @@ const TableRowComponent = ({
                 // 2) Action (titik tiga + edit + delete + alert dialog)
                 if (column.key === 'action') {
                     return (
-                        <TableCell key={column.key} className='text-right'>
+                        <TableCell key={column.key}>
                             <AlertDialog open={isAlertOpen} onOpenChange={setIsAlertOpen}>
                                 <DropdownMenu>
                                     <DropdownMenuTrigger asChild>
@@ -183,11 +181,7 @@ const TableRowComponent = ({
                                     </AlertDialogHeader>
                                     <AlertDialogFooter>
                                         <AlertDialogCancel>Batal</AlertDialogCancel>
-                                        <AlertDialogAction
-                                            className='bg-destructive text-destructive-foreground hover:bg-destructive/90'
-                                            onClick={handleConfirmDelete}>
-                                            Ya, hapus
-                                        </AlertDialogAction>
+                                        <AlertDialogAction onClick={handleConfirmDelete}>Ya, hapus</AlertDialogAction>
                                     </AlertDialogFooter>
                                 </AlertDialogContent>
                             </AlertDialog>
